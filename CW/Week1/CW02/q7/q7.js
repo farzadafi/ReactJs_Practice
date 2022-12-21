@@ -5,6 +5,7 @@ function getNumbers() {
     const numbers = [numberOne, numberTwo, numberThree];
     calcMin(numbers);
     calcMax(numbers);
+    calcAverage(numbers);
 }
 
 function calcMin(numbers) {
@@ -23,4 +24,13 @@ function calcMax(numbers) {
             min = numbers[i]
     }
     alert(`max number is ${min}`)
+}
+
+function calcAverage(numbers) {
+    let sum = 0;
+    for (const i in numbers) {
+        sum += Number(numbers[i]);
+    }
+    alert(sum)
+    alert(`average is ${sum/numbers.length}`);
 }
