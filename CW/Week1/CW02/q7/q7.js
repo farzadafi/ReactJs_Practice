@@ -4,6 +4,7 @@ function getNumbers() {
     let numberThree = prompt("Enter number three:")
     const numbers = [numberOne, numberTwo, numberThree];
     calcMin(numbers);
+    calcMax(numbers);
 }
 
 function calcMin(numbers) {
@@ -13,4 +14,13 @@ function calcMin(numbers) {
             min = numbers[i]
     }
     alert(`min number is ${min}`)
+}
+
+function calcMax(numbers) {
+    let min = numbers[0];
+    for (const i in numbers) {
+        if(numbers[i] > min)
+            min = numbers[i]
+    }
+    alert(`max number is ${min}`)
 }
