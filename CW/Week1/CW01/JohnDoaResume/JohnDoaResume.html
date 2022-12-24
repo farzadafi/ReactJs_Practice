@@ -3,9 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: gray;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainDiv {
+            width: 900px;
+            height: 600px;
+            border: 1px solid white;
+        }
+
+        .leftDiv {
+            background-color: #8c57ff;
+            width: 300px;
+            height: 100%;
+        }
+
+        .avatar {
+            height: 250px;
+            width: 250px;
+            margin-top: 50px;
+            margin-left: 25px;
+            border-radius: 50%;
+        }
+
+        .middle-class {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 30px 0 30px
+        }
+
+    </style>
+
 </head>
 <body>
+<div class="mainDiv">
+    <div class="leftDiv">
+        <img class="avatar" src="image/71474273.jpeg" alt="farzad Picture">
+        <h2 class="middle-class">فرزاد افشار زرندی</h2>
+        <p class="middle-class">فرانت اند دولوپر</p>
+        <div class="social-icon">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+    </div>
 
-    
+</div>
+
+<script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+
 </body>
 </html>
