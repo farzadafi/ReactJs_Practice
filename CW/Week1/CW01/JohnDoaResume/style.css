@@ -101,6 +101,6 @@ footer ul {
     list-style-type: none;
 }
 
-.gray-color {
-    color: gray;
+footer ul li:nth-child(even) {
+    color: #cccccc;
 }
