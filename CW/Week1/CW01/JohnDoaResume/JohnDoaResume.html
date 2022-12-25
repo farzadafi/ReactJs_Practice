@@ -28,11 +28,12 @@
         }
 
         .leftDiv {
-            background-color: #8c57ff;
+            background-color: #692cec;
             width: 300px;
             height: 100%;
             padding-right: 30px;
             padding-left: 30px;
+            float: left;
         }
 
         .avatar {
@@ -64,6 +65,48 @@
             display: flex;
             justify-content: space-between;
         }
+
+        .right-div {
+            background-color: #ff9994;
+            width: 598px;
+            height: 100%;
+            float: right;
+            padding: 10% 5%;
+            direction: rtl;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header button {
+            background-color: DodgerBlue;
+            border: none;
+            border-radius: 10%;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .top-margin {
+            margin-top: 50px;
+        }
+
+         .personal-information {
+            list-style-type: none;
+        }
+
+         footer ul {
+             display: flex;
+             justify-content: space-between;
+             list-style-type: none;
+         }
+
+         .gray-color {
+             color: gray;
+         }
 
     </style>
 
@@ -102,6 +145,32 @@
                 <p>کارشناسی</p>
             </div>
         </div>
+    </div>
+    <div class="right-div">
+        <div class="header">
+            <h1>درباره من</h1>
+            <button>دانلود رزومه
+                <ion-icon name="cloud-download"></ion-icon>
+            </button>
+        </div>
+        <p class="top-margin">
+            فرزاد افشار کارشناس حقوق قضائی،مسلط به تولید محتوا و سئو سایت علاقه مند به برنامه نویسی فرانت و در حال
+            یادگیری زبان برنامه نویسی ری اکت در مکتب شریف. این فایل اولین تمرین css من در دوره می باشد.
+        </p>
+        <ul class="top-margin personal-information">
+            <li><b>تاریخ تولد:</b>۲۹ فروردین ۱۳۷۶</li>
+            <li><b>آدرس:</b>کرمان شهرستان زرند</li>
+            <li><b>ایمیل:</b>farzadafi40@gmail.com</li>
+            <li><b>شماره تماس:</b>۱۲۳۴۵۶۷۸۹</li>
+        </ul>
+        <footer class="top-margin">
+            <ul>
+                <li>html</li>
+                <li class="gray-color">100%</li>
+                <li>css</li>
+                <li class="gray-color">100%</li>
+            </ul>
+        </footer>
     </div>
 
 </div>
