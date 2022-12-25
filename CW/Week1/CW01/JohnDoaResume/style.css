@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: "vazir";
-    src: url(/Vazir.ttf) format("truetype");
+    src: url(Vazir.ttf) format("truetype");
 }
 
 * {
@@ -56,7 +56,7 @@ html, body {
     display: flex;
     flex-direction: column;
     direction: rtl;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .information div {
@@ -88,7 +88,7 @@ html, body {
 }
 
 .top-margin {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .personal-information {
