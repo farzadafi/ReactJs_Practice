@@ -1,0 +1,11 @@
+p:nth-child(even) {
+    color: blue;
+}
+
+p:first-child {
+    color: red;
+}
+
+p:nth-last-child(2) {
+    color: green;
+}
