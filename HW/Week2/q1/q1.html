@@ -3,8 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mainDiv {
+            width: 700px;
+            height: 700px;
+            border-radius: 1%;
+            border: solid rgb(234, 234, 234) 1px;
+        }
+
+        .mainDiv header {
+            display: flex;
+            padding: 5px 20px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        header div img {
+            width: 100px;
+            display: inline-block;
+        }
+
+        .post {
+            display: flex;
+            align-items: center;
+        }
+
+        .post ~ div i {
+            margin-top: 20px;
+        }
+
+    </style>
+
 </head>
 <body>
-
+<div class="mainDiv">
+    <header>
+        <div class="post">
+            <img src="image/nasa-logo-web-rgb.png" alt="nasa image">
+            <b>nasa</b>
+        </div>
+        <div>
+            <i class="fa fa-ellipsis-h" ></i>
+        </div>
+    </header>
+</div>
 </body>
 </html>
