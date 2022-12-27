@@ -19,6 +19,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: gray;
         }
 
         .mainDiv {
@@ -49,6 +50,29 @@
             margin-top: 20px;
         }
 
+        .middle-div {
+            position: relative;
+        }
+
+        .middle-div img {
+            width: 100%;
+            display: block;
+        }
+
+        .fa-user {
+            color: white;
+            position: absolute;
+            bottom: 30px;
+            left: 50px;
+        }
+
+        .fa-volume-up {
+            position: absolute;
+            color: white;
+            bottom: 30px;
+            left: 630px;
+        }
+
     </style>
 
 </head>
@@ -60,9 +84,14 @@
             <b>nasa</b>
         </div>
         <div>
-            <i class="fa fa-ellipsis-h" ></i>
+            <i class="fa fa-ellipsis-h"></i>
         </div>
     </header>
+    <div class="middle-div">
+        <img src="image/javaScript.png" alt="java script picture">
+        <a href="" download="new-filename"><i class="fa fa-user"></i></a>
+        <a href="" download="new-filename"><i class="fa fa-volume-up"></i></a>
+    </div>
 </div>
 </body>
 </html>
