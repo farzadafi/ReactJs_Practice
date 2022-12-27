@@ -19,7 +19,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: gray;
         }
 
         .mainDiv {
@@ -31,7 +30,7 @@
 
         .mainDiv header {
             display: flex;
-            padding: 5px 20px;
+            padding: 5px 30px 5px 0;
             flex-direction: row;
             justify-content: space-between;
         }
@@ -73,6 +72,30 @@
             left: 630px;
         }
 
+        .mainDiv footer {
+            padding: 20px 0 5px 35px;
+        }
+
+        .icon {
+            color: black;
+            font-size: 30px;
+            width: 60px;
+        }
+
+        .bottom-icon {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        footer p {
+            margin-top: 15px;
+        }
+
+        .gray-color {
+            color: gray;
+        }
+
     </style>
 
 </head>
@@ -89,9 +112,26 @@
     </header>
     <div class="middle-div">
         <img src="image/javaScript.png" alt="java script picture">
-        <a href="" download="new-filename"><i class="fa fa-user"></i></a>
-        <a href="" download="new-filename"><i class="fa fa-volume-up"></i></a>
+        <a href=""><i class="fa fa-user"></i></a>
+        <a href=""><i class="fa fa-volume-up"></i></a>
     </div>
+    <footer>
+        <div class="bottom-icon">
+            <div>
+                <a href=""><i class="icon fa fa fa-heart"></i></a>
+                <a href=""><i class="icon fa fa-comment"></i></a>
+                <a href=""><i class="icon fa fa-share-square"></i></a>
+            </div>
+            <div>
+                <a href=""><i class="icon fa fa-tag"></i></a>
+            </div>
+        </div>
+        <p ><b>1,123,923 views</b></p>
+        <p ><b>Lorem </b>ipsum dolor sit amet, consectetur adipisicing elit. Minima, quam, ente! Animi dolore
+            doloribus ducimus eaque </p>
+        <p class="gray-color">view all 2,128 comment</p>
+        <p class="gray-color"><small>22 HOURS AGO</small></p>
+    </footer>
 </div>
 </body>
 </html>
