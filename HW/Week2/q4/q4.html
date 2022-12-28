@@ -31,7 +31,7 @@
             font-size: 15px;
             background-color: #4e5054;
             padding: 17px 60px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
         }
 
         .fa-bars {
@@ -58,12 +58,89 @@
             transform: translateX(-9%) translateY(-25%) rotate(95deg);
         }
 
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #2e2c34;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .sidenav a, p {
+            padding: 8px 30px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        h1 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .link {
+            display: flex;
+            justify-content: space-between;
+        }
+
     </style>
 
 </head>
 <body>
-<button class="sideBar-button">
+<button class="sideBar-button" onclick="openNav()">
     <i class="fa fa-bars"></i>
 </button>
+<div id="mySidenav" class="sidenav">
+    <h1>Site:</h1>
+    <div>
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <div class="link">
+            <a href="#">Google</a>
+            <p>></p>
+        </div>
+        <div class="link">
+            <a href="#">Zarebin</a>
+            <p>></p>
+        </div>
+        <div class="link">
+            <a href="#">Telegram</a>
+            <p>></p>
+        </div>
+        <div class="link">
+            <a href="#">Github</a>
+            <p>></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
 </body>
 </html>
