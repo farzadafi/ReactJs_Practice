@@ -102,6 +102,30 @@
             border: 2px solid yellow;
         }
 
+        .key-container {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            margin-bottom: 15px;
+            width: 300px;
+            height: 100px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .key-container button {
+            color: white;
+            width: 140px;
+            height: 50px;
+            background-color: rgb(48, 49, 52);
+            border: none;
+            border-radius: 10px;
+        }
+
+        .key-container button:hover {
+            cursor: pointer;
+            background-color: rgb(58, 49, 52);
+        }
+
     </style>
 
 </head>
@@ -120,8 +144,14 @@
     <img src="image/google.png" alt="google-image">
     <div class="input-container">
         <i class="fa fa-search left-icon"></i>
-        <input type="text" class="input-field">
+        <label>
+            <input type="text" class="input-field">
+        </label>
         <i class="fa fa-microphone right-icon"></i>
+    </div>
+    <div class="key-container">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button>
     </div>
 </main>
 </body>
