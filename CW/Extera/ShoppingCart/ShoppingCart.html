@@ -60,12 +60,26 @@
             background-color: purple;
             height: 400px;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             padding: 20px 0;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 0fr;
+            align-items: center;
         }
 
         main div img {
             width: 100px;
+        }
+
+        main button {
+            background-color: whitesmoke;
+            border: none;
+        }
+
+        main button:hover {
+            cursor: pointer;
         }
 
     </style>
@@ -80,8 +94,25 @@
         </header>
         <hr>
         <main>
-            <div>
-                <img src="image/img.png" alt="T-shirt">
+            <div class="row">
+                <div>
+                    <img src="image/img.png" alt="T-shirt">
+                </div>
+                <div>
+                    <p>Shirt</p>
+                    <strong>Cotton T-shirt</strong>
+                </div>
+                <div>
+                    <button>-</button>
+                    <strong>1</strong>
+                    <button>+</button>
+                </div>
+                <div>
+                    <strong>$44.00</strong>
+                </div>
+                <div>
+                    &times;
+                </div>
             </div>
         </main>
     </div>
