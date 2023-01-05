@@ -3,101 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
-    <style>
-
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: grid;
-            align-content: center;
-            height: 100vh;
-            justify-items: center;
-            background-color: #cccccc;
-        }
-
-        .main-div {
-            height: 600px;
-            width: 1200px;
-            border-radius: 25px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-        }
-
-        .left-div {
-            background-color: whitesmoke;
-            height: 100%;
-            border-radius: 25px 0 0 25px;
-            padding: 25px;
-        }
-
-        .right-div {
-            background-color: gray;
-            height: 100%;
-            border-radius: 0 25px 25px 0;
-        }
-
-        .left-div header {
-            border-radius: 25px 0 0 0;
-            height: 75px;
-            display: grid;
-            grid-template-columns: 9fr 1fr;
-            align-content: space-between;
-        }
-
-        .left-div header p {
-            display: inherit;
-            align-content: center;
-            color: gray;
-        }
-
-        .left-div main {
-            height: 400px;
-            display: grid;
-        }
-
-        .row {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 0fr;
-            align-items: center;
-            border-bottom: rgb(235, 235, 235) 2px solid;
-            border-top: rgb(235, 235, 235) 2px solid;
-            padding: 20px 0;
-        }
-
-        main div img {
-            width: 100px;
-        }
-
-        main button {
-            background-color: whitesmoke;
-            border: none;
-        }
-
-        main button:hover {
-            cursor: pointer;
-        }
-
-        .row p, button {
-            color: gray;
-        }
-
-        footer button {
-            margin-top: 50px;
-            background-color: whitesmoke;
-            border: none;
-        }
-
-        footer button:hover {
-            cursor: pointer;
-        }
-
-    </style>
-
 </head>
 <body>
 <div class="main-div">
@@ -175,7 +80,30 @@
             <button>back to shop</button>
         </footer>
     </div>
-    <div class="right-div"></div>
+    <div class="right-div">
+        <header>
+            <h1>Summary</h1>
+        </header>
+        <main>
+            <div class="right-row">
+                <p>ITEMS 3</p>
+                <p>$ 132.00</p>
+                <strong>SHOPPING</strong>
+                <label for="first"></label>
+                <select name="" id="first">Standard-Delivery 65.00</select><br>
+                <strong>GIVE CODE</strong>
+                <label for="second"></label>
+                <select name="" id="second">Standard-Delivery 65.00</select>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>TOTAL PRICE</p>
+                <p>$137.00</p>
+            </div>
+            <button>CHECKOUT</button>
+        </footer>
+    </div>
 </div>
 </body>
 </html>
