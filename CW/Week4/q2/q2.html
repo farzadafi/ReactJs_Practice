@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            background-color: gray;
+            display: grid;
+            height: 100vh;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .main-container {
+            background-color: rgb(205, 234, 141);
+            padding: 10px;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+        }
+
+        .blue-light-div {
+            background-color: rgb(217, 232, 255);
+            height: 100px;
+            width: 100px;
+        }
+
+        .pink-light-div {
+            background-color: rgb(255, 230, 205);
+        }
+
+        .el-1 {
+            grid-column: 4/7;
+        }
+
+        .el-2 {
+            grid-column: 1/4;
+            width: 300px;
+        }
+
+        .fl-1 {
+            grid-column: 5/6;
+        }
+
+        .el-3 {
+            grid-column: 4/7;
+        }
+
+        .fl-2 {
+            grid-column: 2/3;
+        }
+
+        .fl-3 {
+            grid-column: 5/6;
+        }
+
+        .fl-4 {
+            grid-column: 4/7;
+            width: 115px;
+        }
+
+        .fl-5 {
+            grid-column: 3/4;
+        }
+
+        .fl-6 {
+            grid-column: 5/7;
+        }
+
+        .el-4 {
+            grid-column: 2/6;
+        }
+
+        .fl-8, .el-4 {
+            grid-row: 7/8;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div class="main-container">
+    <div class="blue-light-div"></div>
+    <div class="blue-light-div"></div>
+    <div class="blue-light-div"></div>
+    <div class="pink-light-div el-1"></div>
+
+    <div class="pink-light-div el-2"></div>
+    <div class="blue-light-div fl-1"></div>
+    <div class="blue-light-div"></div>
+
+    <div class="pink-light-div el-2"></div>
+    <div class="pink-light-div el-3"></div>
+
+    <div class="blue-light-div fl-2"></div>
+    <div class="blue-light-div"></div>
+    <div class="blue-light-div fl-3"></div>
+    <div class="blue-light-div"></div>
+
+    <div class="blue-light-div"></div>
+    <div class="blue-light-div"></div>
+    <div class="blue-light-div"></div>
+    <div class="blue-light-div fl-4"></div>
+
+    <div class="blue-light-div fl-5"></div>
+    <div class="blue-light-div fl-6"></div>
+
+        <div class="blue-light-div fl-8"></div>
+        <div class="pink-light-div el-4"></div>
+        <div class="blue-light-div fl-7"></div>
+</div>
+
+</body>
+</html>
