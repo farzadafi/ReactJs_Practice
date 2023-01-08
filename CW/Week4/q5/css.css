@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: gray;
+    padding: 20px;
+}
+
+p {
+    font-size: 25px;
+    color: black;
+    font-family: "Noto Serif", serif;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #ffba41;
+    width: 150px;
+    height: 60px;
+    border-radius: 25px;
+    border: none;
+    font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #ffdb72;
+}
