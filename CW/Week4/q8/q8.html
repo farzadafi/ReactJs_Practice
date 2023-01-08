@@ -1,10 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            background-color: gray;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            height: 100vh;
+        }
+
+        .main-container {
+            background-color: deeppink;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            height: 70px;
+            width: 300px;
+            grid-template-columns: 1fr 1fr;
+            padding: 10px;
+            border-radius: 50px
+        }
+
+        select {
+            width: 100px;
+            background-color: orange;
+            border: none;
+            border-radius: 25px;
+            padding: 10px;
+        }
+
+        select:focus {
+            background-color: purple;
+            color: white;
+        }
+
+        button {
+            background-color: orange;
+            border: none;
+            border-radius: 25px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: yellow;
+        }
+
+    </style>
+
+
 </head>
 <body>
+<div class="main-container">
+    <label for="colorSelect">
+        <select id="colorSelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>White</option>
+            <option>Black</option>
+        </select>
+    </label>
+    <button onclick="removeColor()">remove color</button>
+</div>
 
+
+<script>
+
+    const removeColor = () => {
+        let select = document.getElementById('colorSelect');
+        let lastIndex = Number(select.options.length - 1 );
+        select.remove(lastIndex);
+    }
+
+</script>
 </body>
 </html>
