@@ -6,59 +6,7 @@
 
     <style>
 
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
 
-        html, body {
-            background-color: gray;
-            display: grid;
-            justify-content: center;
-            align-content: center;
-            height: 100vh;
-            font-family: "Noto Serif", serif;
-            font-size: 30px;
-        }
-
-        .form {
-            background-color: deeppink;
-            display: grid;
-            gap: 20px;
-            width: 500px;
-            height: 300px;
-            justify-content: center;
-            border-radius: 25px;
-        }
-
-        p {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        input {
-            width: 200px;
-            height: 40px;
-            border-radius: 25px;
-            padding: 10px;
-            border: none;
-        }
-
-        button {
-            background-color: orange;
-            border: none;
-            border-radius: 25px;
-            width: 150px;
-            height: 50px;
-            justify-content: inherit;
-            margin: auto;
-        }
-
-        button:hover {
-            cursor: pointer;
-            background-color: #ffdb72;
-        }
 
 
     </style>
@@ -79,18 +27,7 @@
 
 <script>
 
-    function getInformation() {
-        let button = document.querySelector('#getInformationButton');
-        button.addEventListener('click', function () {
-            alert("farzad")
 
-            let username = document.getElementById('username').value;
-            let password = document.getElementById('password').value;
-
-            alert(`entered username is ${username}`)
-            alert(`entered password is ${password}`)
-        });
-    }
 
 </script>
 
