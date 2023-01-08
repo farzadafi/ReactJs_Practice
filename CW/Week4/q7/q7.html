@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            background-color: gray;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            height: 100vh;
+        }
+
+        table, tr, th, td{
+            border: 2px orange solid;
+            padding: 8px;
+            background-color: deeppink;
+            color: white;
+        }
+
+        button {
+            width: 90px;
+            margin: 20px 30px;
+            height: 40px;
+            background-color: orange;
+            border: none;
+            border-radius: 25px;
+        }
+        
+        button:hover {
+            cursor: pointer;
+            background-color: yellow;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div class="main-container">
+    <table id="table">
+        <tr>
+            <th>row1</th>
+            <th>row2</th>
+        </tr>
+        <tr id="tr">
+            <td>farzad</td>
+            <td>farzad</td>
+        </tr>
+    </table>
+    <button onclick="addRow()" id="addRow">add row</button>
+</div>
+
+<script>
+
+   function addRow() {
+       let tableRow = document.getElementById('table');
+       let row = document.createElement("tr");
+       let cell1 = document.createElement("td");
+       let cell2 = document.createElement("td");
+       cell1.innerHTML = "farzad";
+       cell2.innerHTML = "farzad";
+       row.append(cell2, cell1)
+       tableRow.appendChild(row);
+   }
+
+</script>
+</body>
+</html>
