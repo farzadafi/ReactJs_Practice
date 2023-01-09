@@ -206,18 +206,13 @@
         let email = document.createElement("td");
         let phone = document.createElement("td");
         let id = document.createElement("td");
-        let editButton = document.createElement("button");
-        let editTd = document.createElement("td");
         id.innerHTML = information[0];
         firstname.innerHTML = information[1];
         lastname.innerHTML = information[2];
         email.innerHTML = information[3];
         phone.innerHTML = information[4]
-        editButton.innerHTML = 'ویرایش';
-        editButton.className = "edit-btn";
-        editTd.append(editButton);
-        editButton.setAttribute('onclick', `editSpecificRows(${information[0]})`);
         let removeTd = createRemoveButton(information[0]);
+        let editTd = createEditButton(information[0])
 
 
         row.append(id, firstname, lastname, email, phone, editTd, removeTd);
@@ -242,6 +237,16 @@
         removeButton.className = "remove-btn";
         removeTd.append(removeButton);
         return removeTd;
+    }
+
+    const createEditButton = (numberRow) => {
+        let editButton = document.createElement("button");
+        let editTd = document.createElement("td");
+        editButton.innerHTML = 'ویرایش';
+        editButton.className = "edit-btn";
+        editTd.append(editButton);
+        editButton.setAttribute('onclick', `editSpecificRows(${numberRow})`);
+        return editTd;
     }
 
 
