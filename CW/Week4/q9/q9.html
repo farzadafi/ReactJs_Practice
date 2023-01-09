@@ -135,6 +135,9 @@
         <label for="rowId" aria-disabled="true">
             <input id="rowId" value="1" type="number" hidden="hidden">
         </label>
+        <label for="tempRowNumber" aria-disabled="true">
+            <input id="tempRowNumber" type="number" hidden="hidden">
+        </label>
         <label for="firstname">
             <input id="firstname" type="text" placeholder="نام">
         </label>
@@ -171,20 +174,33 @@
 
     window.onload = () => {
         document.getElementById("rowId").value = Number(1);
+        document.getElementById("tempRowNumber").value = Number(-1);
+        document.getElementById('firstname').value = '';
+        document.getElementById('lastname').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('phone').value = '';
     }
 
     const getInformation = () => {
-        let id = document.getElementById('rowId').value;
+        let tempRowNumber = Number(document.getElementById('tempRowNumber').value);
+        let id;
+        let isTemp = 1;
+        if (tempRowNumber === -1)
+            id = document.getElementById('rowId').value;
+        else {
+            id = document.getElementById('tempRowNumber').value;
+            isTemp = 0;
+        }
         let firstname = document.getElementById('firstname').value;
         let lastname = document.getElementById('lastname').value;
         let email = document.getElementById('email').value;
         let phone = document.getElementById('phone').value;
 
         let information = [id, firstname, lastname, email, phone];
-        setInformation(information);
+        setInformation(information, isTemp);
     }
 
-    const setInformation = (information) => {
+    const setInformation = (information, isTemp) => {
         let tableRow = document.getElementById('table');
         let row = document.createElement("tr");
         let firstname = document.createElement("td");
@@ -206,7 +222,7 @@
         removeButton.setAttribute('onclick', `deleteSpecificRows(${information[0]})`);
         editButton.className = "edit-btn";
         editTd.append(editButton);
-        editButton.setAttribute('onclick', `deleteSpecificRows(${information[0]})`);
+        editButton.setAttribute('onclick', `editSpecificRows(${information[0]})`);
         removeButton.className = "remove-btn";
         removeTd.append(removeButton);
 
@@ -214,7 +230,17 @@
         row.append(id, firstname, lastname, email, phone, editTd, removeTd);
         row.setAttribute('id', `tr${information[0]}`);
         tableRow.appendChild(row);
-        increaseIdValue(information[0])
+        document.getElementById('tempRowNumber').value = -1;
+
+        if (Number(isTemp) !== 0)
+            increaseIdValue(information[0])
+        if (isTemp === 0)
+            deleteSpecificRows(information[0]);
+
+        document.getElementById('firstname').value = '';
+        document.getElementById('lastname').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('phone').value = '';
     }
 
     const increaseIdValue = (numberId) => {
@@ -228,7 +254,20 @@
 
     const editSpecificRows = (rowId) => {
         let row = document.getElementById(`tr${rowId}`);
-        alert(row.getAttribute('td'))
+        let td = row.getElementsByTagName('td');
+
+        let rowNumber = td[0].innerHTML;
+        let firstname = td[1].innerHTML;
+        let lastname = td[2].innerHTML;
+        let email = td[3].innerHTML;
+        let phone = td[4].innerHTML;
+
+
+        document.getElementById('firstname').value = firstname;
+        document.getElementById('lastname').value = lastname;
+        document.getElementById('email').value = email;
+        document.getElementById('phone').value = phone;
+        document.getElementById('tempRowNumber').value = rowNumber;
     }
 
 </script>
