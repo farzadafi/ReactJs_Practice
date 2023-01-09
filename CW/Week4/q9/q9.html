@@ -96,6 +96,34 @@
             height: 10px;
         }
 
+        .remove-btn {
+            background-color: orangered;
+            height: 40px;
+            width: 100px;
+            border: none;
+            border-radius: 30px;
+            color: white;
+        }
+
+        .edit-btn {
+            background-color: purple;
+            height: 40px;
+            width: 100px;
+            border: none;
+            border-radius: 30px;
+            color: white;
+        }
+
+        .remove-btn:hover {
+            cursor: pointer;
+            background-color: orange;
+        }
+
+        .edit-btn:hover {
+            cursor: pointer;
+            background-color: rebeccapurple;
+        }
+
 
     </style>
 
@@ -141,6 +169,10 @@
 
 <script>
 
+    window.onload = () => {
+        document.getElementById("rowId").value = Number(1);
+    }
+
     const getInformation = () => {
         let id = document.getElementById('rowId').value;
         let firstname = document.getElementById('firstname').value;
@@ -160,22 +192,43 @@
         let email = document.createElement("td");
         let phone = document.createElement("td");
         let id = document.createElement("td");
-        let edit = document.createElement("td");
-        let remove = document.createElement("td");
+        let editButton = document.createElement("button");
+        let editTd = document.createElement("td");
+        let removeButton = document.createElement("button");
+        let removeTd = document.createElement("td");
         id.innerHTML = information[0];
         firstname.innerHTML = information[1];
         lastname.innerHTML = information[2];
         email.innerHTML = information[3];
         phone.innerHTML = information[4]
-        edit.innerHTML = '2';
-        remove.innerHTML = '3';
-        row.append(id, firstname, lastname, email, phone, edit, remove)
+        editButton.innerHTML = 'ویرایش';
+        removeButton.innerHTML = 'حذف';
+        removeButton.setAttribute('onclick', `deleteSpecificRows(${information[0]})`);
+        editButton.className = "edit-btn";
+        editTd.append(editButton);
+        editButton.setAttribute('onclick', `deleteSpecificRows(${information[0]})`);
+        removeButton.className = "remove-btn";
+        removeTd.append(removeButton);
+
+
+        row.append(id, firstname, lastname, email, phone, editTd, removeTd);
+        row.setAttribute('id', `tr${information[0]}`);
         tableRow.appendChild(row);
         increaseIdValue(information[0])
     }
 
     const increaseIdValue = (numberId) => {
         document.getElementById("rowId").value = Number(++numberId);
+    }
+
+    const deleteSpecificRows = (rowId) => {
+        let row = document.getElementById(`tr${rowId}`);
+        row.remove();
+    }
+
+    const editSpecificRows = (rowId) => {
+        let row = document.getElementById(`tr${rowId}`);
+        alert(row.getAttribute('td'))
     }
 
 </script>
