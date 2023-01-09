@@ -88,11 +88,14 @@
             height: 50px;
         }
 
-        td {
-            justify-content: center;
-            display: grid;
-            align-content: center;
+        tr {
         }
+
+        td {
+            text-align: center;
+            height: 10px;
+        }
+
 
     </style>
 
@@ -101,6 +104,9 @@
 <div class="main-container">
     <div class="form">
         <p>فرم ورود اطلاعات</p>
+        <label for="rowId" aria-disabled="true">
+            <input id="rowId" value="1" type="number" hidden="hidden">
+        </label>
         <label for="firstname">
             <input id="firstname" type="text" placeholder="نام">
         </label>
@@ -115,8 +121,8 @@
         </label>
         <button onclick="getInformation()">ثبت اطلاعات</button>
     </div>
-    <div class="table" id="table">
-        <table>
+    <div class="table">
+        <table id="table">
             <tr>
                 <th>شناسه</th>
                 <th>نام</th>
@@ -136,12 +142,13 @@
 <script>
 
     const getInformation = () => {
+        let id = document.getElementById('rowId').value;
         let firstname = document.getElementById('firstname').value;
         let lastname = document.getElementById('lastname').value;
         let email = document.getElementById('email').value;
         let phone = document.getElementById('phone').value;
 
-        let information = [firstname, lastname, email, phone];
+        let information = [id, firstname, lastname, email, phone];
         setInformation(information);
     }
 
@@ -155,12 +162,20 @@
         let id = document.createElement("td");
         let edit = document.createElement("td");
         let remove = document.createElement("td");
-        firstname.innerHTML = information[0];
-        lastname.innerHTML = information[1];
-        email.innerHTML = information[2];
-        phone.innerHTML = information[3]
+        id.innerHTML = information[0];
+        firstname.innerHTML = information[1];
+        lastname.innerHTML = information[2];
+        email.innerHTML = information[3];
+        phone.innerHTML = information[4]
+        edit.innerHTML = '2';
+        remove.innerHTML = '3';
         row.append(id, firstname, lastname, email, phone, edit, remove)
         tableRow.appendChild(row);
+        increaseIdValue(information[0])
+    }
+
+    const increaseIdValue = (numberId) => {
+        document.getElementById("rowId").value = Number(++numberId);
     }
 
 </script>
