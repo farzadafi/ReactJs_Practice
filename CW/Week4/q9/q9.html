@@ -201,20 +201,19 @@
     const setInformation = (information, isTemp) => {
         let tableRow = document.getElementById('table');
         let row = document.createElement("tr");
-        let lastname = document.createElement("td");
         let email = document.createElement("td");
         let phone = document.createElement("td");
         let id = document.createElement("td");
         id.innerHTML = information[0];
-        lastname.innerHTML = information[2];
         email.innerHTML = information[3];
         phone.innerHTML = information[4]
         let firstnameTd = createFirstnameTd(information[1])
+        let lastnameTd = createLastnameTd(information[2])
         let removeTd = createRemoveButton(information[0]);
         let editTd = createEditButton(information[0])
 
 
-        row.append(id, firstnameTd, lastname, email, phone, editTd, removeTd);
+        row.append(id, firstnameTd, lastnameTd, email, phone, editTd, removeTd);
         row.setAttribute('id', `tr${information[0]}`);
         tableRow.appendChild(row);
         document.getElementById('tempRowNumber').value = -1;
@@ -231,6 +230,12 @@
     const createFirstnameTd = (firstnameValue) => {
         let firstname = document.createElement("td");
         firstname.innerHTML = firstnameValue;
+        return firstname;
+    }
+
+    const createLastnameTd = (lastnameValue) => {
+        let firstname = document.createElement("td");
+        firstname.innerHTML = lastnameValue;
         return firstname;
     }
 
