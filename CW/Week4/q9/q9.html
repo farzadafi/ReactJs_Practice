@@ -180,7 +180,6 @@
     }
 
     const getInformation = () => {
-        alert("here")
         let tempRowNumber = Number(document.getElementById('tempRowNumber').value);
         let id;
         let isTemp = 1;
@@ -200,17 +199,9 @@
     }
 
     const setInformation = (information, isTemp) => {
-        if (isTemp === 0) {
-            let row = document.getElementById(`tr${information[0]}`);
-            let td = row.getElementsByTagName('td');
-
-            td[1].innerHTML = information[1];
-            td[2].innerHTML = information[2];
-            td[3].innerHTML = information[3];
-            td[4].innerHTML = information[4];
-            document.getElementById('tempRowNumber').value = -1;
-
-        } else {
+        if (isTemp === 0)
+            editRow(information);
+        else {
             let tableRow = document.getElementById('table');
             let row = document.createElement("tr");
 
@@ -315,6 +306,17 @@
         let value = [firstname, lastname, email, phone];
         setFormValue(value);
         document.getElementById('tempRowNumber').value = rowNumber;
+    }
+
+    const editRow = (information) => {
+        let row = document.getElementById(`tr${information[0]}`);
+        let td = row.getElementsByTagName('td');
+
+        td[1].innerHTML = information[1];
+        td[2].innerHTML = information[2];
+        td[3].innerHTML = information[3];
+        td[4].innerHTML = information[4];
+        document.getElementById('tempRowNumber').value = -1;
     }
 
 </script>
