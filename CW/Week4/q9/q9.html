@@ -208,21 +208,16 @@
         let id = document.createElement("td");
         let editButton = document.createElement("button");
         let editTd = document.createElement("td");
-        let removeButton = document.createElement("button");
-        let removeTd = document.createElement("td");
         id.innerHTML = information[0];
         firstname.innerHTML = information[1];
         lastname.innerHTML = information[2];
         email.innerHTML = information[3];
         phone.innerHTML = information[4]
         editButton.innerHTML = 'ویرایش';
-        removeButton.innerHTML = 'حذف';
-        removeButton.setAttribute('onclick', `deleteSpecificRows(${information[0]})`);
         editButton.className = "edit-btn";
         editTd.append(editButton);
         editButton.setAttribute('onclick', `editSpecificRows(${information[0]})`);
-        removeButton.className = "remove-btn";
-        removeTd.append(removeButton);
+        let removeTd = createRemoveButton(information[0]);
 
 
         row.append(id, firstname, lastname, email, phone, editTd, removeTd);
@@ -238,6 +233,17 @@
         let value = ['', '', '', '',];
         setFormValue(value);
     }
+
+    const createRemoveButton = (numberRow) => {
+        let removeButton = document.createElement("button");
+        let removeTd = document.createElement("td");
+        removeButton.innerHTML = 'حذف';
+        removeButton.setAttribute('onclick', `deleteSpecificRows(${numberRow})`);
+        removeButton.className = "remove-btn";
+        removeTd.append(removeButton);
+        return removeTd;
+    }
+
 
     const setFormValue = (information) => {
         document.getElementById('firstname').value = information[0];
