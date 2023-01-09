@@ -175,10 +175,8 @@
     window.onload = () => {
         document.getElementById("rowId").value = Number(1);
         document.getElementById("tempRowNumber").value = Number(-1);
-        document.getElementById('firstname').value = '';
-        document.getElementById('lastname').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('phone').value = '';
+        let value = ['', '', '', '',];
+        setFormValue(value);
     }
 
     const getInformation = () => {
@@ -237,10 +235,15 @@
         if (isTemp === 0)
             deleteSpecificRows(information[0]);
 
-        document.getElementById('firstname').value = '';
-        document.getElementById('lastname').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('phone').value = '';
+        let value = ['', '', '', '',];
+        setFormValue(value);
+    }
+
+    const setFormValue = (information) => {
+        document.getElementById('firstname').value = information[0];
+        document.getElementById('lastname').value = information[1];
+        document.getElementById('email').value = information[2];
+        document.getElementById('phone').value = information[3];
     }
 
     const increaseIdValue = (numberId) => {
@@ -262,11 +265,8 @@
         let email = td[3].innerHTML;
         let phone = td[4].innerHTML;
 
-
-        document.getElementById('firstname').value = firstname;
-        document.getElementById('lastname').value = lastname;
-        document.getElementById('email').value = email;
-        document.getElementById('phone').value = phone;
+        let value = [firstname, lastname, email, phone];
+        setFormValue(value);
         document.getElementById('tempRowNumber').value = rowNumber;
     }
 
