@@ -201,18 +201,16 @@
     const setInformation = (information, isTemp) => {
         let tableRow = document.getElementById('table');
         let row = document.createElement("tr");
-        let phone = document.createElement("td");
-        let id = document.createElement("td");
-        id.innerHTML = information[0];
-        phone.innerHTML = information[4]
+        let idTd = createIdTd(information[0])
         let firstnameTd = createFirstnameTd(information[1])
         let lastnameTd = createLastnameTd(information[2])
         let emailTd = createEmailTd(information[3])
+        let phoneTd = createPhoneTd(information[4])
         let removeTd = createRemoveButton(information[0]);
         let editTd = createEditButton(information[0])
 
 
-        row.append(id, firstnameTd, lastnameTd, emailTd, phone, editTd, removeTd);
+        row.append(idTd, firstnameTd, lastnameTd, emailTd, phoneTd, editTd, removeTd);
         row.setAttribute('id', `tr${information[0]}`);
         tableRow.appendChild(row);
         document.getElementById('tempRowNumber').value = -1;
@@ -224,6 +222,12 @@
 
         let value = ['', '', '', '',];
         setFormValue(value);
+    }
+
+    const createIdTd = (idValue) => {
+        let id = document.createElement("td");
+        id.innerHTML = idValue;
+        return id;
     }
 
     const createFirstnameTd = (firstnameValue) => {
@@ -242,6 +246,12 @@
         let email = document.createElement("td");
         email.innerHTML = emailValue;
         return email;
+    }
+
+    const createPhoneTd = (phoneValue) => {
+        let phone = document.createElement("td");
+        phone.innerHTML = phoneValue;
+        return phone;
     }
 
     const createRemoveButton = (numberRow) => {
