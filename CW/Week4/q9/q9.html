@@ -201,29 +201,43 @@
     const setInformation = (information, isTemp) => {
         if (isTemp === 0)
             editRow(information);
-        else {
-            let tableRow = document.getElementById('table');
-            let row = document.createElement("tr");
+        else
+            addRow(information);
 
-            let idTd = createIdTd(information[0])
-            let firstnameTd = createFirstnameTd(information[1])
-            let lastnameTd = createLastnameTd(information[2])
-            let emailTd = createEmailTd(information[3])
-            let phoneTd = createPhoneTd(information[4])
-            let removeTd = createRemoveButton(information[0]);
-            let editTd = createEditButton(information[0])
-
-            row.append(idTd, firstnameTd, lastnameTd, emailTd, phoneTd, editTd, removeTd);
-            row.setAttribute('id', `tr${information[0]}`);
-            tableRow.appendChild(row);
-            document.getElementById('tempRowNumber').value = -1;
-
-            if (Number(isTemp) !== 0)
-                increaseIdValue(information[0])
-
-        }
         let value = ['', '', '', '',];
         setFormValue(value);
+    }
+
+    const editRow = (information) => {
+        let row = document.getElementById(`tr${information[0]}`);
+        let td = row.getElementsByTagName('td');
+
+        td[1].innerHTML = information[1];
+        td[2].innerHTML = information[2];
+        td[3].innerHTML = information[3];
+        td[4].innerHTML = information[4];
+        document.getElementById('tempRowNumber').value = -1;
+    }
+
+    const addRow = (information) => {
+        let tableRow = document.getElementById('table');
+        let row = document.createElement("tr");
+
+        let idTd = createIdTd(information[0])
+        let firstnameTd = createFirstnameTd(information[1])
+        let lastnameTd = createLastnameTd(information[2])
+        let emailTd = createEmailTd(information[3])
+        let phoneTd = createPhoneTd(information[4])
+        let removeTd = createRemoveButton(information[0]);
+        let editTd = createEditButton(information[0])
+
+        row.append(idTd, firstnameTd, lastnameTd, emailTd, phoneTd, editTd, removeTd);
+        row.setAttribute('id', `tr${information[0]}`);
+        tableRow.appendChild(row);
+        document.getElementById('tempRowNumber').value = -1;
+
+        // if (Number(isTemp) !== 0)
+        increaseIdValue(information[0])
     }
 
     const createIdTd = (idValue) => {
@@ -308,16 +322,6 @@
         document.getElementById('tempRowNumber').value = rowNumber;
     }
 
-    const editRow = (information) => {
-        let row = document.getElementById(`tr${information[0]}`);
-        let td = row.getElementsByTagName('td');
-
-        td[1].innerHTML = information[1];
-        td[2].innerHTML = information[2];
-        td[3].innerHTML = information[3];
-        td[4].innerHTML = information[4];
-        document.getElementById('tempRowNumber').value = -1;
-    }
 
 </script>
 </body>
