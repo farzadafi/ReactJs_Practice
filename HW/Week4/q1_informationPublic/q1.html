@@ -237,12 +237,7 @@
         let buttonDiv = document.createElement('div');
         buttonDiv.className = 'button-div';
 
-        let trashButton = document.createElement('button');
-        let buttonIcon = document.createElement('ion-icon');
-        buttonIcon.className = 'icon';
-        buttonIcon.name = 'trash-outline';
-        buttonIcon.size = 'large';
-        trashButton.append(buttonIcon);
+        let trashButton = createTrashButton();
 
         let eyeButton = document.createElement('button');
         let eyeButtonIcon = document.createElement('ion-icon');
@@ -254,6 +249,16 @@
         buttonDiv.append(trashButton);
         buttonDiv.append(eyeButton)
         return buttonDiv;
+    }
+
+    const createTrashButton = () => {
+        let trashButton = document.createElement('button');
+        let buttonIcon = document.createElement('ion-icon');
+        buttonIcon.className = 'icon';
+        buttonIcon.name = 'trash-outline';
+        buttonIcon.size = 'large';
+        trashButton.append(buttonIcon);
+        return trashButton;
     }
 
     const getNowDate = () => {
