@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
     <style>
 
         * {
@@ -26,9 +26,6 @@
             background-color: #cccccc;
             border-radius: 20px;
             padding: 5px 10px;
-        }
-
-        .form {
         }
 
         .form input {
@@ -63,34 +60,110 @@
             font-weight: bolder;
         }
 
+        .information {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .small-color {
+            background-color: rgb(163, 50, 233, 0.5);
+            border-radius: 15px;
+            width: 5px;
+            height: 35px;
+
+        }
+
+        p, strong, span {
+            margin-left: 10px;
+        }
+
+        span {
+            color: gray;
+            font-size: 15px;
+        }
+
+        .right-div {
+            text-align: right;
+            vertical-align: bottom;
+            transform: translateY(40%);
+        }
+
+        .right-div button {
+            background-color: #cccccc;
+            border: none;
+            margin-right: 30px;
+            width: 10px;
+        }
+
+        .right-div button:hover {
+            cursor: pointer;
+        }
+
+        .icon {
+            color: purple;
+            margin-right: 10px;
+        }
+
+        .require {
+            color: red;
+            font-size: 12px;
+        }
+
     </style>
 
 
 </head>
 <body>
-<div class="main-container">
+<div id="main-container" class="main-container">
     <div class="form">
         <label for="title">
             <input type="text" id="title" placeholder="title">
         </label>
+        <p id="p-title" class="require" hidden="hidden">this field is required</p>
         <label for="description">
             <input type="text" id="description" placeholder="description">
         </label>
         <label for="details">
             <input type="text" id="details" placeholder="details">
         </label>
-        <button>Submit</button>
+        <p id="p-details" class="require" hidden="hidden">this field is required</p>
+        <button onclick="add()">Submit</button>
         <label for="sortKey">
             <select name="sortKey" id="sortKey">
-                <option >Newest</option>
-                <option >Oldest</option>
-                <option >A-Z</option>
+                <option>Newest</option>
+                <option>Oldest</option>
+                <option>A-Z</option>
             </select>
         </label>
     </div>
     <div class="information">
-
+        <div class="small-color">
+            <strong>farzad</strong>
+            <p>farzad</p>
+            <span>farzad</span>
+        </div>
+        <div class="right-div">
+            <button>
+                <ion-icon class="icon" name="eye-outline" size="large"></ion-icon>
+            </button>
+            <button>
+                <ion-icon class="icon" name="trash-outline" size="large"></ion-icon>
+            </button>
+        </div>
     </div>
 </div>
+
+<script>
+
+    window.onload = () => {
+        document.getElementById('title').value = '';
+        document.getElementById('details').value = '';
+    }
+
+
+
+</script>
+
 </body>
 </html>
