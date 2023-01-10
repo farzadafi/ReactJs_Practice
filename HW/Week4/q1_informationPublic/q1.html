@@ -177,14 +177,9 @@
 
             let informationDiv = createInformationDiv();
 
-            let strong = document.createElement('strong');
-            strong.innerHTML = `${title}`;
-            strong.setAttribute('margin-right', '10px');
+            let strong = createStrong(title);
 
-            let today = getNowDate();
-            let date = document.createElement('span');
-            date.innerHTML = String(today);
-            date.setAttribute('margin-right', '10px');
+
 
             let p = document.createElement('p');
             p.innerHTML = `${description}`
@@ -217,6 +212,15 @@
         informationDiv.className = 'information';
         return informationDiv;
     }
+
+    const createStrong = (title) => {
+        let strong = document.createElement('strong');
+        strong.innerHTML = `${title}`;
+        strong.setAttribute('margin-right', '10px');
+        return strong;
+    }
+
+
 
     const getNowDate = () => {
         let today = new Date();
