@@ -64,6 +64,7 @@
             margin-top: 30px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            background-color: rgb(163, 50, 233, 0.3);
         }
 
         .small-color {
@@ -176,10 +177,8 @@
             setAttribute('p-title', 'hidden', 'hidden')
             setAttribute('p-details', 'hidden', 'hidden')
             let informationDiv = createInformationDiv(title, description);
-            let buttonDiv = createButtonDiv();
 
             document.getElementById('main-container').append(informationDiv);
-            document.getElementById('main-container').append(buttonDiv);
         }
     }
 
@@ -198,7 +197,8 @@
         let date = createSpanDate();
         let p = createP(description);
         let innerDiv = createInnerDiv(strong, p, date);
-        informationDiv.append(innerDiv);
+        let buttonDiv = createButtonDiv();
+        informationDiv.append(innerDiv, buttonDiv);
         return informationDiv;
     }
 
@@ -238,16 +238,9 @@
         buttonDiv.className = 'button-div';
 
         let trashButton = createTrashButton();
-
-        let eyeButton = document.createElement('button');
-        let eyeButtonIcon = document.createElement('ion-icon');
-        eyeButtonIcon.className = 'icon';
-        eyeButtonIcon.name = 'eye-outline';
-        eyeButtonIcon.size = 'large';
-        eyeButton.append(eyeButtonIcon)
-
-        buttonDiv.append(trashButton);
-        buttonDiv.append(eyeButton)
+        let eyeButton = createEyeButton();
+        buttonDiv.append(eyeButton);
+        buttonDiv.append(trashButton)
         return buttonDiv;
     }
 
@@ -259,6 +252,16 @@
         buttonIcon.size = 'large';
         trashButton.append(buttonIcon);
         return trashButton;
+    }
+
+    const createEyeButton = () => {
+        let eyeButton = document.createElement('button');
+        let eyeButtonIcon = document.createElement('ion-icon');
+        eyeButtonIcon.className = 'icon';
+        eyeButtonIcon.name = 'eye-outline';
+        eyeButtonIcon.size = 'large';
+        eyeButton.append(eyeButtonIcon)
+        return eyeButton;
     }
 
     const getNowDate = () => {
