@@ -176,10 +176,8 @@
             setAttribute('p-details', 'hidden', 'hidden')
 
             let informationDiv = createInformationDiv();
-
             let strong = createStrong(title);
-
-
+            let date = createSpanDate();
 
             let p = document.createElement('p');
             p.innerHTML = `${description}`
@@ -220,7 +218,13 @@
         return strong;
     }
 
-
+    const createSpanDate = () => {
+        let today = getNowDate();
+        let date = document.createElement('span');
+        date.innerHTML = String(today);
+        date.setAttribute('margin-right', '10px');
+        return date;
+    }
 
     const getNowDate = () => {
         let today = new Date();
