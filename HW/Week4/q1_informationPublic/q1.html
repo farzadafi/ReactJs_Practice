@@ -176,8 +176,10 @@
             setAttribute('p-title', 'hidden', 'hidden')
             setAttribute('p-details', 'hidden', 'hidden')
             let informationDiv = createInformationDiv(title, description);
+            let buttonDiv = createButtonDiv();
 
             document.getElementById('main-container').append(informationDiv);
+            document.getElementById('main-container').append(buttonDiv);
         }
     }
 
@@ -229,6 +231,29 @@
         innerDiv.append(p);
         innerDiv.append(date);
         return innerDiv;
+    }
+
+    const createButtonDiv = () => {
+        let buttonDiv = document.createElement('div');
+        buttonDiv.className = 'button-div';
+
+        let trashButton = document.createElement('button');
+        let buttonIcon = document.createElement('ion-icon');
+        buttonIcon.className = 'icon';
+        buttonIcon.name = 'trash-outline';
+        buttonIcon.size = 'large';
+        trashButton.append(buttonIcon);
+
+        let eyeButton = document.createElement('button');
+        let eyeButtonIcon = document.createElement('ion-icon');
+        eyeButtonIcon.className = 'icon';
+        eyeButtonIcon.name = 'eye-outline';
+        eyeButtonIcon.size = 'large';
+        eyeButton.append(eyeButtonIcon)
+
+        buttonDiv.append(trashButton);
+        buttonDiv.append(eyeButton)
+        return buttonDiv;
     }
 
     const getNowDate = () => {
