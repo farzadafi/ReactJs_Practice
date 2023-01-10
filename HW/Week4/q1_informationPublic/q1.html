@@ -263,6 +263,8 @@
 
     const createTrashButton = () => {
         let trashButton = document.createElement('button');
+        let numberId = document.getElementById('numberId').value;
+        trashButton.value = String(numberId);
         let buttonIcon = document.createElement('ion-icon');
         buttonIcon.className = 'icon';
         buttonIcon.name = 'trash-outline';
@@ -273,6 +275,8 @@
 
     const createEyeButton = () => {
         let eyeButton = document.createElement('button');
+        let numberId = document.getElementById('numberId').value;
+        eyeButton.value = String(numberId);
         let eyeButtonIcon = document.createElement('ion-icon');
         eyeButtonIcon.className = 'icon';
         eyeButtonIcon.name = 'eye-outline';
