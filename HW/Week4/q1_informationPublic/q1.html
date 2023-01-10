@@ -266,25 +266,29 @@
         let numberId = document.getElementById('numberId').value;
         trashButton.value = String(numberId);
         trashButton.setAttribute('onclick', `removeInformationDiv(${numberId})`)
+        let buttonIcon = createTrashIcon();
+        trashButton.append(buttonIcon);
+        return trashButton;
+    }
+
+    const createTrashIcon = () => {
         let buttonIcon = document.createElement('ion-icon');
         buttonIcon.className = 'icon';
         buttonIcon.name = 'trash-outline';
         buttonIcon.size = 'large';
-        trashButton.append(buttonIcon);
-        return trashButton;
+        return buttonIcon;
     }
 
     const createEyeButton = () => {
         let eyeButton = document.createElement('button');
         let numberId = document.getElementById('numberId').value;
         eyeButton.value = String(numberId);
-        let eyeButtonIcon = document.createElement('ion-icon');
-        eyeButtonIcon.className = 'icon';
-        eyeButtonIcon.name = 'eye-outline';
-        eyeButtonIcon.size = 'large';
+        let eyeButtonIcon = createEyeIcon();
         eyeButton.append(eyeButtonIcon)
         return eyeButton;
     }
+
+
 
     const getNowDate = () => {
         let today = new Date();
