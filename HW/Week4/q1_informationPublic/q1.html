@@ -29,7 +29,6 @@
         }
 
         .form {
-            display: grid;
         }
 
         .form input {
@@ -38,10 +37,24 @@
             border-radius: 10px;
             border: rgb(227, 227, 227) solid 2px;
             padding: 10px;
+            background-color: #cccccc;
         }
 
         .form * {
             margin-top: 5px;
+        }
+
+        .form button, select {
+            width: 100px;
+            height: 35px;
+            background-color: #cccccc;
+            border-radius: 10px;
+            border: rgb(163, 50, 233) solid 2px;
+            text-align: center;
+        }
+
+        .form select option:active {
+            background-color: purple;
         }
 
     </style>
@@ -59,6 +72,14 @@
         </label>
         <label for="details">
             <input type="text" id="details" placeholder="details">
+        </label>
+        <button>Submit</button>
+        <label for="sortKey">
+            <select name="sortKey" id="sortKey">
+                <option class="far" value="volvo">Newest</option>
+                <option value="saab">Oldest</option>
+                <option value="opel">A-Z</option>
+            </select>
         </label>
     </div>
     <div class="information">
