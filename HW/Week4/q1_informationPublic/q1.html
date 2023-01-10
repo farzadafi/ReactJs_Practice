@@ -163,6 +163,7 @@
         document.getElementById('title').value = '';
         document.getElementById('details').value = '';
         document.getElementById('description').value = '';
+        document.getElementById('numberId').value = '1';
     }
 
     const addRow = () => {
@@ -181,6 +182,8 @@
             let informationDiv = createInformationDiv(title, description, details);
 
             document.getElementById('main-container').append(informationDiv);
+            let numberId = document.getElementById('numberId').value;
+            document.getElementById('numberId').value = Number(++numberId)
         }
     }
 
@@ -195,6 +198,8 @@
     const createInformationDiv = (title, description, details) => {
         let informationDiv = document.createElement('div');
         informationDiv.className = 'information';
+        let numberId = document.getElementById('numberId').value;
+        informationDiv.id = `information${numberId}`
         let strong = createStrong(title);
         let date = createSpanDate();
         let p = createP(description);
