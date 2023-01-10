@@ -182,7 +182,7 @@
             strong.innerHTML = `${title}`;
             strong.setAttribute('margin-right', '10px');
 
-            let today = nowDate();
+            let today = getNowDate();
             let date = document.createElement('span');
             date.innerHTML = String(today);
             date.setAttribute('margin-right', '10px');
@@ -213,6 +213,15 @@
         document.getElementById(id).setAttribute(attributeName, attributeValue);
     }
 
+    const getNowDate = () => {
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
+
+        today = mm + '/' + dd + '/' + yyyy;
+        return today;
+    }
 
 </script>
 
