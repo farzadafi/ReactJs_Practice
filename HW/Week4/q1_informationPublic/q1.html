@@ -288,7 +288,13 @@
         return eyeButton;
     }
 
-
+    const createEyeIcon = () => {
+        let eyeButtonIcon = document.createElement('ion-icon');
+        eyeButtonIcon.className = 'icon';
+        eyeButtonIcon.name = 'eye-outline';
+        eyeButtonIcon.size = 'large';
+        return eyeButtonIcon;
+    }
 
     const getNowDate = () => {
         let today = new Date();
