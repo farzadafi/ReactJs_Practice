@@ -128,7 +128,7 @@
             <input type="text" id="details" placeholder="details">
         </label>
         <p id="p-details" class="require" hidden="hidden">this field is required</p>
-        <button onclick="add()">Submit</button>
+        <button onclick="addRow()">Submit</button>
         <label for="sortKey">
             <select name="sortKey" id="sortKey">
                 <option>Newest</option>
@@ -159,6 +159,50 @@
     window.onload = () => {
         document.getElementById('title').value = '';
         document.getElementById('details').value = '';
+    }
+
+    const addRow = () => {
+        let title = document.getElementById('title').value;
+        let description = document.getElementById('description').value;
+        let details = document.getElementById('details').value;
+
+        if (title === '')
+            removeAttribute('p-title', 'hidden');
+        else if (details === '') {
+            setAttribute('p-title', 'hidden', 'hidden')
+            removeAttribute('p-details', 'hidden');
+        } else {
+            setAttribute('p-title', 'hidden', 'hidden')
+            setAttribute('p-details', 'hidden', 'hidden')
+
+            let informationDiv = document.createElement('div');
+            informationDiv.className = 'information';
+
+            let strong = document.createElement('strong');
+            strong.innerHTML = `${title}`;
+            strong.setAttribute('margin-right', '10px');
+
+            let today = nowDate();
+            let date = document.createElement('span');
+            date.innerHTML = String(today);
+            date.setAttribute('margin-right', '10px');
+
+            let p = document.createElement('p');
+            p.innerHTML = `${description}`
+            p.setAttribute('margin-right', '10px');
+
+            let innerDiv = document.createElement('div');
+            innerDiv.className = 'small-color';
+            innerDiv.append(strong)
+            innerDiv.append(p);
+            innerDiv.append(date);
+            innerDiv.setAttribute('span', `${details}`)
+
+            informationDiv.append(innerDiv);
+
+
+            document.getElementById('main-container').append(informationDiv);
+        }
     }
 
 
