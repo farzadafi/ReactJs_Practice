@@ -51,10 +51,16 @@
             border-radius: 10px;
             border: rgb(163, 50, 233) solid 2px;
             text-align: center;
+            color: rgb(13, 50, 163);
         }
 
-        .form select option:active {
-            background-color: purple;
+        .form button:hover, select:hover {
+            background-color: #cccccc;
+            cursor: pointer;
+        }
+
+        .form button:active {
+            font-weight: bolder;
         }
 
     </style>
@@ -76,9 +82,9 @@
         <button>Submit</button>
         <label for="sortKey">
             <select name="sortKey" id="sortKey">
-                <option class="far" value="volvo">Newest</option>
-                <option value="saab">Oldest</option>
-                <option value="opel">A-Z</option>
+                <option >Newest</option>
+                <option >Oldest</option>
+                <option >A-Z</option>
             </select>
         </label>
     </div>
