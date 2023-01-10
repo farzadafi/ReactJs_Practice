@@ -175,8 +175,7 @@
             setAttribute('p-title', 'hidden', 'hidden')
             setAttribute('p-details', 'hidden', 'hidden')
 
-            let informationDiv = document.createElement('div');
-            informationDiv.className = 'information';
+            let informationDiv = createInformationDiv();
 
             let strong = document.createElement('strong');
             strong.innerHTML = `${title}`;
@@ -211,6 +210,12 @@
 
     const setAttribute = (id, attributeName, attributeValue) => {
         document.getElementById(id).setAttribute(attributeName, attributeValue);
+    }
+
+    const createInformationDiv = () => {
+        let informationDiv = document.createElement('div');
+        informationDiv.className = 'information';
+        return informationDiv;
     }
 
     const getNowDate = () => {
