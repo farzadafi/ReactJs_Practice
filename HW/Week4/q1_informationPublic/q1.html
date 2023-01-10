@@ -178,10 +178,7 @@
             let informationDiv = createInformationDiv();
             let strong = createStrong(title);
             let date = createSpanDate();
-
-            let p = document.createElement('p');
-            p.innerHTML = `${description}`
-            p.setAttribute('margin-right', '10px');
+            let p = createP(description);
 
             let innerDiv = document.createElement('div');
             innerDiv.className = 'small-color';
@@ -224,6 +221,13 @@
         date.innerHTML = String(today);
         date.setAttribute('margin-right', '10px');
         return date;
+    }
+
+    const createP = (description) => {
+        let p = document.createElement('p');
+        p.innerHTML = `${description}`
+        p.setAttribute('margin-right', '10px');
+        return p;
     }
 
     const getNowDate = () => {
