@@ -159,6 +159,7 @@
     window.onload = () => {
         document.getElementById('title').value = '';
         document.getElementById('details').value = '';
+        document.getElementById('description').value = '';
     }
 
     const addRow = () => {
@@ -179,17 +180,9 @@
             let strong = createStrong(title);
             let date = createSpanDate();
             let p = createP(description);
-
-            let innerDiv = document.createElement('div');
-            innerDiv.className = 'small-color';
-            innerDiv.append(strong)
-            innerDiv.append(p);
-            innerDiv.append(date);
-            innerDiv.setAttribute('span', `${details}`)
+            let innerDiv = createInnerDiv(strong, p, date);
 
             informationDiv.append(innerDiv);
-
-
             document.getElementById('main-container').append(informationDiv);
         }
     }
@@ -228,6 +221,15 @@
         p.innerHTML = `${description}`
         p.setAttribute('margin-right', '10px');
         return p;
+    }
+
+    const createInnerDiv = (strong, p, date) => {
+        let innerDiv = document.createElement('div');
+        innerDiv.className = 'small-color';
+        innerDiv.append(strong)
+        innerDiv.append(p);
+        innerDiv.append(date);
+        return innerDiv;
     }
 
     const getNowDate = () => {
