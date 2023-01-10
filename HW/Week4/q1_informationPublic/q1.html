@@ -64,7 +64,6 @@
             margin-top: 30px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            background-color: rgb(163, 50, 233, 0.3);
         }
 
         .small-color {
@@ -176,7 +175,7 @@
         } else {
             setAttribute('p-title', 'hidden', 'hidden')
             setAttribute('p-details', 'hidden', 'hidden')
-            let informationDiv = createInformationDiv(title, description);
+            let informationDiv = createInformationDiv(title, description, details);
 
             document.getElementById('main-container').append(informationDiv);
         }
@@ -190,13 +189,14 @@
         document.getElementById(id).setAttribute(attributeName, attributeValue);
     }
 
-    const createInformationDiv = (title, description) => {
+    const createInformationDiv = (title, description, details) => {
         let informationDiv = document.createElement('div');
         informationDiv.className = 'information';
         let strong = createStrong(title);
         let date = createSpanDate();
         let p = createP(description);
-        let innerDiv = createInnerDiv(strong, p, date);
+        let hiddenP = createHiddenP(details);
+        let innerDiv = createInnerDiv(strong, p, date, hiddenP);
         let buttonDiv = createButtonDiv();
         informationDiv.append(innerDiv, buttonDiv);
         return informationDiv;
@@ -224,12 +224,21 @@
         return p;
     }
 
-    const createInnerDiv = (strong, p, date) => {
+    const createHiddenP = (details) => {
+        let p = document.createElement('p');
+        p.innerHTML = `${details}`
+        p.setAttribute('margin-right', '10px');
+        p.setAttribute('hidden', 'hidden');
+        return p;
+    }
+
+    const createInnerDiv = (strong, p, date, hiddenP) => {
         let innerDiv = document.createElement('div');
         innerDiv.className = 'small-color';
         innerDiv.append(strong)
         innerDiv.append(p);
         innerDiv.append(date);
+        innerDiv.append(hiddenP);
         return innerDiv;
     }
 
