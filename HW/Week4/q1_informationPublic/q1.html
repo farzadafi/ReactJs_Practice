@@ -175,14 +175,8 @@
         } else {
             setAttribute('p-title', 'hidden', 'hidden')
             setAttribute('p-details', 'hidden', 'hidden')
+            let informationDiv = createInformationDiv(title, description);
 
-            let informationDiv = createInformationDiv();
-            let strong = createStrong(title);
-            let date = createSpanDate();
-            let p = createP(description);
-            let innerDiv = createInnerDiv(strong, p, date);
-
-            informationDiv.append(innerDiv);
             document.getElementById('main-container').append(informationDiv);
         }
     }
@@ -195,9 +189,14 @@
         document.getElementById(id).setAttribute(attributeName, attributeValue);
     }
 
-    const createInformationDiv = () => {
+    const createInformationDiv = (title, description) => {
         let informationDiv = document.createElement('div');
         informationDiv.className = 'information';
+        let strong = createStrong(title);
+        let date = createSpanDate();
+        let p = createP(description);
+        let innerDiv = createInnerDiv(strong, p, date);
+        informationDiv.append(innerDiv);
         return informationDiv;
     }
 
