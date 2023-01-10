@@ -265,6 +265,7 @@
         let trashButton = document.createElement('button');
         let numberId = document.getElementById('numberId').value;
         trashButton.value = String(numberId);
+        trashButton.setAttribute('onclick', `removeInformationDiv(${numberId})`)
         let buttonIcon = document.createElement('ion-icon');
         buttonIcon.className = 'icon';
         buttonIcon.name = 'trash-outline';
@@ -293,6 +294,10 @@
 
         today = mm + '/' + dd + '/' + yyyy;
         return today;
+    }
+
+    const removeInformationDiv = (numberId) => {
+        document.getElementById(`information${numberId}`).remove();
     }
 
 </script>
