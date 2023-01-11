@@ -273,6 +273,9 @@
         let innerDiv = createInnerDiv(strong, p, date, hiddenP);
         let buttonDiv = createButtonDiv();
         informationDiv.append(innerDiv, buttonDiv);
+        document.getElementById('title').value = '';
+        document.getElementById('details').value = '';
+        document.getElementById('description').value = '';
         return informationDiv;
     }
 
