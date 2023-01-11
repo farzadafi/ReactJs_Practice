@@ -187,7 +187,7 @@
             <select name="sortKey" id="sortKey">
                 <option onclick="newest()">Newest</option>
                 <option>Oldest</option>
-                <option>A-Z</option>
+                <option onclick="sortAlphabetic()">A-Z</option>
             </select>
         </label>
         <label for="numberId">
@@ -206,21 +206,21 @@
             </div>
         </div>
     </div>
-    <div class="information">
-        <div class="small-color">
-            <strong>farzad</strong>
-            <h6>farzad</h6>
-            <span>farzad</span>
+        <div class="information">
+            <div class="small-color">
+                <strong>farzad</strong>
+                <h6>farzad</h6>
+                <span>farzad</span>
+            </div>
+            <div class="button-div">
+                <button>
+                    <ion-icon class="icon" name="eye-outline" size="large"></ion-icon>
+                </button>
+                <button>
+                    <ion-icon class="icon" name="trash-outline" size="large"></ion-icon>
+                </button>
+            </div>
         </div>
-        <div class="button-div">
-            <button>
-                <ion-icon class="icon" name="eye-outline" size="large"></ion-icon>
-            </button>
-            <button>
-                <ion-icon class="icon" name="trash-outline" size="large"></ion-icon>
-            </button>
-        </div>
-    </div>
 </div>
 
 <script>
@@ -271,11 +271,11 @@
         let numberId = document.getElementById('numberId').value;
         informationDiv.id = `information${numberId}`
         let strong = createStrong(title);
-        let date;
-        if(informationDate === '')
-            date = createSpanDate();
-        else
-            date = informationDate;
+        // let date;
+        // if (informationDate === '')
+        //     date = createSpanDate();
+        // else
+        let date = createSpanDate(informationDate);
         let p = createH6Tag(description);
         let hiddenP = createHiddenP(details);
         let innerDiv = createInnerDiv(strong, p, date, hiddenP);
@@ -293,10 +293,13 @@
         return strong;
     }
 
-    const createSpanDate = () => {
+    const createSpanDate = (informationDate) => {
         let today = getNowDate();
         let date = document.createElement('span');
-        date.innerHTML = String(today);
+        if (informationDate === '')
+            date.innerHTML = String(today);
+        else
+            date.innerHTML = String(informationDate);
         date.setAttribute('margin-right', '10px');
         return date;
     }
@@ -411,6 +414,31 @@
 
     }
 
+    const sortAlphabetic = () => {
+        let numberId = document.getElementById('numberId').value - 1;
+        let array = [];
+        for (let i = 1; i <= numberId; i++) {
+            array.push(document.getElementById(`information${i}`))
+        }
+        array.sort(function (a, b) {
+            return a.getElementsByClassName('small-color')
+                .item(0)
+                .getElementsByTagName('strong')
+                .item(0).innerHTML
+                .localeCompare(b.getElementsByClassName('small-color')
+                    .item(0)
+                    .getElementsByTagName('strong')
+                    .item(0).innerHTML)
+        });
+
+        const myNode = document.getElementById("main-container");
+        for (let i = 0; i < numberId; i++) {
+            myNode.removeChild(myNode.lastChild);
+        }
+
+        for (let i = 0; i < numberId; i++)
+            myNode.appendChild(array[i])
+    }
 </script>
 
 </body>
