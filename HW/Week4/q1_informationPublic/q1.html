@@ -396,7 +396,8 @@
         let numberId = document.getElementById('numberId').value - 1;
         let array = [];
         for (let i = 1; i <= numberId; i++) {
-            array.push(document.getElementById(`information${i}`))
+            if (document.getElementById(`information${i}`) !== null)
+                array.push(document.getElementById(`information${i}`))
         }
         array.sort(function (a, b) {
             return a.getElementsByClassName('small-color')
@@ -410,12 +411,14 @@
         });
 
         const myNode = document.getElementById("main-container");
-        for (let i = 0; i < numberId; i++) {
-            myNode.removeChild(myNode.lastChild);
+        for (let i = 1; i < numberId; i++) {
+            myNode.children.item(1)
         }
 
-        for (let i = 0; i < numberId; i++)
-            myNode.appendChild(array[i])
+        for (let i = 0; i < numberId; i++) {
+            if (typeof array[i] !== 'undefined')
+                myNode.appendChild(array[i])
+        }
     }
 </script>
 
