@@ -185,7 +185,7 @@
         <button onclick="addRow()">Submit</button>
         <label for="sortKey">
             <select name="sortKey" id="sortKey">
-                <option>Newest</option>
+                <option onclick="newest()">Newest</option>
                 <option>Oldest</option>
                 <option>A-Z</option>
             </select>
@@ -226,10 +226,14 @@
 <script>
 
     window.onload = () => {
+        removeContent();
+        document.getElementById('numberId').value = '1';
+    }
+
+    const removeContent = () => {
         document.getElementById('title').value = '';
         document.getElementById('details').value = '';
         document.getElementById('description').value = '';
-        document.getElementById('numberId').value = '1';
     }
 
     const addRow = () => {
@@ -245,7 +249,7 @@
         } else {
             setAttribute('p-title', 'hidden', 'hidden')
             setAttribute('p-details', 'hidden', 'hidden')
-            let informationDiv = createInformationDiv(title, description, details);
+            let informationDiv = createInformationDiv(title, description, details, '');
 
             document.getElementById('main-container').append(informationDiv);
             let numberId = document.getElementById('numberId').value;
@@ -261,21 +265,23 @@
         document.getElementById(id).setAttribute(attributeName, attributeValue);
     }
 
-    const createInformationDiv = (title, description, details) => {
+    const createInformationDiv = (title, description, details, informationDate) => {
         let informationDiv = document.createElement('div');
         informationDiv.className = 'information';
         let numberId = document.getElementById('numberId').value;
         informationDiv.id = `information${numberId}`
         let strong = createStrong(title);
-        let date = createSpanDate();
+        let date;
+        if(informationDate === '')
+            date = createSpanDate();
+        else
+            date = informationDate;
         let p = createH6Tag(description);
         let hiddenP = createHiddenP(details);
         let innerDiv = createInnerDiv(strong, p, date, hiddenP);
         let buttonDiv = createButtonDiv();
         informationDiv.append(innerDiv, buttonDiv);
-        document.getElementById('title').value = '';
-        document.getElementById('details').value = '';
-        document.getElementById('description').value = '';
+        removeContent();
         return informationDiv;
     }
 
@@ -399,6 +405,10 @@
 
     const removeInformationDiv = (numberId) => {
         document.getElementById(`information${numberId}`).remove();
+    }
+
+    const newest = () => {
+
     }
 
 </script>
