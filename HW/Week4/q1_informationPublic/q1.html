@@ -114,7 +114,6 @@
             display: none;
             position: fixed;
             z-index: 1;
-            padding-top: 180px;
             left: 0;
             top: 0;
             width: 100%;
@@ -127,15 +126,14 @@
         .modal-content {
             background-color: #cccccc;
             margin: auto;
-            padding: 20px;
+            padding: 5px;
             border: 1px solid #888;
             width: 800px;
             height: 600px;
-            border-radius: 25px;
+            border-radius: 15px;
         }
 
         .close {
-            transform: translateY(-200%);
             color: #aaaaaa;
             float: right;
             font-size: 28px;
@@ -152,6 +150,15 @@
         .no-wrap {
             white-space: nowrap;
         }
+
+        .modal-content span:last-child {
+        }
+
+        .modal-content div:first-child {
+            display: grid;
+            grid-template-columns: 6fr 0fr;
+        }
+
 
     </style>
 
@@ -185,11 +192,15 @@
         <!--modal-->
         <div id="myModal" class="modal">
             <div class="modal-content">
-                <h1 id="modalTitle"></h1>
-                <span onclick="closeModal()" class="close">&times;</span>
-                <p id="modalDescription"></p>
-                <p id="modalDetails"></p>
-                <span id="modalDate"></span>
+                <div>
+                    <h1 id="modalTitle">farzad</h1>
+                    <span onclick="closeModal()" class="close">&times;</span>
+                </div>
+                <p id="modalDescription">Full Stack Developer</p>
+                <p id="modalDetails">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto,
+                    consequatur, dolorem doloremque dolores est, eum facere impedit labore magni minima molestiae
+                    mollitia obcaecati perspiciatis qui quidem repudiandae sed voluptatum!</p>
+                <span id="modalDate">10/10/1000</span>
             </div>
         </div>
     </div>
@@ -356,7 +367,7 @@
         document.getElementById('modalDate').innerHTML = date;
         document.getElementById('modalDetails').innerHTML = details;
 
-        document.getElementById('myModal').style.display = 'block';
+        document.getElementById('myModal').style.display = 'grid';
     }
 
     const closeModal = () => {
