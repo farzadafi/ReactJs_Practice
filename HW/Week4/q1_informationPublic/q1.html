@@ -74,7 +74,7 @@
 
         }
 
-        p, strong, span {
+        p, strong, span, h6 {
             margin-left: 10px;
         }
 
@@ -178,15 +178,17 @@
         <!--modal-->
         <div id="myModal" class="modal">
             <div class="modal-content">
+                <h1 id="modalTitle"></h1>
                 <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
+                <p id="modalDescription"></p>
+                <p id="modalDetails">farzad</p>
             </div>
         </div>
     </div>
     <div class="information">
         <div class="small-color">
             <strong>farzad</strong>
-            <p>farzad</p>
+            <h6>farzad</h6>
             <span>farzad</span>
         </div>
         <div class="button-div">
@@ -245,7 +247,7 @@
         informationDiv.id = `information${numberId}`
         let strong = createStrong(title);
         let date = createSpanDate();
-        let p = createP(description);
+        let p = createH6Tag(description);
         let hiddenP = createHiddenP(details);
         let innerDiv = createInnerDiv(strong, p, date, hiddenP);
         let buttonDiv = createButtonDiv();
@@ -268,11 +270,11 @@
         return date;
     }
 
-    const createP = (description) => {
-        let p = document.createElement('p');
-        p.innerHTML = `${description}`
-        p.setAttribute('margin-right', '10px');
-        return p;
+    const createH6Tag = (description) => {
+        let h6 = document.createElement('h6');
+        h6.innerHTML = `${description}`
+        h6.setAttribute('margin-right', '10px');
+        return h6;
     }
 
     const createHiddenP = (details) => {
@@ -326,10 +328,13 @@
         let eyeButton = document.createElement('button');
         let numberId = document.getElementById('numberId').value;
         eyeButton.value = String(numberId);
+        eyeButton.setAttribute('onclick', `viewInformation(${numberId})`)
         let eyeButtonIcon = createEyeIcon();
         eyeButton.append(eyeButtonIcon)
         return eyeButton;
     }
+
+
 
     const createEyeIcon = () => {
         let eyeButtonIcon = document.createElement('ion-icon');
