@@ -142,13 +142,13 @@
             </li>
         </ul>
         <div>
-            <a class="d-block m-3" href="">
+            <a class="d-block m-3 color-gray" id="reportSectionBtn" href="">
                 <ion-icon name="text-outline"></ion-icon>
                 Reports Section
                 <ion-icon class="ml-4" name="add-circle-outline"></ion-icon>
             </a>
         </div>
-        <ul>
+        <ul id="reportSectionList">
             <li>
                 <a class="d-block m-3" href="">
                     <ion-icon name="golf-outline"></ion-icon>
@@ -180,6 +180,8 @@
 
     const dashboardBtn = document.getElementById('dashboardBtn');
     const dashboardList = document.getElementById('dashboardList');
+    const reportSectionBtn = document.getElementById('reportSectionBtn');
+    const reportSectionList = document.getElementById('reportSectionList');
 
     const openDashboardList = (e) => {
         e.preventDefault();
@@ -195,6 +197,21 @@
     }
 
     dashboardBtn.addEventListener('click',openDashboardList)
+
+    const openReportSection = (e) => {
+        e.preventDefault();
+        const display = getComputedStyle(reportSectionList).display;
+        if(display === 'none') {
+            reportSectionList.style.display = 'block';
+            reportSectionBtn.style.color = 'blue'
+        }
+        else {
+            reportSectionList.style.display = 'none';
+            reportSectionBtn.style.color = 'gray'
+        }
+    }
+
+    reportSectionBtn.addEventListener('click',openReportSection)
 
 
 
