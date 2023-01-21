@@ -79,7 +79,17 @@
 
         ul {
             list-style-type: none;
-            display: none;
+            opacity: 0;
+        }
+
+        .unVisible {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
         }
 
         a {
@@ -185,13 +195,13 @@
 
     const openDashboardList = (e) => {
         e.preventDefault();
-        const display = getComputedStyle(dashboardList).display;
-        if(display === 'none') {
-            dashboardList.style.display = 'block';
+        const opacity = getComputedStyle(dashboardList).opacity;
+        if(opacity === '0') {
+            dashboardList.className = 'visible'
             dashboardBtn.style.color = 'blue'
         }
         else {
-            dashboardList.style.display = 'none';
+            dashboardList.className = 'unVisible'
             dashboardBtn.style.color = 'gray'
         }
     }
