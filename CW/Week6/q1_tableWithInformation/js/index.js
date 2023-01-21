@@ -1102,6 +1102,25 @@ const addTableDate = () => {
     });
 };
 
+const createTableElement = (product) => {
+    let tr = document.createElement("tr");
+
+    let id_data = createData(product.id);
+    let firstName_data = createData(product.first_name);
+    let lastName_data = createData(product.last_name);
+    let phone_data = createData(product.phone);
+    let city_data = createData(product.city);
+
+    tr.append(
+        id_data,
+        firstName_data,
+        lastName_data,
+        phone_data,
+        city_data
+    );
+    return tr;
+};
+
 
 
 addTableDate();
