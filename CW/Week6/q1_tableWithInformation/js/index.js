@@ -1093,3 +1093,15 @@ const informationArray = [{
 }, {"id": 300, "first_name": "Rozanne", "last_name": "Filppetti", "phone": "117-827-2649", "city": "Krasnokholm"}]
 
 
+const table = document.getElementById("table").children[1];
+
+const addTableDate = () => {
+    informationArray.forEach((product) => {
+        const tableRow = createTableElement(product);
+        table.appendChild(tableRow);
+    });
+};
+
+
+
+addTableDate();
