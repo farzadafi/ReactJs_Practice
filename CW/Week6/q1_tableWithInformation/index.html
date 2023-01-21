@@ -51,13 +51,12 @@
         }
 
         aside {
-            border: solid #2e2c34 .15rem;
+            border-right: solid #2e2c34 .15rem;
             width: 29.5rem;
             padding: 1rem;
         }
 
         main {
-            background-color: blue;
             width: 100%;
         }
 
@@ -115,15 +114,32 @@
         }
 
         .btn-form-left {
-            background-color: #cccccc;
+            background-color: gainsboro;
             border-radius: .5rem 0 0 .5rem;
             border: solid #2e2c34 .15rem;
+            color: #2e2c34;
         }
 
         .btn-form-right {
-            background-color: #cccccc;
+            background-color: gainsboro;
             border-radius: 0 .5rem .5rem 0;
             border: solid #2e2c34 .15rem;
+            color: #2e2c34;
+        }
+
+        .gap-1 {
+            gap: 1rem;
+        }
+
+        select {
+            background-color: gainsboro;
+            border: solid #2e2c34 .15rem;
+            border-radius: .5rem;
+            color: #2e2c34;
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding: 1rem 2.4rem;
+            cursor: pointer;
         }
 
     </style>
@@ -209,14 +225,15 @@
         <header>
             <div class="d-grid space-between order m-3">
                 <h1>Orders</h1>
-                <div class="d-grid right-btn">
+                <div class="d-grid right-btn gap-1">
                     <div class="d-grid ">
                         <button class="btn btn-form-left">Share</button>
                         <button class="btn btn-form-right">Export</button>
                     </div>
                     <label for="selectBar">
                         <select name="" id="selectBar">
-                            <option value="">This week</option>
+                            <option value="">
+                                This week</option>
                         </select>
                     </label>
                 </div>
