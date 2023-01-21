@@ -5,6 +5,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="style/index.css">
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <style>
 
         .btn {
@@ -66,14 +69,28 @@
             margin: 3rem;
         }
 
+        .ml-8 {
+            margin-left: 8rem;
+        }
+
+        .ml-4 {
+            margin-left: 4rem;
+        }
+
         ul {
             list-style-type: none;
+            display: none;
         }
 
         a {
             width: fit-content;
+            text-decoration: none;
+            color: black;
         }
 
+        .color-gray {
+            color: gray;
+        }
 
     </style>
 
@@ -91,43 +108,66 @@
 <div class="main-container d-grid">
     <aside>
         <div>
-            <a class="d-block m-3" href="">Dashboard</a>
+            <a class="d-block m-3 color-gray" id="dashboardBtn" href="">
+                <ion-icon name="desktop-outline"></ion-icon>
+                Dashboard
+                <ion-icon class="ml-8" name="add-circle-outline"></ion-icon>
+            </a>
         </div>
-        <ul>
+        <ul id="dashboardList">
             <li>
-                <a class="d-block m-3" href="">farzad</a>
+                <a class="d-block m-3" href="">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                    Orders</a>
             </li>
             <li>
-                <a class="d-block m-3" href="">farzad</a>
+                <a class="d-block m-3" href="">
+                    <ion-icon name="file-tray-full-outline"></ion-icon>
+                    Products</a>
             </li>
             <li>
-                <a class="d-block m-3" href="">farzad</a>
+                <a class="d-block m-3" href="">
+                    <ion-icon name="accessibility-outline"></ion-icon>
+                    Customers</a>
             </li>
             <li>
-                <a class="d-block m-3" href="">farzad</a>
+                <a class="d-block m-3" href="">
+                    <ion-icon name="bug-outline"></ion-icon>
+                    Reports</a>
             </li>
             <li>
-                <a class="d-block m-3" href="">farzad</a>
-            </li>
-            <li>
-                <a class="d-block m-3" href="">farzad</a>
+                <a class="d-block m-3" href="">
+                    <ion-icon name="cash-outline"></ion-icon>
+                    Integration</a>
             </li>
         </ul>
         <div>
-            <a class="d-block m-3" href="">Reports Section</a>
+            <a class="d-block m-3" href="">
+                <ion-icon name="text-outline"></ion-icon>
+                Reports Section
+                <ion-icon class="ml-4" name="add-circle-outline"></ion-icon>
+            </a>
         </div>
         <ul>
             <li>
-                <a class="d-block m-3" href="">farzad</a>
+                <a class="d-block m-3" href="">
+                    <ion-icon name="golf-outline"></ion-icon>
+                    Current Month</a>
             </li>
             <li>
-                <a class="d-block m-3" href="">farzad</a>
+                <a class="d-block m-3" href="">
+                    <ion-icon name="journal-outline"></ion-icon>
+                    Last Quarter</a>
             </li>
             <li>
-                <a class="d-block m-3" href="">farzad</a>
+                <a class="d-block m-3" href="">
+                    <ion-icon name="rose-outline"></ion-icon>
+                    Social Management</a>
             </li>
             <li>
-                <a class="d-block m-3" href="">farzad</a>
+                <a class="d-block m-3" href="">
+                    <ion-icon name="umbrella-outline"></ion-icon>
+                    Year Report</a>
             </li>
         </ul>
     </aside>
@@ -135,5 +175,31 @@
         farzad
     </main>
 </div>
+
+<script>
+
+    const dashboardBtn = document.getElementById('dashboardBtn');
+    const dashboardList = document.getElementById('dashboardList');
+
+    const openDashboardList = (e) => {
+        e.preventDefault();
+        const display = getComputedStyle(dashboardList).display;
+        if(display === 'none') {
+            dashboardList.style.display = 'block';
+            dashboardBtn.style.color = 'blue'
+        }
+        else {
+            dashboardList.style.display = 'none';
+            dashboardBtn.style.color = 'gray'
+        }
+    }
+
+    dashboardBtn.addEventListener('click',openDashboardList)
+
+
+
+</script>
+
+
 </body>
 </html>
