@@ -210,13 +210,13 @@
 
     const openReportSection = (e) => {
         e.preventDefault();
-        const display = getComputedStyle(reportSectionList).display;
-        if(display === 'none') {
-            reportSectionList.style.display = 'block';
+        const opacity = getComputedStyle(reportSectionList).opacity;
+        if(opacity === '0') {
+            reportSectionList.className = 'visible'
             reportSectionBtn.style.color = 'blue'
         }
         else {
-            reportSectionList.style.display = 'none';
+            reportSectionList.className = 'unVisible'
             reportSectionBtn.style.color = 'gray'
         }
     }
