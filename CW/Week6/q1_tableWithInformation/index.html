@@ -3,8 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style/index.css">
+
+    <style>
+
+        .btn {
+            background-color: var(--dark);
+            border: none;
+            color: #fafafa;
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding: 1rem 2.4rem;
+            cursor: pointer;
+        }
+
+        .d-grid {
+            display: grid;
+        }
+
+        header div{
+            grid-template-columns: 2fr 5fr 1fr;
+        }
+
+        header div p {
+            background-color: var(--dark);
+            color: #fafafa;
+            padding: 10px;
+        }
+
+        header div input {
+            background-color: var(--gray-dark);
+            border: none;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+        }
+
+    </style>
+
 </head>
 <body>
-
+<header>
+    <div class="d-grid">
+        <p>company name</p>
+        <label for="searchInput">
+            <input type="text" id="searchInput" placeholder="search">
+        </label>
+        <button class="btn">Sign Out</button>
+    </div>
+</header>
 </body>
 </html>
