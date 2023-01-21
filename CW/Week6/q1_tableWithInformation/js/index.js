@@ -1121,6 +1121,11 @@ const createTableElement = (product) => {
     return tr;
 };
 
-
+const createData = (data) => {
+    let Node = document.createTextNode(data);
+    let dataElement = document.createElement("td");
+    dataElement.appendChild(Node);
+    return dataElement;
+};
 
 addTableDate();
