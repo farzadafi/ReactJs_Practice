@@ -1,3 +1,10 @@
+:root{
+    --dark:#333333;
+    --gray-dark:rgb(73, 77, 84);
+    --radius:.4rem;
+}
+
+
 *,
 *::after,
 *::before{
