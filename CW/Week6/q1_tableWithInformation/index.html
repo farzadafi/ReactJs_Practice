@@ -43,10 +43,35 @@
             outline: none;
         }
 
+        .main-container {
+            grid-template-columns: 3fr 17fr;
+        }
+
         aside {
             background-color: deeppink;
-            height: 100%;
             width: 29.5rem;
+            padding: 1rem;
+        }
+
+        main {
+            background-color: blue;
+            width: 100%;
+        }
+
+        .d-block {
+            display: block;
+        }
+
+        .m-3 {
+            margin: 3rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            width: fit-content;
         }
 
 
@@ -63,8 +88,35 @@
         <button class="btn">Sign Out</button>
     </div>
 </header>
-<aside>
-    <a href="">farzad</a>
-</aside>
+<div class="main-container d-grid">
+    <aside>
+        <div>
+            <a class="d-block m-3" href="">Dashboard</a>
+        </div>
+        <ul>
+            <li>
+                <a class="d-block m-3" href="">farzad</a>
+            </li>
+            <li>
+                <a class="d-block m-3" href="">farzad</a>
+            </li>
+            <li>
+                <a class="d-block m-3" href="">farzad</a>
+            </li>
+            <li>
+                <a class="d-block m-3" href="">farzad</a>
+            </li>
+            <li>
+                <a class="d-block m-3" href="">farzad</a>
+            </li>
+            <li>
+                <a class="d-block m-3" href="">farzad</a>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        farzad
+    </main>
+</div>
 </body>
 </html>
