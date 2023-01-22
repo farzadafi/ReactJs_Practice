@@ -1092,7 +1092,10 @@ const informationArray = [{
     "city": "Maunuri"
 }, {"id": 300, "first_name": "Rozanne", "last_name": "Filppetti", "phone": "117-827-2649", "city": "Krasnokholm"}]
 
-
+const dashboardBtn = document.getElementById('dashboardBtn');
+const dashboardList = document.getElementById('dashboardList');
+const reportSectionBtn = document.getElementById('reportSectionBtn');
+const reportSectionList = document.getElementById('reportSectionList');
 const table = document.getElementById("table").children[1];
 
 const addTableDate = () => {
@@ -1129,3 +1132,33 @@ const createData = (data) => {
 };
 
 addTableDate();
+
+
+
+const openDashboardList = (e) => {
+    e.preventDefault();
+    const opacity = getComputedStyle(dashboardList).opacity;
+    if (opacity === '0') {
+        dashboardList.className = 'visible'
+        dashboardBtn.style.color = 'blue'
+    } else {
+        dashboardList.className = 'unVisible'
+        dashboardBtn.style.color = 'gray'
+    }
+}
+
+dashboardBtn.addEventListener('click', openDashboardList)
+
+const openReportSection = (e) => {
+    e.preventDefault();
+    const opacity = getComputedStyle(reportSectionList).opacity;
+    if (opacity === '0') {
+        reportSectionList.className = 'visible'
+        reportSectionBtn.style.color = 'blue'
+    } else {
+        reportSectionList.className = 'unVisible'
+        reportSectionBtn.style.color = 'gray'
+    }
+}
+
+reportSectionBtn.addEventListener('click', openReportSection)
