@@ -1,0 +1,32 @@
+
+.d-grid {
+    display: grid;
+}
+
+.d-block {
+    display: block;
+}
+
+.m-3 {
+    margin: 3rem;
+}
+
+.ml-8 {
+    margin-left: 8rem;
+}
+
+.ml-4 {
+    margin-left: 4rem;
+}
+
+.color-gray {
+    color: gray;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
