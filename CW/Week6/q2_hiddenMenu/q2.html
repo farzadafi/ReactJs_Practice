@@ -106,9 +106,7 @@
     const findTag = (e) => {
         const id = e.target.id
         const pTag = id.replace('Btn', 'P');
-        const finalPTag = arrayP.filter((el) => {
-            return el.id === pTag;
-        });
+        const finalPTag = arrayP.filter( (el) => el.id === pTag);
         return finalPTag.pop();
     }
 
