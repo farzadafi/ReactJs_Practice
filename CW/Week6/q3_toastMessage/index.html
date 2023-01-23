@@ -4,53 +4,84 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-  <style>
+    <style>
 
-    *,
-    *::after,
-    *::before {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-    html {
-      font-size: 62.5%;
-      height: 100%;
-      background-color: gainsboro;
-    }
+        html {
+            font-size: 62.5%;
+            height: 100%;
+            background-color: gainsboro;
+        }
 
-    body {
-      font-size: 1.6rem;
-      font-family: 'Nunito', sans-serif;
-      height: 100%;
-    }
+        body {
+            font-size: 1.6rem;
+            font-family: 'Nunito', sans-serif;
+            height: 100%;
+        }
 
-    .btn {
-      display: block;
-      background-color: #f8041c;
-      width: 15rem;
-      border: solid red 1px;
-      padding: 1rem;
-      cursor: pointer;
-      color: white;
-    }
+        .btn {
+            display: block;
+            background-color: #f8041c;
+            width: 15rem;
+            border: solid red 1px;
+            padding: 1rem;
+            cursor: pointer;
+            color: white;
+        }
 
-    .btn:hover {
-      background-color: #ff0073;
-    }
+        .btn:hover {
+            background-color: #ff0073;
+        }
 
-    .center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-  </style>
+        .toast-message {
+            background-color: green;
+            color: white;
+            cursor: default;
+        }
+
+        .toast-btn {
+            width: max-content;
+            height: max-content;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .toast-div {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 28rem;
+            height: 5rem;
+            background-color: green;
+            position: absolute;
+            left: 10%;
+            top: 10%;
+        }
+
+    </style>
 
 </head>
 <body>
 <button class="btn center">click</button>
+<div class="toast-div">
+    <button class="toast-btn">x</button>
+    <div class="toast-message" id="toast">this is a warning message.</div>
+</div>
 </body>
 </html>
