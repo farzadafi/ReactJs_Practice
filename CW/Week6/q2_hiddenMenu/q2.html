@@ -77,25 +77,25 @@
 <main>
     <div class="main-container">
         <button class="btn" id="htmlBtn">+ HTML</button>
-        <p id="htmlP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur cumque
+        <p id="htmlP" class="hidden visually-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur cumque
             doloribus
             eligendi eos est
             eveniet excepturi incidunt nulla officia officiis pariatur perferendis possimus quidem quos, repudiandae
             totam veniam voluptatum!</p>
         <button class="btn" id="cssBtn">+ Css</button>
-        <p id="cssP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur delectus
+        <p id="cssP" class="hidden visually-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur delectus
             molestias quis rerum
             sint,
             tenetur! A delectus dolor dolore, fuga neque, officia officiis omnis, quam quod repudiandae tenetur ullam
             vitae?</p>
         <button class="btn" id="jsBtn">+ Javascript</button>
-        <p id="jsP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur
+        <p id="jsP" class="hidden visually-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur
             explicabo iure
             magnam
             perferendis vitae voluptate. At cupiditate dolor doloremque ipsam neque similique voluptates. Amet dolor hic
             iure perferendis vitae.</p>
         <button class="btn border-bottom" id="reactBtn">+ React</button>
-        <p id="reactP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda commodi
+        <p id="reactP" class="hidden visually-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda commodi
             consectetur
             eaque eligendi
             esse explicabo fuga illum impedit iure iusto labore laboriosam maxime, minus modi officiis perferendis
@@ -133,7 +133,7 @@
             }, 20);
         } else {
             tag.classList.add('visually-hidden');
-            tag.addEventListener('transitionend', function (e) {
+            tag.addEventListener('transitionend', function () {
                 tag.classList.add('hidden');
             }, {
                 capture: false,
