@@ -71,17 +71,32 @@
             background-color: green;
             position: absolute;
             left: 10%;
-            top: 10%;
+            top: -10%;
         }
 
     </style>
 
 </head>
 <body>
-<button class="btn center">click</button>
-<div class="toast-div">
+<button class="btn center" id="click">click</button>
+<div class="toast-div" id="toast-div">
     <button class="toast-btn">x</button>
     <div class="toast-message" id="toast">this is a warning message.</div>
 </div>
+
+<script>
+
+    const click = document.getElementById('click');
+    const toastDiv = document.getElementById('toast-div');
+
+    click.addEventListener('click', () => {
+        toastDiv.style.top = '10%';
+        setInterval(function () {
+            toastDiv.style.top = '-10%';
+        }, 3000);
+    })
+
+</script>
+
 </body>
 </html>
