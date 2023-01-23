@@ -26,9 +26,54 @@
             height: 100%;
         }
 
+        .d-grid {
+            display: grid;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .m-t-1 {
+            margin-top: 1rem;
+        }
+
+        header {
+            background-color: black;
+            height: 25rem;
+            width: 100%;
+            color: gainsboro;
+        }
+
+        .header-div {
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header-btn {
+            height: 4rem;
+            width: 10rem;
+            background-color: black;
+            border: solid 1px gainsboro;
+            border-radius: .5rem;
+            color: gainsboro;
+        }
+
     </style>
 </head>
 <body>
-
+<header class="d-grid justify-center align-center">
+    <div class="header-div">
+        <h1>Welcome to Farzad Web Solutions</h1>
+        <p class="m-t-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque nemo perferendis reiciendis. A aperiam cumque
+            deserunt eum</p>
+        <button class="header-btn m-t-1">Read More</button>
+    </div>
+</header>
 </body>
 </html>
