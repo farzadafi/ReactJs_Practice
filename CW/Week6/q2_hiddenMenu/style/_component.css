@@ -1,0 +1,42 @@
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    direction: rtl;
+    background-color: rgb(211, 211, 211);
+}
+
+.btn {
+    display: block;
+    direction: rtl;
+    background-color: #f8041c;
+    width: 100%;
+    border: solid black 1px;
+    border-bottom: none;
+    text-align: start;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.border-bottom {
+    border-bottom: solid black 1px;
+}
+
+.btn:hover {
+    background-color: #f6057e;
+}
+
+p {
+    transition: all 1s linear;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    opacity: 0;
+}
