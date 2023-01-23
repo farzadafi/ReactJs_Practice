@@ -51,7 +51,6 @@
 
         .header-div {
             width: 80%;
-            padding: 20px;
             text-align: center;
         }
 
@@ -64,16 +63,46 @@
             color: gainsboro;
         }
 
+        .main-header-div {
+            padding: 1rem;
+            height: 12rem;
+            text-align: center;
+            background-color: gray;
+            width: 100%;
+        }
+
+        .main-header-div div {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .width-50 {
+            width: 50rem;
+        }
+
     </style>
 </head>
 <body>
 <header class="d-grid justify-center align-center">
     <div class="header-div">
         <h1>Welcome to Farzad Web Solutions</h1>
-        <p class="m-t-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque nemo perferendis reiciendis. A aperiam cumque
+        <p class="m-t-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque nemo perferendis reiciendis. A
+            aperiam cumque
             deserunt eum</p>
         <button class="header-btn m-t-1">Read More</button>
     </div>
 </header>
+<main>
+    <div class="main-header-div d-grid justify-center align-center">
+        <h1>Web & Application Development</h1>
+        <div class="d-grid">
+            <div class="width-50 m-t-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequatur incidunt, laborum
+                molestiae obcae quam quia rerum. Ea excepturi expedita
+            </div>
+            <div class="width-50 m-t-1">Amet architecto aspernatur cupiditate ducimus eos illum magnam minus neque nisi nulla obcaecati
+                perferendis, possimus provident qui, quisquam quo recusandae
+            </div>
+        </div>
+    </div>
+</main>
 </body>
 </html>
