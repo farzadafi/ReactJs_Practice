@@ -77,22 +77,26 @@
 <main>
     <div class="main-container">
         <button class="btn" id="htmlBtn">+ HTML</button>
-        <p id="htmlP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur cumque doloribus
+        <p id="htmlP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur cumque
+            doloribus
             eligendi eos est
             eveniet excepturi incidunt nulla officia officiis pariatur perferendis possimus quidem quos, repudiandae
             totam veniam voluptatum!</p>
         <button class="btn" id="cssBtn">+ Css</button>
-        <p id="cssP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur delectus molestias quis rerum
+        <p id="cssP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur delectus
+            molestias quis rerum
             sint,
             tenetur! A delectus dolor dolore, fuga neque, officia officiis omnis, quam quod repudiandae tenetur ullam
             vitae?</p>
         <button class="btn" id="jsBtn">+ Javascript</button>
-        <p id="jsP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur explicabo iure
+        <p id="jsP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur
+            explicabo iure
             magnam
             perferendis vitae voluptate. At cupiditate dolor doloremque ipsam neque similique voluptates. Amet dolor hic
             iure perferendis vitae.</p>
         <button class="btn border-bottom" id="reactBtn">+ React</button>
-        <p id="reactP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda commodi consectetur
+        <p id="reactP" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda commodi
+            consectetur
             eaque eligendi
             esse explicabo fuga illum impedit iure iusto labore laboriosam maxime, minus modi officiis perferendis
             quo.</p>
@@ -115,17 +119,28 @@
     const findTag = (e) => {
         const id = e.target.id
         const pTag = id.replace('Btn', 'P');
-        const finalPTag = arrayP.filter( (el) => el.id === pTag);
+        const finalPTag = arrayP.filter((el) => el.id === pTag);
         return finalPTag.pop();
     }
 
     const openP = (e) => {
         const tag = findTag(e);
-        const display = getComputedStyle(tag).display;
-        if (display === 'none')
-            tag.style.display = 'block';
-        else
-            tag.style.display = 'none';
+
+        if (tag.classList.contains('hidden')) {
+            tag.classList.remove('hidden');
+            setTimeout(function () {
+                tag.classList.remove('visually-hidden');
+            }, 20);
+        } else {
+            tag.classList.add('visually-hidden');
+            tag.addEventListener('transitionend', function (e) {
+                tag.classList.add('hidden');
+            }, {
+                capture: false,
+                once: true,
+                passive: false
+            });
+        }
     }
 
     cssBtn.addEventListener('click', openP)//() => {
