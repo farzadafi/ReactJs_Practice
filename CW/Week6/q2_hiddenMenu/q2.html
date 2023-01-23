@@ -111,7 +111,14 @@
         return finalPTag.pop();
     }
 
-
+    const openP = (e) => {
+        const tag = findTag(e);
+        const display = getComputedStyle(tag).display;
+        if (display === 'none')
+            tag.style.display = 'block';
+        else
+            tag.style.display = 'none';
+    }
 
     cssBtn.addEventListener('click', openP)//() => {
     jsBtn.addEventListener('click', openP)//() => {
