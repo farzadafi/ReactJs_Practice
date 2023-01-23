@@ -80,7 +80,7 @@
 <body>
 <button class="btn center" id="click">click</button>
 <div class="toast-div" id="toast-div">
-    <button class="toast-btn">x</button>
+    <button class="toast-btn" id="toast-btn">x</button>
     <div class="toast-message" id="toast">this is a warning message.</div>
 </div>
 
@@ -88,6 +88,7 @@
 
     const click = document.getElementById('click');
     const toastDiv = document.getElementById('toast-div');
+    const toastBtn = document.getElementById('toast-btn')
 
     click.addEventListener('click', () => {
         toastDiv.style.top = '10%';
@@ -95,6 +96,8 @@
             toastDiv.style.top = '-10%';
         }, 3000);
     })
+
+    toastBtn.addEventListener('click', () => toastDiv.style.top = '-10%')
 
 </script>
 
