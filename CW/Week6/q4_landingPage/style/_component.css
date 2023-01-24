@@ -1,0 +1,34 @@
+header {
+    height: 22rem;
+}
+
+.header-btn {
+    height: 4rem;
+    width: 10rem;
+    border: solid 1px gainsboro;
+    border-radius: .5rem;
+}
+
+.main-header-div {
+    padding: 1rem;
+    height: 12rem;
+}
+
+.main-header-div div {
+    grid-template-columns: 1fr 1fr;
+}
+
+.box {
+    background-color: gainsboro;
+    width: 25rem;
+    height: 25rem;
+    margin: 2rem 1rem 2rem;
+}
+
+.last-div {
+    height: 16rem;
+}
+
+footer {
+    justify-content: space-between;
+}
