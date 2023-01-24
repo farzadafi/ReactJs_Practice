@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
 
     <style>
 
@@ -54,6 +55,39 @@
             margin-top: 2rem;
         }
 
+        input {
+            background: none;
+            border: none;
+            color: gainsboro;
+            height: 3rem;
+            padding: 1rem;
+        }
+
+        .input-icon-container {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 2px solid #bb94ef;
+            color: gainsboro;
+            align-items: center;
+        }
+
+        /*.input-group {*/
+        /*    margin-bottom: 2rem;*/
+        /*    display: flex;*/
+        /*    flex-direction: column;*/
+        /*}*/
+
+        .checkbox {
+            display: flex;
+            align-items: end;
+            gap: 1rem;
+            color: gainsboro;
+            font-size: 1rem;
+        }
+
+        .p-bottom-1{
+            padding-bottom: 1rem;
+        }
 
     </style>
 
@@ -64,6 +98,26 @@
     <div class="header">
         <img src="image/logo.jpg" alt="logo image">
         <h1 class="m-top-2">LOG IN</h1>
+    </div>
+    <div class="m-top-2 input-group">
+        <div class="input-icon-container">
+            <label>
+                <ion-icon name="person"></ion-icon>
+                <input type="text" placeholder="Username">
+            </label>
+        </div>
+        <div class="input-icon-container">
+            <label>
+                <ion-icon name="person"></ion-icon>
+                <input class="m-top-2" type="text" placeholder="Password">
+            </label>
+        </div>
+        <div class="checkbox">
+            <label >
+                <input class="m-top-2" type="checkbox">
+            </label>
+            <p class="p-bottom-1">Remember me</p>
+        </div>
     </div>
 </div>
 </body>
