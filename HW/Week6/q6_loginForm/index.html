@@ -74,9 +74,12 @@
 
         input {
             background: none;
-            border: none;
             height: 3rem;
             padding: 1rem;
+        }
+
+        .border-none {
+            border: none;
         }
 
         .input-icon-container {
@@ -98,7 +101,6 @@
 
         button {
             background: gainsboro;
-            border: none;
             width: 10rem;
             height: 5rem;
             border-radius: 3rem;
@@ -123,13 +125,13 @@
         <div class="input-icon-container color-white-gray">
             <label>
                 <ion-icon name="person"></ion-icon>
-                <input class="color-white-gray" type="text" placeholder="Username">
+                <input class="color-white-gray border-none" type="text" placeholder="Username">
             </label>
         </div>
         <div class="input-icon-container color-white-gray">
             <label>
                 <ion-icon name="person"></ion-icon>
-                <input class="m-top-2 color-white-gray" type="text" placeholder="Password">
+                <input class="m-top-2 color-white-gray border-none" type="text" placeholder="Password">
             </label>
         </div>
         <div class="checkbox d-flex font-s-1">
@@ -139,7 +141,7 @@
             <p class="p-bottom-1 color-white-gray">Remember me</p>
         </div>
         <div class="d-flex justify-c-center login-btn m-top-2">
-            <button>Login</button>
+            <button class="border-none">Login</button>
         </div>
     </div>
     <footer class="d-flex justify-c-center">
