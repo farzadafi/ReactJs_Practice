@@ -47,32 +47,23 @@
         }
 
         header {
-            background-color: black;
             height: 22rem;
-            width: 100%;
-            color: gainsboro;
         }
 
-        .header-div {
-            width: 80%;
-            text-align: center;
+        .gainsboro-color {
+            color: gainsboro;
         }
 
         .header-btn {
             height: 4rem;
             width: 10rem;
-            background-color: black;
             border: solid 1px gainsboro;
             border-radius: .5rem;
-            color: gainsboro;
         }
 
         .main-header-div {
             padding: 1rem;
             height: 12rem;
-            text-align: center;
-            background-color: gray;
-            width: 100%;
         }
 
         .main-header-div div {
@@ -87,10 +78,6 @@
             display: flex;
         }
 
-        .box-section {
-            background-color: black;
-        }
-
         .justify-item-center {
             justify-items: center;
         }
@@ -98,9 +85,7 @@
         .box {
             background-color: gainsboro;
             width: 25rem;
-            text-align: center;
             height: 25rem;
-            padding: 2rem;
             margin: 2rem 1rem 2rem;
         }
 
@@ -113,7 +98,6 @@
         }
 
         .last-div {
-            display: flex;
             height: 16rem;
         }
 
@@ -129,32 +113,28 @@
             padding: 3rem;
         }
 
-        .color-white {
-            color: gainsboro;
+        footer {
+            justify-content: space-between;
         }
 
-        footer {
-            background-color: black;
-            color: white;
-            display: flex;
+        .p-2 {
             padding: 2rem;
-            justify-content: space-between;
         }
 
     </style>
 </head>
 <body>
-<header class="d-grid justify-center align-center justify-item-center">
-    <div class="header-div">
+<header class="d-grid justify-center align-center justify-item-center background-black gainsboro-color">
+    <div class="text-align-center width-80">
         <h1>Welcome to Farzad Web Solutions</h1>
         <p class="m-t-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque nemo perferendis reiciendis. A
             aperiam cumque
             deserunt eum</p>
-        <button class="header-btn m-t-1">Read More</button>
+        <button class="header-btn gainsboro-color background-black m-t-1">Read More</button>
     </div>
 </header>
 <main>
-    <div class="main-header-div d-grid justify-center align-center">
+    <div class="main-header-div text-align-center d-grid justify-center align-center">
         <h1>Web & Application Development</h1>
         <div class="d-grid">
             <div class="width-50 m-t-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequatur
@@ -167,24 +147,24 @@
             </div>
         </div>
     </div>
-    <div class="d-flex justify-center box-section">
-        <div class="box">
+    <div class="d-flex justify-center background-black">
+        <div class="box p-2 text-align-center">
             <h3>Web Development</h3>
             <p class="m-t-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda enim iure
                 molestiae nulla sed. Amet commodi debitis deleniti!</p>
         </div>
-        <div class="box">
+        <div class="box p-2 text-align-center">
             <h3>Mobile Applications</h3>
             <p class="m-t-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda enim iure
                 molestiae nulla sed. Amet commodi debitis deleniti!</p>
         </div>
-        <div class="box">
+        <div class="box p-2 text-align-center">
             <h3>Teach Marketing</h3>
             <p class="m-t-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda enim iure
                 molestiae nulla sed. Amet commodi debitis deleniti!</p>
         </div>
     </div>
-    <div class="main-header-div d-grid justify-center align-center">
+    <div class="main-header-div text-align-center d-grid justify-center align-center">
         <h1>We handle all of your digital needs</h1>
         <div class="width-80 m-t-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequatur
             incidunt, laborum
@@ -192,14 +172,14 @@
         </div>
     </div>
     <div class="last-div d-flex">
-        <div class="text-align-center p-3 background-blue color-white">
+        <div class="text-align-center p-3 background-blue gainsboro-color">
             <h3>Contact Us</h3>
             <p class="m-t-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, commodi debitis dolorum
                 iusto
                 laborum maxime minus modi molestiae natus quaerat q</p>
             <p class="m-t-1">farzadafi40@gmail.com</p>
         </div>
-        <div class="text-align-center p-3 background-black color-white">
+        <div class="text-align-center p-3 background-black gainsboro-color">
             <h3>Contact Us</h3>
             <p class="m-t-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, commodi debitis dolorum
                 iusto
@@ -207,7 +187,7 @@
         </div>
     </div>
 </main>
-<footer>
+<footer class="background-black d-flex p-2 gainsboro-color">
     <div class="text-align-center width-80">Farzad</div>
     <div class="text-align-center width-80">Afshar</div>
 </footer>
