@@ -8,7 +8,7 @@
     <style>
 
         :root {
-            --color:rgb(251, 254, 248);
+            --color: rgb(251, 254, 248);
         }
 
         *,
@@ -59,10 +59,13 @@
             margin-top: 2rem;
         }
 
+        .color-white-gray {
+            color: var(--color);
+        }
+
         input {
             background: none;
             border: none;
-            color: gainsboro;
             height: 3rem;
             padding: 1rem;
         }
@@ -71,21 +74,13 @@
             display: flex;
             flex-direction: row;
             border-bottom: 2px solid #bb94ef;
-            color: gainsboro;
             align-items: center;
         }
-
-        /*.input-group {*/
-        /*    margin-bottom: 2rem;*/
-        /*    display: flex;*/
-        /*    flex-direction: column;*/
-        /*}*/
 
         .checkbox {
             display: flex;
             align-items: end;
             gap: 1rem;
-            color: gainsboro;
             font-size: 1rem;
         }
 
@@ -112,7 +107,6 @@
         }
 
         a {
-            color: gainsboro;
             margin-top: 12rem;
             text-decoration: none;
             font-size: 1.2rem;
@@ -129,30 +123,30 @@
         <h1 class="m-top-2">LOG IN</h1>
     </div>
     <div class="m-top-2 input-group">
-        <div class="input-icon-container">
+        <div class="input-icon-container color-white-gray">
             <label>
                 <ion-icon name="person"></ion-icon>
-                <input type="text" placeholder="Username">
+                <input class="color-white-gray" type="text" placeholder="Username">
             </label>
         </div>
-        <div class="input-icon-container">
+        <div class="input-icon-container color-white-gray">
             <label>
                 <ion-icon name="person"></ion-icon>
-                <input class="m-top-2" type="text" placeholder="Password">
+                <input class="m-top-2 color-white-gray" type="text" placeholder="Password">
             </label>
         </div>
         <div class="checkbox">
             <label>
                 <input class="m-top-2" type="checkbox">
             </label>
-            <p class="p-bottom-1">Remember me</p>
+            <p class="p-bottom-1 color-white-gray">Remember me</p>
         </div>
         <div class="login-btn m-top-2">
             <button>Login</button>
         </div>
     </div>
     <footer>
-        <a href="">Forgot password?</a>
+        <a class="color-white-gray" href="">Forgot password?</a>
     </footer>
 </div>
 </body>
