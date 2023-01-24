@@ -66,6 +66,10 @@
             display: flex;
         }
 
+        .justify-c-center {
+            justify-content: center;
+        }
+
         input {
             background: none;
             border: none;
@@ -88,20 +92,12 @@
             padding-bottom: 1rem;
         }
 
-        .login-btn {
-            justify-content: center;
-        }
-
         button {
             background: gainsboro;
             border: none;
             width: 10rem;
             height: 5rem;
             border-radius: 3rem;
-        }
-
-        footer {
-            justify-content: center;
         }
 
         a {
@@ -139,11 +135,11 @@
             </label>
             <p class="p-bottom-1 color-white-gray">Remember me</p>
         </div>
-        <div class="d-flex login-btn m-top-2">
+        <div class="d-flex justify-c-center login-btn m-top-2">
             <button>Login</button>
         </div>
     </div>
-    <footer class="d-flex">
+    <footer class="d-flex justify-c-center">
         <a class="color-white-gray" href="">Forgot password?</a>
     </footer>
 </div>
