@@ -1,0 +1,40 @@
+
+.align-i-center {
+    align-items: center;
+}
+
+.header {
+    flex-direction: column;
+}
+
+.m-top-2 {
+    margin-top: 2rem;
+}
+
+.color-white-gray {
+    color: var(--color);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-c-center {
+    justify-content: center;
+}
+
+.border-none {
+    border: none;
+}
+
+.input-icon-container {
+    border-bottom: 2px solid #bb94ef;
+}
+
+.font-s-1 {
+    font-size: 1.2rem;
+}
+
+.p-bottom-1 {
+    padding-bottom: 1rem;
+}
