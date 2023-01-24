@@ -50,7 +50,6 @@
         }
 
         .header {
-            display: flex;
             flex-direction: column;
             align-items: center;
         }
@@ -63,6 +62,10 @@
             color: var(--color);
         }
 
+        .d-flex {
+            display: flex;
+        }
+
         input {
             background: none;
             border: none;
@@ -71,14 +74,11 @@
         }
 
         .input-icon-container {
-            display: flex;
-            flex-direction: row;
             border-bottom: 2px solid #bb94ef;
             align-items: center;
         }
 
         .checkbox {
-            display: flex;
             align-items: end;
             gap: 1rem;
             font-size: 1rem;
@@ -89,7 +89,6 @@
         }
 
         .login-btn {
-            display: flex;
             justify-content: center;
         }
 
@@ -102,7 +101,6 @@
         }
 
         footer {
-            display: flex;
             justify-content: center;
         }
 
@@ -118,7 +116,7 @@
 </head>
 <body>
 <div class="main-container">
-    <div class="header">
+    <div class="header d-flex">
         <img src="image/logo.jpg" alt="logo image">
         <h1 class="m-top-2">LOG IN</h1>
     </div>
@@ -135,17 +133,17 @@
                 <input class="m-top-2 color-white-gray" type="text" placeholder="Password">
             </label>
         </div>
-        <div class="checkbox">
+        <div class="checkbox d-flex">
             <label>
                 <input class="m-top-2" type="checkbox">
             </label>
             <p class="p-bottom-1 color-white-gray">Remember me</p>
         </div>
-        <div class="login-btn m-top-2">
+        <div class="d-flex login-btn m-top-2">
             <button>Login</button>
         </div>
     </div>
-    <footer>
+    <footer class="d-flex">
         <a class="color-white-gray" href="">Forgot password?</a>
     </footer>
 </div>
