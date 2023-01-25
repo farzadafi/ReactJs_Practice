@@ -25,10 +25,47 @@
             height: 100%;
         }
 
+        .diamond {
+            width: 35rem;
+            height: 35rem;
+            background-color: black;
+            transform: rotateX(45deg) rotateZ(45deg);
+        }
+
+        .main-container {
+            display: flex;
+        }
+
+        .div {
+            background-color: blue;
+            width: 50rem;
+        }
+
     </style>
 
 </head>
 <body>
-<div class="far"></div>
+<div class="main-container">
+    <div class="div">
+        <div class="diamond"></div>
+        <div class="diamond"></div>
+        <div class="diamond"></div>
+    </div>
+    <div class="div">
+        <div class="diamond"></div>
+        <div class="diamond"></div>
+        <div class="diamond"></div>
+    </div>
+    <div class="div">
+        <div class="diamond"></div>
+        <div class="diamond"></div>
+        <div class="diamond"></div>
+    </div>
+    <div class="div">
+        <div class="diamond"></div>
+        <div class="diamond"></div>
+        <div class="diamond"></div>
+    </div>
+</div>
 </body>
 </html>
