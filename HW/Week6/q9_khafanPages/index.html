@@ -27,7 +27,7 @@
 
         .container {
             position: absolute;
-            width: 850px;
+            width: 1100px;
             height: 100px;
             top: 15%;
             left: 50%;
@@ -35,12 +35,58 @@
             border-radius: 3rem;
         }
 
+        .first-div {
+            height: 45rem;
+            background-color: rgb(94, 34, 181);
+            border-radius: 3rem 3rem 0 0;
+            padding: 1rem 1rem 1rem 3rem;
+            direction: rtl;
+        }
+
+        .nav-header {
+            list-style-type: none;
+            display: flex;
+            padding-right: 10rem;
+            align-items: center;
+        }
+
+        .nav-header li a,button {
+            display: block;
+            color: whitesmoke;
+            padding: 1.4rem 1.6rem;
+            text-decoration: none;
+        }
+
+        .free-btn {
+            background-color: #79f2fc;
+            border: none;
+            border-radius: 1rem;
+        }
+
+        .codex {
+            color: lightseagreen;
+            font-family: "Fira Code Medium",serif;
+            margin-right: 20rem;
+        }
+
     </style>
 
 </head>
 <body>
 <div class="container">
-
+    <div class="first-div">
+        <header>
+            <ul class="nav-header">
+                <li><button class="free-btn">FREE TRIAL</button></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Test</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Home</a></li>
+                <li><h1 class="codex">Codext</h1></li>
+            </ul>
+        </header>
+    </div>
 </div>
 </body>
 </html>
