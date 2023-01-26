@@ -105,6 +105,54 @@
             text-align: left;
         }
 
+        .second-div {
+            background-color: gainsboro;
+            height: 45rem;
+            padding: 5rem 1rem 1rem 0;
+            direction: rtl;
+            display: flex;
+        }
+
+        .second-div-passage {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        .arrow-svg-orange {
+            margin-top: 1rem;
+            width: 4rem;
+            background-color: orange;
+            -webkit-mask: url(image/arrow.svg) no-repeat center;
+            margin-right: 3rem;
+        }
+
+        .arrow-svg-green {
+            margin-top: 1rem;
+            width: 4rem;
+            background-color: green;
+            -webkit-mask: url(image/arrow.svg) no-repeat center;
+            margin-right: 3rem;
+        }
+
+        .arrow-svg-blue {
+            margin-top: 1rem;
+            width: 4rem;
+            background-color: blue;
+            -webkit-mask: url(image/arrow.svg) no-repeat center;
+            margin-right: 3rem;
+        }
+
+        .arrow-item {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: left;
+            direction: ltr;
+            width: 45rem;
+        }
+
     </style>
 
 </head>
@@ -138,6 +186,35 @@
                 </div>
             </div>
         </main>
+    </div>
+    <div class="second-div">
+        <div class="second-div-passage">
+            <h1>It's helpful for operating system</h1>
+            <div class="arrow-item">
+                <div class="arrow-svg-orange">
+                    <img src="image/arrow.svg" alt="">
+                </div>
+                <h3 style="display: block">Ultra fast & Secure</h3>
+                <p style="margin-left: 7rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A </p>
+            </div>
+            <div class="arrow-item">
+                <div class="arrow-svg-green">
+                    <img src="image/arrow.svg" alt="">
+                </div>
+                <h3 style="display: block">Ultra fast & Secure</h3>
+                <p style="margin-left: 7rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A </p>
+            </div>
+            <div class="arrow-item">
+                <div class="arrow-svg-blue">
+                    <img src="image/arrow.svg" alt="">
+                </div>
+                <h3 style="display: block">Ultra fast & Secure</h3>
+                <p style="margin-left: 7rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A </p>
+            </div>
+        </div>
+        <div>
+            <img style="height: 35rem;width: 50rem" src="image/picture.png" alt="first image">
+        </div>
     </div>
 </div>
 </body>
