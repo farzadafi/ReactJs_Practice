@@ -39,7 +39,7 @@
             height: 45rem;
             background-color: rgb(94, 34, 181);
             border-radius: 3rem 3rem 0 0;
-            padding: 1rem 1rem 1rem 3rem;
+            padding: 1rem 1rem 1rem 5.3rem;
             direction: rtl;
         }
 
@@ -50,7 +50,7 @@
             align-items: center;
         }
 
-        .nav-header li a,button {
+        .nav-header li a,.nav-header li button {
             display: block;
             color: whitesmoke;
             padding: 1.4rem 1.6rem;
@@ -61,13 +61,48 @@
             background-color: #79f2fc;
             border: none;
             border-radius: 1rem;
+            margin-left: 3rem;
         }
 
         .codex {
             color: lightseagreen;
-            font-family: "Fira Code Medium",serif;
-            margin-right: 20rem;
+            font-family: "Fira Code Medium", serif;
+            margin-right: 15rem;
         }
+
+        .first-main-container {
+            display: flex;
+            margin-top: 5rem;
+            color: whitesmoke;
+            margin-left: 9.5rem;
+        }
+
+        .first-main-h1 {
+            color: whitesmoke;
+            direction: ltr;
+        }
+
+        .first-main-img {
+            width: 100rem
+        }
+
+        .try-btn {
+            background-color: #0690da;
+            border: none;
+            border-radius: .3rem;
+            width: 15rem;
+            height: 4rem;
+            color: whitesmoke;
+        }
+
+        .m-top-2 {
+            margin-top: 2rem;
+        }
+
+        .first-main-passage {
+            text-align: left;
+        }
+
 
     </style>
 
@@ -77,7 +112,9 @@
     <div class="first-div">
         <header>
             <ul class="nav-header">
-                <li><button class="free-btn">FREE TRIAL</button></li>
+                <li>
+                    <button class="free-btn">FREE TRIAL</button>
+                </li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">Test</a></li>
                 <li><a href="">Pricing</a></li>
@@ -86,6 +123,19 @@
                 <li><h1 class="codex">Codext</h1></li>
             </ul>
         </header>
+        <main>
+            <div class="first-main-container">
+                <div class="first-main-img">
+                    <img src="image/picture.png" alt="first image">
+                </div>
+                <div class="first-main-passage">
+                    <h1 class="first-main-h1">Codex one of the best system in SAAS.</h1>
+                    <p class="m-top-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt ea expedita m
+                        mollitia possimus</p>
+                    <button class="try-btn m-top-2">Try A Live Demo</button>
+                </div>
+            </div>
+        </main>
     </div>
 </div>
 </body>
