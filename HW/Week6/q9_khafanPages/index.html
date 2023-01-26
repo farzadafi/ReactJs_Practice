@@ -39,6 +39,10 @@
             direction: rtl;
         }
 
+        .align-i-center {
+            align-items: center;
+        }
+
         .first-div {
             height: 45rem;
             background-color: rgb(94, 34, 181);
@@ -53,7 +57,6 @@
         .nav-header {
             list-style-type: none;
             padding-right: 10rem;
-            align-items: center;
         }
 
         .nav-header li a, .nav-header li button {
@@ -94,7 +97,7 @@
             margin-left: 9.5rem;
         }
 
-        .first-main-h1 {
+        .dir-ltr {
             direction: ltr;
         }
 
@@ -117,8 +120,11 @@
             padding: 5rem 1rem 1rem 0;
         }
 
-        .second-div-passage {
+        .text-align-l {
             text-align: left;
+        }
+
+        .second-div-passage {
             flex-direction: column;
             align-items: end;
         }
@@ -142,10 +148,7 @@
         }
 
         .arrow-item {
-            align-items: center;
             flex-wrap: wrap;
-            text-align: left;
-            direction: ltr;
             width: 45rem;
         }
 
@@ -156,7 +159,7 @@
 <div class="container">
     <div class="first-div dir-rtl">
         <header>
-            <ul class="nav-header d-flex">
+            <ul class="nav-header d-flex align-i-center">
                 <li>
                     <button class="btn free-btn c-white-smoke">FREE TRIAL</button>
                 </li>
@@ -174,7 +177,7 @@
                     <img src="image/picture.png" alt="first image">
                 </div>
                 <div class="first-main-passage">
-                    <h1 class="first-main-h1">Codex one of the best system in SAAS.</h1>
+                    <h1 class="dir-ltr first-main-h1">Codex one of the best system in SAAS.</h1>
                     <p class="m-top-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt ea expedita
                         m
                         mollitia possimus</p>
@@ -184,23 +187,23 @@
         </main>
     </div>
     <div class="second-div dir-rtl d-flex">
-        <div class="second-div-passage d-flex">
+        <div class="second-div-passage d-flex text-align-l">
             <h1>It's helpful for operating system</h1>
-            <div class="arrow-item d-flex">
+            <div class="arrow-item d-flex dir-ltr align-i-center">
                 <div class="arrow-svg background-orange">
                     <img src="image/arrow.svg" alt="">
                 </div>
                 <h3 style="display: block">Ultra fast & Secure</h3>
                 <p style="margin-left: 7rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A </p>
             </div>
-            <div class="arrow-item d-flex">
+            <div class="arrow-item d-flex dir-ltr align-i-center">
                 <div class="arrow-svg background-green">
                     <img src="image/arrow.svg" alt="">
                 </div>
                 <h3 style="display: block">Ultra fast & Secure</h3>
                 <p style="margin-left: 7rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A </p>
             </div>
-            <div class="arrow-item d-flex">
+            <div class="arrow-item d-flex dir-ltr align-i-center">
                 <div class="arrow-svg background-blue">
                     <img src="image/arrow.svg" alt="">
                 </div>
