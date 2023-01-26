@@ -35,12 +35,15 @@
             border-radius: 3rem;
         }
 
+        .dir-rtl {
+            direction: rtl;
+        }
+
         .first-div {
             height: 45rem;
             background-color: rgb(94, 34, 181);
             border-radius: 3rem 3rem 0 0;
             padding: 1rem 1rem 1rem 5.3rem;
-            direction: rtl;
         }
 
         .nav-header {
@@ -109,7 +112,6 @@
             background-color: gainsboro;
             height: 45rem;
             padding: 5rem 1rem 1rem 0;
-            direction: rtl;
             display: flex;
         }
 
@@ -158,7 +160,7 @@
 </head>
 <body>
 <div class="container">
-    <div class="first-div">
+    <div class="first-div dir-rtl">
         <header>
             <ul class="nav-header">
                 <li>
@@ -187,7 +189,7 @@
             </div>
         </main>
     </div>
-    <div class="second-div">
+    <div class="second-div dir-rtl">
         <div class="second-div-passage">
             <h1>It's helpful for operating system</h1>
             <div class="arrow-item">
