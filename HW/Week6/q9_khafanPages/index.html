@@ -46,9 +46,12 @@
             padding: 1rem 1rem 1rem 5.3rem;
         }
 
+        .d-flex {
+            display: flex;
+        }
+
         .nav-header {
             list-style-type: none;
-            display: flex;
             padding-right: 10rem;
             align-items: center;
         }
@@ -75,7 +78,6 @@
         }
 
         .first-main-container {
-            display: flex;
             margin-top: 5rem;
             color: whitesmoke;
             margin-left: 9.5rem;
@@ -112,12 +114,10 @@
             background-color: gainsboro;
             height: 45rem;
             padding: 5rem 1rem 1rem 0;
-            display: flex;
         }
 
         .second-div-passage {
             text-align: left;
-            display: flex;
             flex-direction: column;
             align-items: end;
         }
@@ -147,7 +147,6 @@
         }
 
         .arrow-item {
-            display: flex;
             align-items: center;
             flex-wrap: wrap;
             text-align: left;
@@ -162,7 +161,7 @@
 <div class="container">
     <div class="first-div dir-rtl">
         <header>
-            <ul class="nav-header">
+            <ul class="nav-header d-flex">
                 <li>
                     <button class="free-btn">FREE TRIAL</button>
                 </li>
@@ -175,7 +174,7 @@
             </ul>
         </header>
         <main>
-            <div class="first-main-container">
+            <div class="first-main-container d-flex">
                 <div class="first-main-img">
                     <img src="image/picture.png" alt="first image">
                 </div>
@@ -189,24 +188,24 @@
             </div>
         </main>
     </div>
-    <div class="second-div dir-rtl">
-        <div class="second-div-passage">
+    <div class="second-div dir-rtl d-flex">
+        <div class="second-div-passage d-flex">
             <h1>It's helpful for operating system</h1>
-            <div class="arrow-item">
+            <div class="arrow-item d-flex">
                 <div class="arrow-svg-orange">
                     <img src="image/arrow.svg" alt="">
                 </div>
                 <h3 style="display: block">Ultra fast & Secure</h3>
                 <p style="margin-left: 7rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A </p>
             </div>
-            <div class="arrow-item">
+            <div class="arrow-item d-flex">
                 <div class="arrow-svg-green">
                     <img src="image/arrow.svg" alt="">
                 </div>
                 <h3 style="display: block">Ultra fast & Secure</h3>
                 <p style="margin-left: 7rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A </p>
             </div>
-            <div class="arrow-item">
+            <div class="arrow-item d-flex">
                 <div class="arrow-svg-blue">
                     <img src="image/arrow.svg" alt="">
                 </div>
