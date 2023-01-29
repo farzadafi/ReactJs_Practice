@@ -157,13 +157,13 @@
         </a>3,900 likes
     </div>
     <footer>
-        <audio>
+        <audio id="audio">
             <source src="assistance/RouyayeBiTekrar.mp3">
         </audio>
         <div class="music-progress">
             <p>0:12</p>
             <div class="time-line"></div>
-            <p>0:12</p>
+            <p id="endTime">0:12</p>
         </div>
         <div class="music-control-key">
             <button>
@@ -194,5 +194,31 @@
         </div>
     </footer>
 </div>
+
+<script>
+
+    const audio = document.getElementById('audio');
+    const endTime = document.getElementById('endTime');
+    let durationMusic;
+
+    setTimeout(function () {
+        durationMusic = audio.duration;
+        endTime.innerText = calculateTotalValue(durationMusic);
+    }, 100);
+
+    const calculateTotalValue = length => {
+        const minutes = Math.floor(length / 60);
+        let seconds_int = length - minutes * 60;
+        if(seconds_int < 10){
+            seconds_int = "0"+seconds_int;
+        }
+        const seconds_str = seconds_int.toString();
+        const seconds = seconds_str.substr(0, 2);
+        return minutes + ':' + seconds;
+    }
+
+
+</script>
+
 </body>
 </html>
