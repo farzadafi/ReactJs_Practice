@@ -136,7 +136,7 @@
             background-color: deeppink;
             border-radius: 5rem;
             height: 100%;
-            width: 100%;
+            width: 0;
             position: absolute;
             z-index: 999;
             display: block;
@@ -174,7 +174,7 @@
         <div class="music-progress">
             <p id="currentTime">0:12</p>
             <div class="time-line">
-                <div class="progress-time-line"></div>
+                <div class="progress-time-line" id="progress-time-line"></div>
             </div>
             <p id="endTime">0:12</p>
         </div>
@@ -213,6 +213,7 @@
     const audio = document.getElementById('audio');
     const endTime = document.getElementById('endTime');
     const currentTime = document.getElementById('currentTime');
+    const progressTimeLine = document.getElementById('progress-time-line');
     let durationMusic;
 
     setTimeout(() => {
@@ -232,7 +233,10 @@
     }
 
     const updateCurrentTime = () => {
-        currentTime.innerText = calculateTotalValue(audio.currentTime);
+        const currentSecond = audio.currentTime;
+        currentTime.innerText = calculateTotalValue(currentSecond);
+        const width = (currentSecond / audio.duration) * 100;
+        progressTimeLine.style.width = `${width}%`;
     }
 
     setInterval(updateCurrentTime, 1000);
