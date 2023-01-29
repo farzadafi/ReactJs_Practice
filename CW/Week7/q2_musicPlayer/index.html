@@ -6,6 +6,11 @@
 
     <style>
 
+        @font-face {
+            src: url("./assistance/Vazir.ttf");
+            font-face-name: "vazir";
+        }
+
         *,
         *::after,
         *::before {
@@ -22,7 +27,7 @@
 
         body {
             font-size: 1.6rem;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'vazir', sans-serif;
             height: 100%;
         }
 
@@ -37,12 +42,62 @@
             border-radius: 1rem;
         }
 
+        main {
+            display: flex;
+            justify-content: center;
+            margin-top: 5rem;
+        }
+
+        .poster {
+            border-radius: 1rem;
+            width: 38rem;
+        }
+
+        .color-gray {
+            color: gray;
+        }
+
+        .color-white {
+            color: white;
+        }
+
+        .information {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            margin-left: 1rem;
+            gap: 4rem;
+            font: inherit;
+        }
+
+        .font-weight-bold {
+            font-weight: bold;
+        }
+
+        .information * {
+            margin-top: .3rem;
+        }
+
     </style>
 
 </head>
 <body>
 <div class="main-container">
-
+    <main>
+        <img class="poster" src="image/img.png" alt="ali zand poster">
+        <div class="information">
+            <div class="english-information">
+                <p class="color-gray font-weight-bold">Ali Zand Vakili</p>
+                <p class="color-gray">Royaye Bi Tekrar</p>
+                <p class="color-white font-weight-bold">Atash Dar Aab</p>
+            </div>
+            <div class="persian-information">
+                <p class="color-gray font-weight-bold">علی زند وکیلی</p>
+                <p class="color-gray">رویای بی تکرار</p>
+                <p class="color-white font-weight-bold">آتش در آب</p>
+            </div>
+        </div>
+    </main>
 </div>
 </body>
 </html>
