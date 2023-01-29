@@ -94,6 +94,43 @@
             font-size: 2rem;
         }
 
+        footer {
+            color: white;
+            padding-top: 1rem;
+            margin-top: 2rem;
+            width: 100%;
+            height: 10rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .music-progress {
+            display: flex;
+            padding: 0 4rem;
+            align-items: center;
+        }
+
+        .music-control-key {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+        }
+
+        button {
+            background-color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        .time-line {
+            width: 100%;
+            background-color: gray;
+            height: .3rem;
+            border-radius: 5rem;
+            margin: 0 1rem;
+        }
+
     </style>
 
 </head>
@@ -119,6 +156,43 @@
             <ion-icon name="heart"></ion-icon>
         </a>3,900 likes
     </div>
+    <footer>
+        <audio>
+            <source src="assistance/RouyayeBiTekrar.mp3">
+        </audio>
+        <div class="music-progress">
+            <p>0:12</p>
+            <div class="time-line"></div>
+            <p>0:12</p>
+        </div>
+        <div class="music-control-key">
+            <button>
+                <ion-icon name="repeat"></ion-icon>
+            </button>
+            <button>
+                <ion-icon name="play-back"></ion-icon>
+            </button>
+            <button>
+                <ion-icon name="play"></ion-icon>
+            </button>
+            <button>
+                <ion-icon name="play-forward"></ion-icon>
+            </button>
+            <button>
+                <ion-icon name="add"></ion-icon>
+            </button>
+            <div>
+                <button>
+                    <ion-icon name="add-outline"></ion-icon>
+                    <ion-icon name="add-outline"></ion-icon>
+                    <ion-icon name="add-outline"></ion-icon>
+                    <ion-icon name="add-outline"></ion-icon>
+                    <ion-icon name="add-outline"></ion-icon>
+                    <ion-icon name="add-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </footer>
 </div>
 </body>
 </html>
