@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
 
     <style>
 
@@ -78,6 +79,21 @@
             margin-top: .3rem;
         }
 
+        .like-div {
+            color: white;
+            margin-top: 2rem;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            justify-items: center;
+        }
+
+        ion-icon {
+            color: white;
+            font-size: 2rem;
+        }
+
     </style>
 
 </head>
@@ -98,6 +114,11 @@
             </div>
         </div>
     </main>
+    <div class="like-div">
+        <a href="">
+            <ion-icon name="heart"></ion-icon>
+        </a>3,900 likes
+    </div>
 </div>
 </body>
 </html>
