@@ -65,17 +65,15 @@
         }
 
         .main-content {
-            width: 120rem;
-            height: 10rem;
+            height: max-content;
             display: flex;
             flex-direction: column;
-            gap: 4rem;
+            gap: 3rem;
         }
 
         .categories-div {
             margin-top: 1rem;
             background-color: lightgray;
-            width: 30rem;
             height: 3rem;
             border-radius: .2rem;
             display: flex;
@@ -94,6 +92,26 @@
 
         .m-top-2 {
             margin-top: 2rem;
+        }
+
+        .col-1 {
+            width: 120rem;
+            height: max-content;
+        }
+
+        .col-2 {
+            width: 35rem;
+            height: max-content;
+        }
+
+        @media only screen and (max-width: 1200px/*768px*/
+        ) {
+            [class*="col-"] {
+                width: 100%;
+            }
+            main{
+                flex-direction: column-reverse;
+            }
         }
 
     </style>
@@ -116,7 +134,7 @@
     </div>
 </header>
 <main>
-    <div class="main-content">
+    <div class="main-content col-1">
         <div class="main-card">
             <h1>Farzad Afshar Zarandi</h1>
             <p class="m-top-2 color-lightgray">farzad living in zarand :)</p>
@@ -133,7 +151,7 @@
             <p class="m-top-2 color-lightgray">Good!</p>
         </div>
     </div>
-    <aside>
+    <aside class="col-2">
         <p class="color-lightgray">CATEGORIES</p>
         <div class="categories-div">
             <p>farzad afshar zarandi</p>
