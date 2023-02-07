@@ -67,7 +67,9 @@
         .main-content {
             width: 120rem;
             height: 10rem;
-            background-color: deeppink;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
         }
 
         .categories-div {
@@ -82,7 +84,16 @@
         }
 
         .color-lightgray {
-            color: lightgrey;
+            color: #a4a1a1;
+        }
+
+        .main-card {
+            background-color: lightgray;
+            padding: 2rem;
+        }
+
+        .m-top-2 {
+            margin-top: 2rem;
         }
 
     </style>
@@ -106,7 +117,21 @@
 </header>
 <main>
     <div class="main-content">
-
+        <div class="main-card">
+            <h1>Farzad Afshar Zarandi</h1>
+            <p class="m-top-2 color-lightgray">farzad living in zarand :)</p>
+            <p class="m-top-2 color-lightgray">Good!</p>
+        </div>
+        <div class="main-card">
+            <h1>Farzad Afshar Zarandi</h1>
+            <p class="m-top-2 color-lightgray">farzad living in zarand :)</p>
+            <p class="m-top-2 color-lightgray">Good!</p>
+        </div>
+        <div class="main-card">
+            <h1>Farzad Afshar Zarandi</h1>
+            <p class="m-top-2 color-lightgray">farzad living in zarand :)</p>
+            <p class="m-top-2 color-lightgray">Good!</p>
+        </div>
     </div>
     <aside>
         <p class="color-lightgray">CATEGORIES</p>
