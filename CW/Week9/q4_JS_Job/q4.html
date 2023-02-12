@@ -126,10 +126,12 @@
     }
 
     removeAllJobs.addEventListener('click', () => {
-        finishedJob = [];
-        finishedCardBody.innerHTML = '';
+        const response = confirm("Are you sure to delete all finished jobs?");
+        if (response) {
+            finishedJob = [];
+            finishedCardBody.innerHTML = '';
+        }
     })
-
 </script>
 
 
