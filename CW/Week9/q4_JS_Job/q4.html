@@ -59,15 +59,16 @@
     let array = [];
     let cardBody = document.getElementById('cardBody');
     let finishedCardBody = document.getElementById('finishCardBody');
-    let counter = 1;
+    let counter = 0;
     const jobCounter = document.getElementById('jobCounter');
     let finishedJob = [];
     const removeAllJobs = document.getElementById('removeAllJobsBtn');
 
     addJobBtn.addEventListener('click', () => {
+        ++counter;
         array.push(createJob());
         renderJobs(array);
-        jobCounter.innerText = `${counter - 1}`
+        jobCounter.innerText = `${array.length}`
     })
 
     const createJob = () => {
@@ -91,7 +92,6 @@
     const createSpan = () => {
         const span = document.createElement('span');
         span.innerText = `Job ${counter}`;
-        ++counter;
         return span;
     }
 
@@ -103,9 +103,8 @@
             return a.id === element.id;
         })
         finishedJob.push(finishElement.pop());
-        counter--;
-        jobCounter.innerText = `${counter - 1}`
         array = newArray;
+        jobCounter.innerText = `${newArray.length}`;
         renderJobs(newArray);
         renderFinishedJob(finishedJob);
     }
