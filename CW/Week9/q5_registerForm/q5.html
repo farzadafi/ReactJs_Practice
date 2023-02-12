@@ -95,7 +95,16 @@
         }
     }
 
-
+    deleteBtn.addEventListener('click', () => {
+        const newArray = dataArray.filter( s => {
+            const td = s.getElementsByTagName('td')[0];
+            const input = td.getElementsByTagName('input')[0];
+            if(!input.checked)
+                return s;
+        })
+        renderTable(newArray)
+        dataArray = newArray;
+    })
 
 </script>
 
