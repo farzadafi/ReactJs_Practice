@@ -62,6 +62,7 @@
     let counter = 1;
     const jobCounter = document.getElementById('jobCounter');
     let finishedJob = [];
+    const removeAllJobs = document.getElementById('removeAllJobsBtn');
 
     addJobBtn.addEventListener('click', () => {
         array.push(createJob());
@@ -126,6 +127,11 @@
             finishedCardBody.appendChild(finishedJobElement);
         }
     }
+
+    removeAllJobs.addEventListener('click', () => {
+        finishedJob = [];
+        finishedCardBody.innerHTML = '';
+    })
 
 </script>
 
