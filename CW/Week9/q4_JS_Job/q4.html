@@ -7,8 +7,9 @@
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body class="bg-secondary">
-<main class="container">
-    <div class="card">
+<main class="container d-flex flex-wrap gap-3">
+    <!--    card-->
+    <div class="card col-12">
         <!--        header-->
         <div class="card-header d-flex align-items-center gap-2 justify-content-between">
             <div>
@@ -25,6 +26,25 @@
         </div>
         <!--        card body-->
         <div id="cardBody" class="card-body d-flex gap-3 flex-wrap">
+        </div>
+    </div>
+    <!--    card-->
+    <div class="card col-12">
+        <!--        header-->
+        <div class="card-header d-flex align-items-center gap-2 justify-content-between">
+            <div>
+                <img src="./image/archive.svg" alt="archive">
+                <span class="">Finished Jobs</span>
+            </div>
+            <div>
+                <button id="removeAllJobsBtn" class="btn btn-outline-primary">
+                    <img src="./image/trash3.svg" alt="">
+                    Clean-up
+                </button>
+            </div>
+        </div>
+        <!--        card body-->
+        <div id="finishCardBody" class="card-body d-flex gap-3 flex-wrap">
         </div>
     </div>
 </main>
@@ -44,7 +64,7 @@
     addJobBtn.addEventListener('click', () => {
         array.push(createJob());
         renderJobs(array);
-        jobCounter.innerText = `${counter-1}`
+        jobCounter.innerText = `${counter - 1}`
     })
 
     const createJob = () => {
@@ -55,7 +75,7 @@
         const span = createSpan();
         div.append(span);
         div.setAttribute('onclick', `finishJob(this)`);
-        div.setAttribute('id', `job${counter-1}`);
+        div.setAttribute('id', `job${counter - 1}`);
         return div;
     }
 
@@ -75,11 +95,11 @@
     const finishJob = (element) => {
         alert("farzad")
         alert(element.id)
-        const newArray = array.filter( a => {
+        const newArray = array.filter(a => {
             return a.id !== element.id;
         })
         counter--;
-        jobCounter.innerText = `${counter-1}`
+        jobCounter.innerText = `${counter - 1}`
         array = newArray;
         renderJobs(newArray);
     }
