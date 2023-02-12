@@ -88,6 +88,13 @@
         createTr(first, last)
     }
 
+    const renderTable = (array) => {
+        bodyTable.innerHTML = '';
+        for (const dataArrayElement of array) {
+            bodyTable.append(dataArrayElement);
+        }
+    }
+
 
 
 </script>
