@@ -43,11 +43,7 @@
 
     addJobBtn.addEventListener('click', () => {
         array.push(createJob());
-        cardBody.innerHTML = '';
-
-        for (const arrayElement of array) {
-            cardBody.appendChild(arrayElement);
-        }
+        renderJobs(array);
         jobCounter.innerText = `${counter-1}`
     })
 
@@ -58,6 +54,8 @@
         div.append(image);
         const span = createSpan();
         div.append(span);
+        div.setAttribute('onclick', `finishJob(this)`);
+        div.setAttribute('id', `job${counter-1}`);
         return div;
     }
 
@@ -72,6 +70,26 @@
         span.innerText = `Job ${counter}`;
         ++counter;
         return span;
+    }
+
+    const finishJob = (element) => {
+        alert("farzad")
+        alert(element.id)
+        const newArray = array.filter( a => {
+            return a.id !== element.id;
+        })
+        counter--;
+        jobCounter.innerText = `${counter-1}`
+        array = newArray;
+        renderJobs(newArray);
+    }
+
+    const renderJobs = jobs => {
+        cardBody.innerHTML = '';
+
+        for (const arrayElement of jobs) {
+            cardBody.appendChild(arrayElement);
+        }
     }
 
 </script>
