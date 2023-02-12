@@ -56,13 +56,13 @@
 <script>
 
     const addJobBtn = document.getElementById('addJobBtn');
-    let array = [];
     let cardBody = document.getElementById('cardBody');
     let finishedCardBody = document.getElementById('finishCardBody');
-    let counter = 0;
     const jobCounter = document.getElementById('jobCounter');
-    let finishedJob = [];
     const removeAllJobs = document.getElementById('removeAllJobsBtn');
+    let finishedJob = [];
+    let counter = 0;
+    let array = [];
 
     addJobBtn.addEventListener('click', () => {
         ++counter;
