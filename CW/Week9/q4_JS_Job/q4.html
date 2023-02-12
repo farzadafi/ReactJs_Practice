@@ -58,8 +58,10 @@
     const addJobBtn = document.getElementById('addJobBtn');
     let array = [];
     let cardBody = document.getElementById('cardBody');
+    let finishedCardBody = document.getElementById('finishCardBody');
     let counter = 1;
     const jobCounter = document.getElementById('jobCounter');
+    let finishedJob = [];
 
     addJobBtn.addEventListener('click', () => {
         array.push(createJob());
@@ -98,10 +100,15 @@
         const newArray = array.filter(a => {
             return a.id !== element.id;
         })
+        const finishElement = array.filter(a => {
+            return a.id === element.id;
+        })
+        finishedJob.push(finishElement.pop());
         counter--;
         jobCounter.innerText = `${counter - 1}`
         array = newArray;
         renderJobs(newArray);
+        renderFinishedJob(finishedJob);
     }
 
     const renderJobs = jobs => {
@@ -109,6 +116,14 @@
 
         for (const arrayElement of jobs) {
             cardBody.appendChild(arrayElement);
+        }
+    }
+
+    const renderFinishedJob = (finishedJobArray) => {
+        finishedCardBody.innerHTML = '';
+
+        for (const finishedJobElement of finishedJobArray) {
+            finishedCardBody.appendChild(finishedJobElement);
         }
     }
 
