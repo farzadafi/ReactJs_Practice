@@ -66,6 +66,24 @@
         renderTable(dataArray);
     })
 
+    const createTr = (first, last) => {
+        const thRow = document.createElement('th');
+        const tdCheckRow = document.createElement('td');
+        const checkBox = document.createElement('input');
+        checkBox.id = 'checkbox';
+        const tdFirstRow = document.createElement('td');
+        const tdLastRow = document.createElement('td');
+        checkBox.type = 'checkbox';
+        tdCheckRow.append(checkBox);
+        thRow.innerText = `${counter}`;
+        tdFirstRow.innerText = `${first}`;
+        tdLastRow.innerText = `${last}`;
+        const tr = document.createElement('tr');
+        tr.append(thRow, tdCheckRow, tdFirstRow, tdLastRow);
+        ++counter;
+        dataArray.push(tr);
+    }
+
 
 
 </script>
