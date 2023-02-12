@@ -71,6 +71,12 @@
         return image;
     }
 
+    const createSpan = () => {
+        const span = document.createElement('span');
+        span.innerText = `Job ${counter}`;
+        ++counter;
+        return span;
+    }
 
 </script>
 
