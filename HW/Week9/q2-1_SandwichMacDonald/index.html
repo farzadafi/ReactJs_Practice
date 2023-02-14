@@ -23,6 +23,10 @@
             font-family: vazir, serif;
         }
 
+        .no-wrap {
+            white-space: nowrap;
+        }
+
         hr {
             -moz-border-bottom-colors: none;
             -moz-border-image: none;
@@ -34,6 +38,14 @@
             margin: 18px 0;
         }
 
+        .w-10 {
+            width: 10px;
+        }
+
+        .bg-gray {
+            background-color: #cccccc;
+        }
+
 
     </style>
 
@@ -42,9 +54,32 @@
 <div class="container d-flex gap-5 mt-5 font-vazir fw-bold">
     <div class="bg-white col-3">
     </div>
-    <div class="bg-white bg-secondary-subtle col-9 text-center rounded-3 p-3">
-        <h1 class="">رستوران مک دونالد شعبه تهران</h1>
-        <hr>
+    <div class="bg-white bg-secondary-subtle col-9 text-center rounded-3">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="">رستوران مک دونالد شعبه تهران</h1>
+            </div>
+            <div class="card-body">
+                <div class="d-flex col-4 w-25 bg-primary">
+                    <div class="text-end">
+                        <h6 class="no-wrap">همبرگر معمولی</h6>
+                        <p>۸۰۰۰ تومان</p>
+                        <div class="d-flex text-end align-items-center align-content-center">
+                            <button class="btn btn-danger rounded-end-0">
+                                <img class="w-10" src="assets/image/add.png" alt="">
+                            </button>
+                            <p class="my-auto btn rounded-0 bg-gray">۰</p>
+                            <button class="btn btn-danger rounded-start-0">
+                                <img class="w-10" src="assets/image/minus.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="">
+                        <img class="img-fluid" src="./assets/image/hamburger.png" alt="hamburger">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
