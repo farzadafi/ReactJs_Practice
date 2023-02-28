@@ -3,7 +3,7 @@ import elementGenerator from "../../library/elementGenerator";
 const Container = (child) => {
     return (elementGenerator({
         element:'div',
-        className:'w-auto mx-auto px-6 max-w-7xl',
+        className:'max-w-7xl absolute translate-x-[50rem] translate-y-[30rem]',
         child,
     }) );
 }
