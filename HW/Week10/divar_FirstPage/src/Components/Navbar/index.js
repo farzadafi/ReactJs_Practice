@@ -3,7 +3,7 @@ import elementGenerator from "../../library/ElementGenerator.js";
 const navbar = () => {
     return elementGenerator({
         element: 'div',
-        className: 'flex flex-row-reverse gap-11',
+        className: 'flex flex-row-reverse gap-11 justify-center',
         child: [
             elementGenerator({
                 element: 'a',
