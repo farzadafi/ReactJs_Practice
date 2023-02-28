@@ -6,6 +6,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'vazir': '"vazir"'
+    },
     extend: {},
   },
   plugins: [],
