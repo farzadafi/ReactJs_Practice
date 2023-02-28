@@ -12,30 +12,30 @@ const Table = () => {
                 child: [
                     elementGenerator({
                         element: 'th',
-                        className: 'px-10 py-6',
+                        className: 'px-10 py-6 font-vazir',
                         child: 'شناسه'
                     }),
                     elementGenerator({
                         element: 'th',
-                        className: 'px-10 py-6',
+                        className: 'px-10 py-6 font-vazir',
                         child: 'نام'
                     }),
                     elementGenerator({
                         element: 'th',
-                        className: 'px-10 py-6',
+                        className: 'px-10 py-6 font-vazir',
                         child: 'نام خانوادگی'
                     }),
                     elementGenerator({
                         element: 'th',
-                        className: 'px-10 py-6',
+                        className: 'px-10 py-6 font-vazir',
                         child: 'موبایل'
                     }), elementGenerator({
                         element: 'th',
-                        className: 'px-10 py-6',
+                        className: 'px-10 py-6 font-vazir',
                         child: 'ایمیل'
                     }), elementGenerator({
                         element: 'th',
-                        className: 'px-10 py-6',
+                        className: 'px-10 py-6 font-vazir',
                         child: 'عملیات'
                     })
                 ]
