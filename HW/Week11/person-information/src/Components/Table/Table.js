@@ -8,34 +8,34 @@ const Table = () => {
         child: [
             elementGenerator({
                 element: 'tr',
-                className: '',
+                className: 'bg-[#72147e] text-white',
                 child: [
                     elementGenerator({
                         element: 'th',
-                        className: '',
+                        className: 'px-10 py-6',
                         child: 'شناسه'
                     }),
                     elementGenerator({
                         element: 'th',
-                        className: '',
+                        className: 'px-10 py-6',
                         child: 'نام'
                     }),
                     elementGenerator({
                         element: 'th',
-                        className: '',
+                        className: 'px-10 py-6',
                         child: 'نام خانوادگی'
                     }),
                     elementGenerator({
                         element: 'th',
-                        className: '',
+                        className: 'px-10 py-6',
                         child: 'موبایل'
                     }), elementGenerator({
                         element: 'th',
-                        className: '',
+                        className: 'px-10 py-6',
                         child: 'ایمیل'
                     }), elementGenerator({
                         element: 'th',
-                        className: '',
+                        className: 'px-10 py-6',
                         child: 'عملیات'
                     })
                 ]
