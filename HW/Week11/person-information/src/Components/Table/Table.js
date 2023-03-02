@@ -2,39 +2,39 @@ import elementGenerator from "../../library/elementGenerator";
 
 const header = ['شناسه', 'نام', 'نام خانوادگی', 'موبایل', 'ایمیل', 'عملیات'];
 const inputData = [
-    ['1', 'farzad', 'afshar', '0913', 'farzadAfi50@', 'operation'],
-    ['2', 'farzad', 'afshar', '0913', 'farzadAfi50@', 'operation'],
-    ['3', 'farzad', 'afshar', '0913', 'farzadAfi50@', 'operation']
+    ['۱', 'فرزاد', 'افشار', '۰۹۱۳', 'ایمیل', 'عملیات'],
+    ['۲', 'فرزاد', 'افشار', '۰۹۱۳', 'ایمیل', 'عملیات'],
+    ['۳', 'فرزاد', 'افشار', '۰۹۱۳', 'ایمیل', 'عملیات'],
 ]
 
 const Table = () => {
-    const dataArray = [];
+    const headerArray = [];
     for (const key in header) {
-        dataArray.push(elementGenerator({
+        headerArray.push(elementGenerator({
             element: 'th',
-            className: 'px-10 py-6 font-vazir',
+            className: 'px-10 py-6 font-vazir w-36',
             child: `${header[key]}`
         }));
     }
-
-    const dataArr = [];
-    dataArr.push(elementGenerator({
+    const dataArray = [];
+    dataArray.push(elementGenerator({
         element: 'tr',
-        className: 'bg-[#72147e] text-white rounded-tr-3xl rounded-tl-3xl',
-        child: dataArray
+        className: 'bg-[#72147e] text-white rounded-tr-3xl rounded-tl-3xl block',
+        child: headerArray
     }))
+
     for (let i = 0; i < inputData.length; i++) {
         let tdArray = [];
         for (let j = 0; j < inputData[i].length; j++) {
             tdArray.push(elementGenerator({
                 element: 'td',
-                className: '',
+                className: 'px-10 py-6 font-vazir w-36 text-center',
                 child: `${inputData[i][j]}`
             }))
         }
-        dataArr.push(elementGenerator({
+        dataArray.push(elementGenerator({
             element: 'tr',
-            className: '',
+            className: 'bg-gray-100 block',
             child: tdArray
         }))
     }
@@ -43,14 +43,7 @@ const Table = () => {
         element: 'table',
         className: 'w-auto mx-auto px-6 max-w-7xl',
         dir: 'rtl',
-        child: dataArr
-        // child: [
-        //     elementGenerator({
-        //         element: 'tr',
-        //         className: 'bg-[#72147e] text-white rounded-tr-3xl rounded-tl-3xl block',
-        //         child: dataArray
-        //     })
-        // ]
+        child: dataArray
     }));
 }
 
