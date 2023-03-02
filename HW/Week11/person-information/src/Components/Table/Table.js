@@ -8,7 +8,7 @@ const Table = () => {
         child: [
             elementGenerator({
                 element: 'tr',
-                className: 'bg-[#72147e] text-white',
+                className: 'bg-[#72147e] text-white rounded-tr-3xl rounded-tl-3xl block',
                 child: [
                     elementGenerator({
                         element: 'th',
