@@ -12,7 +12,7 @@ const Table = () => {
     for (const key in header) {
         headerArray.push(elementGenerator({
             element: 'th',
-            className: 'px-10 py-6 font-vazir w-36',
+            className: 'px-10 py-6 font-vazir w-36 whitespace-nowrap',
             child: `${header[key]}`
         }));
     }
@@ -28,7 +28,7 @@ const Table = () => {
         for (let j = 0; j < inputData[i].length; j++) {
             tdArray.push(elementGenerator({
                 element: 'td',
-                className: 'px-10 py-6 font-vazir w-36 text-center',
+                className: 'px-14 py-6 font-vazir w-36 text-center',
                 child: `${inputData[i][j]}`
             }))
         }
@@ -38,6 +38,15 @@ const Table = () => {
             child: tdArray
         }))
     }
+
+    dataArray.push(elementGenerator({
+        element: 'tr',
+        className: 'bg-orange-600 text-white block text-center px-10 py-6  rounded-br-3xl rounded-bl-3xl hover:cursor-pointer',
+        onclick:() => {
+
+        },
+        child:'لطفا برای اضافه کردن کاربر جدید کلیک کنید +'
+    }))
 
     return (elementGenerator({
         element: 'table',
