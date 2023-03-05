@@ -1,4 +1,4 @@
-import elementGenerator from '../../library/elementGenerator'
+import elementGenerator from '@/library/elementGenerator'
 
 const Container = (child) => {
   // <div className=""></div>
