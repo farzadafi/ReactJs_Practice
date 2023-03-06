@@ -3,7 +3,7 @@ const elementGenerator = ({ element, child, ...rest }) => {
   for (const key in rest) {
     el[key] = rest[key]
   }
-  (Array.isArray(child)) ? el.append(...child) : el.append(child)
+  if (child) { (Array.isArray(child)) ? el.append(...child) : el.append(child) }
   return el
 }
 
