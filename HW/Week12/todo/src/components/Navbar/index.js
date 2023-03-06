@@ -17,6 +17,17 @@ const Navbar = () => {
         className: 'flex items-center gap-6 mr-4',
         child: [
           elementGenerator({
+            element: 'label',
+            for: 'searchInput',
+            className: ''
+          }),
+          elementGenerator({
+            element: 'input',
+            id: 'searchInput',
+            className: 'rounded-md p-1',
+            placeholder: 'Search'
+          }),
+          elementGenerator({
             element: 'button',
             className: 'text-white',
             innerHTML: svg.filterIcon
