@@ -24,8 +24,8 @@ const Navbar = () => {
           elementGenerator({
             element: 'input',
             id: 'searchInput',
-            className: 'rounded-md p-1',
-            placeholder: 'Search'
+            className: 'rounded-md p-1 bg-[#7926ed] font-[farzad]',
+            placeholder: ' Search'
           }),
           elementGenerator({
             element: 'button',
