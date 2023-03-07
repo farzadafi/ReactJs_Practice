@@ -1,3 +1,7 @@
 .font-awesome {
     font-family: 'Helvetica', FontAwesome, sans-serif;
 }
+
+::placeholder {
+    font-family: 'FontAwesome',serif;
+}
