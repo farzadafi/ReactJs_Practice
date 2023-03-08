@@ -57,7 +57,7 @@ const AddTask = () => {
                     child: [
                       elementGenerator({
                         element: 'div',
-                        className: 'flex justify-between items-center p-[.70rem]',
+                        className: 'flex justify-between items-center p-[.50rem]',
                         child: [
                           elementGenerator({
                             element: 'p',
