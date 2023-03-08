@@ -1,6 +1,8 @@
 import elementGenerator from '@/library/elementGenerator.js'
 import { svg } from '@/assets/svgs/index.js'
 
+const priorityList = ['Low', 'Medium', 'high']
+
 const AddTask = () => {
   return elementGenerator({
     element: 'div',
@@ -47,7 +49,7 @@ const AddTask = () => {
               }),
               elementGenerator({
                 element: 'div',
-                className: 'p-4',
+                className: 'p-4 text-xl',
                 child: [
                   elementGenerator({
                     element: 'div',
@@ -68,6 +70,15 @@ const AddTask = () => {
                             innerHTML: svg.CaretDownFill
                           })
                         ]
+                      }),
+                      elementGenerator({
+                        element: 'div',
+                        className: 'hidden absolute min-w-max shadow-2xl bg-white rounded mt-1 w-44',
+                        child: priorityList.map(s => elementGenerator({
+                          element: 'a',
+                          className: 'block hover:cursor-pointer hover:bg-[#f5f5f2] p-1 active:bg-[#d9d5e6]',
+                          child: s
+                        }))
                       })
                     ]
                   })
