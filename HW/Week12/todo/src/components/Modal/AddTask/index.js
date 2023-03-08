@@ -13,6 +13,15 @@ const AddTask = () => {
       elementGenerator({
         element: 'hr',
         className: ''
+      }),
+      elementGenerator({
+        element: 'fieldset',
+        className: 'border m-4 h-16 rounded',
+        child: elementGenerator({
+          element: 'legend',
+          className: 'ml-4 text-gray-100 p-1',
+          child: 'Task Name'
+        })
       })
     ]
   })
