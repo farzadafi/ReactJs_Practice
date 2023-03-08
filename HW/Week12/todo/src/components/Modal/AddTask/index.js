@@ -1,4 +1,5 @@
 import elementGenerator from '@/library/elementGenerator.js'
+import { svg } from '@/assets/svgs/index.js'
 
 const AddTask = () => {
   return elementGenerator({
@@ -43,6 +44,34 @@ const AddTask = () => {
                       id: 'taskName'
                     })]
                 })
+              }),
+              elementGenerator({
+                element: 'div',
+                className: 'p-4',
+                child: [
+                  elementGenerator({
+                    element: 'div',
+                    className: 'relative inline-block border rounded w-44 h-12 hover:cursor-pointer',
+                    child: [
+                      elementGenerator({
+                        element: 'div',
+                        className: 'flex justify-between items-center p-[.70rem]',
+                        child: [
+                          elementGenerator({
+                            element: 'p',
+                            className: '',
+                            child: 'priority'
+                          }),
+                          elementGenerator({
+                            element: 'span',
+                            className: '',
+                            innerHTML: svg.CaretDownFill
+                          })
+                        ]
+                      })
+                    ]
+                  })
+                ]
               })
             ]
           })
