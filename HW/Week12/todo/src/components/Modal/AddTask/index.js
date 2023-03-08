@@ -57,7 +57,16 @@ const AddTask = () => {
                     child: [
                       elementGenerator({
                         element: 'div',
-                        className: 'flex justify-between items-center p-[.50rem]',
+                        className: 'z-0 flex justify-between items-center p-[.50rem]',
+                        onclick: () => {
+                          const priorityDiv = document.getElementById('priorityDiv')
+                          let priorityDivClass = priorityDiv.className
+                          if (priorityDivClass.match('hidden'))
+                            priorityDivClass = priorityDivClass.replace('hidden', 'block')
+                          else
+                            priorityDivClass = priorityDivClass.replace('block', 'hidden')
+                          priorityDiv.className = priorityDivClass
+                        },
                         child: [
                           elementGenerator({
                             element: 'p',
@@ -74,6 +83,7 @@ const AddTask = () => {
                       elementGenerator({
                         element: 'div',
                         className: 'hidden absolute min-w-max shadow-2xl bg-white rounded mt-1 w-44',
+                        id: 'priorityDiv',
                         child: priorityList.map(s => elementGenerator({
                           element: 'a',
                           className: 'block hover:cursor-pointer hover:bg-[#f5f5f2] p-1 active:bg-[#d9d5e6]',
