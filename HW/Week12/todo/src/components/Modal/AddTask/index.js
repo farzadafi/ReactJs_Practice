@@ -16,10 +16,10 @@ const AddTask = () => {
       }),
       elementGenerator({
         element: 'fieldset',
-        className: 'border m-4 h-16 rounded',
+        className: 'border m-4 h-16 rounded focus-within:border-[#7926ed]',
         child: elementGenerator({
           element: 'legend',
-          className: 'ml-4 text-gray-100 p-1 flex flex-col',
+          className: 'ml-4 text-gray-100 p-1 flex flex-col focus-within:text-[#7926ed]',
           child: ['Task Name',
             elementGenerator({
               element: 'label',
