@@ -7,8 +7,12 @@ const AddTask = () => {
     child: [
       elementGenerator({
         element: 'header',
-        className: 'm-4',
+        className: 'm-4 text-2xl',
         child: 'New Task'
+      }),
+      elementGenerator({
+        element: 'hr',
+        className: ''
       })
     ]
   })
