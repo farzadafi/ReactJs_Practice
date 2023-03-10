@@ -58,13 +58,17 @@ const AddTask = () => {
                       elementGenerator({
                         element: 'div',
                         className: 'z-0 flex justify-between items-center p-[.50rem]',
-                        onclick: () => {
+                        onclick: (e) => {
                           const priorityDiv = document.getElementById('priorityDiv')
+                          const span = e.target.querySelector('span')
                           let priorityDivClass = priorityDiv.className
-                          if (priorityDivClass.match('hidden'))
+                          if (priorityDivClass.match('hidden')) {
                             priorityDivClass = priorityDivClass.replace('hidden', 'block')
-                          else
+                            span.innerHTML = svg.CaretUpFill
+                          } else {
                             priorityDivClass = priorityDivClass.replace('block', 'hidden')
+                            span.innerHTML = svg.CaretDownFill
+                          }
                           priorityDiv.className = priorityDivClass
                         },
                         child: [
