@@ -54,6 +54,7 @@ const AddTask = () => {
                   elementGenerator({
                     element: 'div',
                     className: 'relative inline-block border rounded w-44 h-12 hover:cursor-pointer',
+                    id: 'generalDivPriority',
                     child: [
                       elementGenerator({
                         element: 'div',
@@ -62,12 +63,15 @@ const AddTask = () => {
                         onclick: (e) => {
                           const priorityDiv = document.getElementById('priorityDiv')
                           const span = e.target.querySelector('span')
+                          const generalDivPriority = document.getElementById('generalDivPriority')
                           let priorityDivClass = priorityDiv.className
                           if (priorityDivClass.match('hidden')) {
                             priorityDivClass = priorityDivClass.replace('hidden', 'block')
                             span.innerHTML = svg.CaretUpFill
+                            generalDivPriority.className = generalDivPriority.className + ' border-[#7926ed]'
                           } else {
                             priorityDivClass = priorityDivClass.replace('block', 'hidden')
+                            generalDivPriority.className = generalDivPriority.className.replace('border-[#7926ed]', '')
                             span.innerHTML = svg.CaretDownFill
                           }
                           priorityDiv.className = priorityDivClass
@@ -98,6 +102,8 @@ const AddTask = () => {
                             const priorityDiv = document.getElementById('priorityDiv')
                             let priorityDivClassName = priorityDiv.className
                             priorityDivClassName = priorityDivClassName.replace('block', 'hidden')
+                            const generalPriorityDiv = document.getElementById('generalDivPriority')
+                            generalPriorityDiv.className = generalPriorityDiv.className.replace('border-[#7926ed', '')
                             priorityDiv.className = priorityDivClassName
 
                             document.getElementById('PriorityPTag').innerHTML = e.target.innerHTML
