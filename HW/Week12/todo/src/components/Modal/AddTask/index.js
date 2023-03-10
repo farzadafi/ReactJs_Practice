@@ -57,6 +57,7 @@ const AddTask = () => {
                     child: [
                       elementGenerator({
                         element: 'div',
+                        id: 'prioritySelect',
                         className: 'z-0 flex justify-between items-center p-[.50rem]',
                         onclick: (e) => {
                           const priorityDiv = document.getElementById('priorityDiv')
@@ -75,10 +76,12 @@ const AddTask = () => {
                           elementGenerator({
                             element: 'p',
                             className: '',
+                            id: 'PriorityPTag',
                             child: 'priority'
                           }),
                           elementGenerator({
                             element: 'span',
+                            id: 'prioritySpan',
                             className: '',
                             innerHTML: svg.CaretDownFill
                           })
@@ -91,6 +94,15 @@ const AddTask = () => {
                         child: priorityList.map(s => elementGenerator({
                           element: 'a',
                           className: 'block hover:cursor-pointer hover:bg-[#f5f5f2] p-1 active:bg-[#d9d5e6]',
+                          onclick: (e) => {
+                            const priorityDiv = document.getElementById('priorityDiv')
+                            let priorityDivClassName = priorityDiv.className
+                            priorityDivClassName = priorityDivClassName.replace('block', 'hidden')
+                            priorityDiv.className = priorityDivClassName
+
+                            document.getElementById('PriorityPTag').innerHTML = e.target.innerHTML
+                            document.getElementById('prioritySpan').innerHTML = svg.CaretDownFill
+                          },
                           child: s
                         }))
                       })
