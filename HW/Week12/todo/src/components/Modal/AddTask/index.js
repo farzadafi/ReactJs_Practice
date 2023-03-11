@@ -216,7 +216,7 @@ const AddTask = () => {
                   }),
                   elementGenerator({
                     element: 'input',
-                    className: 'h-12 mt-4 rounded-md w-56 border-gray-300 border p-2',
+                    className: 'h-12 mt-4 rounded-md w-56 border-gray-300 border p-2  focus-within:border-[#7926ed] focus-within:border-2 outline-none',
                     type: 'datetime-local'
                   })
                 ]
