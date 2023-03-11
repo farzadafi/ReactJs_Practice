@@ -49,7 +49,7 @@ const AddTask = () => {
                 })
               }), elementGenerator({
                 element: 'div',
-                className: 'flex',
+                className: 'flex gap-4',
                 child: [
                   elementGenerator({
                     element: 'div',
@@ -57,7 +57,7 @@ const AddTask = () => {
                     child: [
                       elementGenerator({
                         element: 'div',
-                        className: 'relative inline-block border rounded w-44 h-12 hover:cursor-pointer',
+                        className: 'relative inline-block border rounded w-56 h-12 hover:cursor-pointer',
                         id: 'generalDivPriority',
                         onmouseleave: (e) => {
                           const priorityDiv = document.getElementById('priorityDiv')
@@ -137,7 +137,7 @@ const AddTask = () => {
                     child: [
                       elementGenerator({
                         element: 'div',
-                        className: 'relative inline-block border rounded w-44 h-12 hover:cursor-pointer',
+                        className: 'relative inline-block border rounded w-56 h-12 hover:cursor-pointer',
                         id: 'generalDivStatus',
                         onmouseleave: (e) => {
                           const statusDiv = document.getElementById('statusDiv')
@@ -210,6 +210,16 @@ const AddTask = () => {
                         ]
                       })
                     ]
+                  }),
+                  elementGenerator({
+                    element: 'label',
+                    className: '',
+                    for: 'calenderInput'
+                  }),
+                  elementGenerator({
+                    element: 'input',
+                    className: 'h-12 mt-4 rounded-md w-56',
+                    type: 'datetime-local'
                   })
                 ]
               })
