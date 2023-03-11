@@ -49,7 +49,7 @@ const AddTask = () => {
                 })
               }), elementGenerator({
                 element: 'div',
-                className: 'flex gap-4',
+                className: 'flex gap-4 mt-10',
                 child: [
                   elementGenerator({
                     element: 'div',
@@ -225,7 +225,7 @@ const AddTask = () => {
               }),
               elementGenerator({
                 element: 'textarea',
-                className: 'ml-4 rounded-md p-3',
+                className: 'ml-4 rounded-md p-3 mt-10',
                 placeholder: 'Details (optional)',
                 rows: '6',
                 cols: '81'
