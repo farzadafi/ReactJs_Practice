@@ -7,7 +7,7 @@ const statusList = ['Todo', 'Doing', 'Done']
 const AddTask = () => {
   return elementGenerator({
     element: 'div',
-    className: 'fixed w-5/12 h-3/5 bg-green-500 top-[20%] left-[30%] rounded-md',
+    className: 'fixed w-5/12 h-3/5 top-[20%] left-[30%] rounded-md shadow-2xl',
     child: [
       elementGenerator({
         element: 'header',
@@ -18,7 +18,8 @@ const AddTask = () => {
             child: 'New Task'
           }),
           elementGenerator({
-            element: 'hr'
+            element: 'hr',
+            className: 'border-gray-300'
           })
         ]
       }),
@@ -32,10 +33,10 @@ const AddTask = () => {
             child: [
               elementGenerator({
                 element: 'fieldset',
-                className: 'border m-4 h-16 rounded focus-within:border-[#7926ed]',
+                className: 'border m-4 h-16 rounded border-gray-300 focus-within:border-[#7926ed]',
                 child: elementGenerator({
                   element: 'legend',
-                  className: 'ml-4 text-gray-100 p-1 flex flex-col focus-within:text-[#7926ed]',
+                  className: 'ml-4 text-gray-100 p-1 flex text-gray-400 flex-col focus-within:text-[#7926ed]',
                   child: ['Task Name',
                     elementGenerator({
                       element: 'label',
@@ -57,7 +58,7 @@ const AddTask = () => {
                     child: [
                       elementGenerator({
                         element: 'div',
-                        className: 'relative inline-block border rounded w-56 h-12 hover:cursor-pointer',
+                        className: 'relative inline-block border-gray-300 border rounded w-56 h-12 hover:cursor-pointer',
                         id: 'generalDivPriority',
                         onmouseleave: (e) => {
                           const priorityDiv = document.getElementById('priorityDiv')
@@ -65,7 +66,7 @@ const AddTask = () => {
                           const generalDivPriority = document.getElementById('generalDivPriority')
                           let priorityDivClass = priorityDiv.className
                           priorityDivClass = priorityDivClass.replace('block', 'hidden')
-                          generalDivPriority.className = generalDivPriority.className.replace('border-[#7926ed]', '')
+                          generalDivPriority.className = generalDivPriority.className.replace('border-[#6200e3] border-2', '')
                           span.innerHTML = svg.CaretDownFill
                           priorityDiv.className = priorityDivClass
                           priorityDiv.className = priorityDivClass
@@ -83,7 +84,7 @@ const AddTask = () => {
                               if (priorityDivClass.match('hidden')) {
                                 priorityDivClass = priorityDivClass.replace('hidden', 'block')
                                 span.innerHTML = svg.CaretUpFill
-                                generalDivPriority.className = generalDivPriority.className + ' border-[#7926ed]'
+                                generalDivPriority.className = generalDivPriority.className + ' border-[#6200e3] border-2'
                               } else {
                                 priorityDivClass = priorityDivClass.replace('block', 'hidden')
                                 generalDivPriority.className = generalDivPriority.className.replace('border-[#7926ed]', '')
@@ -106,7 +107,7 @@ const AddTask = () => {
                               }),
                               elementGenerator({
                                 element: 'div',
-                                className: 'hidden absolute min-w-max shadow-2xl bg-white rounded mt-1 w-44 mt-[10.5rem]',
+                                className: 'hidden absolute min-w-max shadow-2xl bg-white rounded mt-1 w-56 mt-[10.5rem]',
                                 id: 'priorityDiv',
                                 child: priorityList.map(s => elementGenerator({
                                   element: 'a',
@@ -114,8 +115,6 @@ const AddTask = () => {
                                     const priorityDiv = document.getElementById('priorityDiv')
                                     let priorityDivClassName = priorityDiv.className
                                     priorityDivClassName = priorityDivClassName.replace('block', 'hidden')
-                                    const generalPriorityDiv = document.getElementById('generalDivPriority')
-                                    generalPriorityDiv.className = generalPriorityDiv.className.replace('border-[#7926ed', '')
                                     priorityDiv.className = priorityDivClassName
 
                                     document.getElementById('PriorityPTag').innerHTML = e.target.innerHTML
@@ -137,15 +136,13 @@ const AddTask = () => {
                     child: [
                       elementGenerator({
                         element: 'div',
-                        className: 'relative inline-block border rounded w-56 h-12 hover:cursor-pointer',
+                        className: 'relative inline-block border-gray-300 border rounded w-56 h-12 hover:cursor-pointer',
                         id: 'generalDivStatus',
                         onmouseleave: (e) => {
                           const statusDiv = document.getElementById('statusDiv')
                           const span = e.target.querySelector('span')
-                          const generalDivStatus = document.getElementById('generalDivStatus')
                           let statusDivClass = statusDiv.className
                           statusDivClass = statusDivClass.replace('block', 'hidden')
-                          generalDivStatus.className = generalDivStatus.className.replace('border-[#7926ed]', '')
                           span.innerHTML = svg.CaretDownFill
                           statusDiv.className = statusDivClass
                           statusDiv.className = statusDivClass
@@ -186,7 +183,7 @@ const AddTask = () => {
                               }),
                               elementGenerator({
                                 element: 'div',
-                                className: 'hidden absolute min-w-max shadow-2xl bg-white rounded mt-1 w-44 mt-[10.5rem]',
+                                className: 'hidden absolute min-w-max shadow-2xl bg-white rounded mt-1 w-56 mt-[10.5rem]',
                                 id: 'statusDiv',
                                 child: statusList.map(s => elementGenerator({
                                   element: 'a',
@@ -194,8 +191,6 @@ const AddTask = () => {
                                     const statusDiv = document.getElementById('statusDiv')
                                     let statusDivClassName = statusDiv.className
                                     statusDivClassName = statusDivClassName.replace('block', 'hidden')
-                                    const generalStatusDiv = document.getElementById('generalDivStatus')
-                                    generalStatusDiv.className = generalStatusDiv.className.replace('border-[#7926ed', '')
                                     statusDiv.className = statusDivClassName
 
                                     document.getElementById('statusPTag').innerHTML = e.target.innerHTML
@@ -218,14 +213,14 @@ const AddTask = () => {
                   }),
                   elementGenerator({
                     element: 'input',
-                    className: 'h-12 mt-4 rounded-md w-56',
+                    className: 'h-12 mt-4 rounded-md w-56 border-gray-300 border p-2',
                     type: 'datetime-local'
                   })
                 ]
               }),
               elementGenerator({
                 element: 'textarea',
-                className: 'ml-4 rounded-md p-3 mt-10',
+                className: 'ml-4 rounded-md p-3 mt-10 border border-gray-300 focus-within:border-[#7926ed] focus-within:border-2 outline-none',
                 placeholder: 'Details (optional)',
                 rows: '6',
                 cols: '81'
