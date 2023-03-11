@@ -55,11 +55,22 @@ const AddTask = () => {
                     element: 'div',
                     className: 'relative inline-block border rounded w-44 h-12 hover:cursor-pointer',
                     id: 'generalDivPriority',
+                    onmouseleave: (e) => {
+                      const priorityDiv = document.getElementById('priorityDiv')
+                      const span = e.target.querySelector('span')
+                      const generalDivPriority = document.getElementById('generalDivPriority')
+                      let priorityDivClass = priorityDiv.className
+                      priorityDivClass = priorityDivClass.replace('block', 'hidden')
+                      generalDivPriority.className = generalDivPriority.className.replace('border-[#7926ed]', '')
+                      span.innerHTML = svg.CaretDownFill
+                      priorityDiv.className = priorityDivClass
+                      priorityDiv.className = priorityDivClass
+                    },
                     child: [
                       elementGenerator({
                         element: 'div',
                         id: 'prioritySelect',
-                        className: 'z-0 flex justify-between items-center p-[.50rem]',
+                        className: 'z-0 flex justify-between items-center',
                         onclick: (e) => {
                           const priorityDiv = document.getElementById('priorityDiv')
                           const span = e.target.querySelector('span')
@@ -79,38 +90,38 @@ const AddTask = () => {
                         child: [
                           elementGenerator({
                             element: 'p',
-                            className: '',
+                            className: 'ml-2 mt-2',
                             id: 'PriorityPTag',
                             child: 'priority'
                           }),
                           elementGenerator({
                             element: 'span',
                             id: 'prioritySpan',
-                            className: '',
+                            className: 'mr-2 mt-2',
                             innerHTML: svg.CaretDownFill
+                          }),
+                          elementGenerator({
+                            element: 'div',
+                            className: 'hidden absolute min-w-max shadow-2xl bg-white rounded mt-1 w-44 mt-[10.5rem]',
+                            id: 'priorityDiv',
+                            child: priorityList.map(s => elementGenerator({
+                              element: 'a',
+                              onclick: (e) => {
+                                const priorityDiv = document.getElementById('priorityDiv')
+                                let priorityDivClassName = priorityDiv.className
+                                priorityDivClassName = priorityDivClassName.replace('block', 'hidden')
+                                const generalPriorityDiv = document.getElementById('generalDivPriority')
+                                generalPriorityDiv.className = generalPriorityDiv.className.replace('border-[#7926ed', '')
+                                priorityDiv.className = priorityDivClassName
+
+                                document.getElementById('PriorityPTag').innerHTML = e.target.innerHTML
+                                document.getElementById('prioritySpan').innerHTML = svg.CaretDownFill
+                              },
+                              className: 'block hover:cursor-pointer hover:bg-[#f5f5f2] p-1 active:bg-[#d9d5e6]',
+                              child: s
+                            }))
                           })
                         ]
-                      }),
-                      elementGenerator({
-                        element: 'div',
-                        className: 'hidden absolute min-w-max shadow-2xl bg-white rounded mt-1 w-44',
-                        id: 'priorityDiv',
-                        child: priorityList.map(s => elementGenerator({
-                          element: 'a',
-                          className: 'block hover:cursor-pointer hover:bg-[#f5f5f2] p-1 active:bg-[#d9d5e6]',
-                          onclick: (e) => {
-                            const priorityDiv = document.getElementById('priorityDiv')
-                            let priorityDivClassName = priorityDiv.className
-                            priorityDivClassName = priorityDivClassName.replace('block', 'hidden')
-                            const generalPriorityDiv = document.getElementById('generalDivPriority')
-                            generalPriorityDiv.className = generalPriorityDiv.className.replace('border-[#7926ed', '')
-                            priorityDiv.className = priorityDivClassName
-
-                            document.getElementById('PriorityPTag').innerHTML = e.target.innerHTML
-                            document.getElementById('prioritySpan').innerHTML = svg.CaretDownFill
-                          },
-                          child: s
-                        }))
                       })
                     ]
                   })
