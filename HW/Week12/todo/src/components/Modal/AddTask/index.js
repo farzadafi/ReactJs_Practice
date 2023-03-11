@@ -222,6 +222,13 @@ const AddTask = () => {
                     type: 'datetime-local'
                   })
                 ]
+              }),
+              elementGenerator({
+                element: 'textarea',
+                className: 'ml-4 rounded-md p-3',
+                placeholder: 'Details (optional)',
+                rows: '6',
+                cols: '81'
               })
             ]
           })
