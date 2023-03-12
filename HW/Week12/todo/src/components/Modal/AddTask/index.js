@@ -7,7 +7,8 @@ const statusList = ['Todo', 'Doing', 'Done']
 const AddTask = () => {
   return elementGenerator({
     element: 'div',
-    className: 'fixed w-5/12 h-3/5 top-[20%] left-[30%] rounded-md shadow-2xl',
+    id: 'addTaskModal',
+    className: 'absolute w-5/12 h-3/5 top-[20%] left-[30%] rounded-md shadow-2xl',
     child: [
       elementGenerator({
         element: 'header',
@@ -44,7 +45,7 @@ const AddTask = () => {
                     }),
                     elementGenerator({
                       element: 'input',
-                      className: 'absolute top-[6.0rem] left-[1rem] w-[47.5rem] h-12 bg-opacity-0 p-5 bg-green-500 outline-none',
+                      className: 'absolute top-[6.0rem] left-[1rem] w-[47.5rem] h-12 bg-opacity-0 p-5 bg-green-500 outline-none text-black',
                       id: 'taskName'
                     })]
                 })
@@ -66,7 +67,7 @@ const AddTask = () => {
                           const generalDivPriority = document.getElementById('generalDivPriority')
                           let priorityDivClass = priorityDiv.className
                           priorityDivClass = priorityDivClass.replace('block', 'hidden')
-                          generalDivPriority.className = generalDivPriority.className.replace('border-[#6200e3] border-2', '')
+                          generalDivPriority.className = generalDivPriority.className.replace('border-purple-600 border-2', '')
                           span.innerHTML = svg.CaretDownFill
                           priorityDiv.className = priorityDivClass
                           priorityDiv.className = priorityDivClass
@@ -84,10 +85,10 @@ const AddTask = () => {
                               if (priorityDivClass.match('hidden')) {
                                 priorityDivClass = priorityDivClass.replace('hidden', 'block')
                                 span.innerHTML = svg.CaretUpFill
-                                generalDivPriority.className = generalDivPriority.className + ' border-[#6200e3] border-2'
+                                generalDivPriority.className = generalDivPriority.className + ' border-purple-600 border-2'
                               } else {
                                 priorityDivClass = priorityDivClass.replace('block', 'hidden')
-                                generalDivPriority.className = generalDivPriority.className.replace('border-[#7926ed]', '')
+                                generalDivPriority.className = generalDivPriority.className.replace('border-purple-600 border-2', '')
                                 span.innerHTML = svg.CaretDownFill
                               }
                               priorityDiv.className = priorityDivClass
