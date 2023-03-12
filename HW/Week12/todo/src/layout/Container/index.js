@@ -5,7 +5,7 @@ const Container = (child) => {
   return (elementGenerator({
     element: 'div',
     id: 'container',
-    className: 'container mx-auto bg-gray-100 inset-0 fixed',
+    className: 'container mx-auto bg-white inset-0 fixed',
     child
   }))
 }
