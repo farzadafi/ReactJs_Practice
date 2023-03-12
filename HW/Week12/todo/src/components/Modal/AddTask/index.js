@@ -12,7 +12,7 @@ const AddTask = () => {
     onclick: (e) => {
       e.stopPropagation()
     },
-    className: 'absolute w-6/12 h-3/5 bg-white top-[20%] left-[25%] rounded-md shadow-2xl',
+    className: 'absolute w-6/12 h-3/5 bg-white top-[-90%] left-[25%] rounded-md shadow-2xl',
     child: [
       elementGenerator({
         element: 'header',
