@@ -1,5 +1,6 @@
 import elementGenerator from '@/library/elementGenerator.js'
 import { svg } from '@/assets/svgs/index.js'
+import { Button } from '@/components/Button/index.js'
 
 const priorityList = ['Low', 'Medium', 'High']
 const statusList = ['Todo', 'Doing', 'Done']
@@ -8,7 +9,10 @@ const AddTask = () => {
   return elementGenerator({
     element: 'div',
     id: 'addTaskModal',
-    className: 'hidden w-6/12 h-3/5 bg-white top-[20%] left-[25%] rounded-md shadow-2xl',
+    onclick: (e) => {
+      e.stopPropagation()
+    },
+    className: 'absolute w-6/12 h-3/5 bg-white top-[20%] left-[25%] rounded-md shadow-2xl',
     child: [
       elementGenerator({
         element: 'header',
@@ -163,7 +167,6 @@ const AddTask = () => {
                               if (statusDivClass.match('hidden')) {
                                 statusDivClass = statusDivClass.replace('hidden', 'block')
                                 span.innerHTML = svg.CaretUpFill
-                                // generalDivStatus.className = generalDivStatus.className + ' border-[#7926ed]'
                                 generalDivStatus.className = generalDivStatus.className + ' border-purple-600 border-2'
                               } else {
                                 statusDivClass = statusDivClass.replace('block', 'hidden')
@@ -228,6 +231,30 @@ const AddTask = () => {
                 placeholder: 'Details (optional)',
                 rows: '6',
                 cols: '77'
+              })
+            ]
+          })
+        ]
+      }),
+      elementGenerator({
+        element: 'footer',
+        className: '',
+        child: [
+          elementGenerator({
+            element: 'hr',
+            className: 'mt-4'
+          }),
+          elementGenerator({
+            element: 'div',
+            className: 'flex p-4 mt-1 justify-between',
+            child: [
+              Button({
+                child: 'Cancel',
+                variant: 'outlined'
+              }),
+              Button({
+                child: 'Save',
+                variant: 'contained'
               })
             ]
           })
