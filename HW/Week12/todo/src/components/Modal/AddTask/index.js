@@ -250,6 +250,12 @@ const AddTask = () => {
             child: [
               Button({
                 child: 'Cancel',
+                onclick: () => {
+                  const addTaskModal = document.getElementById('addTaskModal')
+                  const container = document.getElementById('container')
+                  addTaskModal.className = addTaskModal.className.replace('absolute', 'hidden')
+                  container.className = container.className.replace('bg-opacity-30 bg-black', 'bg-white')
+                },
                 variant: 'outlined'
               }),
               Button({
