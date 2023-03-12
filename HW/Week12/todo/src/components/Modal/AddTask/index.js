@@ -8,7 +8,7 @@ const AddTask = () => {
   return elementGenerator({
     element: 'div',
     id: 'addTaskModal',
-    className: 'absolute w-5/12 h-3/5 top-[20%] left-[30%] rounded-md shadow-2xl',
+    className: 'absolute w-6/12 h-3/5 bg-white top-[20%] left-[25%] rounded-md shadow-2xl',
     child: [
       elementGenerator({
         element: 'header',
@@ -51,7 +51,7 @@ const AddTask = () => {
                 })
               }), elementGenerator({
                 element: 'div',
-                className: 'flex gap-4 mt-10',
+                className: 'flex gap-1 mt-10',
                 child: [
                   elementGenerator({
                     element: 'div',
@@ -227,7 +227,7 @@ const AddTask = () => {
                 className: 'ml-4 rounded-md p-3 mt-10 border border-gray-300 focus-within:border-[#7926ed] focus-within:border-2 outline-none',
                 placeholder: 'Details (optional)',
                 rows: '6',
-                cols: '81'
+                cols: '77'
               })
             ]
           })
