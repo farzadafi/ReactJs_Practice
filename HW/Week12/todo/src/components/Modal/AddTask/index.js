@@ -8,7 +8,7 @@ const AddTask = () => {
   return elementGenerator({
     element: 'div',
     id: 'addTaskModal',
-    className: 'absolute w-6/12 h-3/5 bg-white top-[20%] left-[25%] rounded-md shadow-2xl',
+    className: 'hidden w-6/12 h-3/5 bg-white top-[20%] left-[25%] rounded-md shadow-2xl',
     child: [
       elementGenerator({
         element: 'header',
