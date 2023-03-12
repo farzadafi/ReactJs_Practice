@@ -2,7 +2,7 @@ import elementGenerator from '@/library/elementGenerator.js'
 
 const variants = {
   contained: 'bg-blue-600 text-slate-100 font-bold',
-  outlined: ' border border-2 text-blue-700 font-bold border-blue-700',
+  outlined: ' border border-1 text-blue-700 font-bold border-blue-700',
   link: 'bg-transparent'
 }
 
