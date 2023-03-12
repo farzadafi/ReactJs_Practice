@@ -2,7 +2,6 @@ import elementGenerator from '@/library/elementGenerator.js'
 import { svg } from '@/assets/svgs/index.js'
 
 const Navbar = () => {
-  // <div className=""></div>
   return (elementGenerator({
     element: 'div',
     className: 'flex p-2 bg-[#6200ea] justify-between',
@@ -35,7 +34,14 @@ const Navbar = () => {
           elementGenerator({
             element: 'button',
             className: 'text-white',
-            innerHTML: svg.plusIcon
+            innerHTML: svg.plusIcon,
+            onclick: (e) => {
+              e.stopPropagation()
+              const addTaskModal = document.getElementById('addTaskModal')
+              const container = document.getElementById('container')
+              addTaskModal.className = addTaskModal.className.replace('hidden', 'absolute')
+              container.className = container.className + ' bg-opacity-30 bg-black'
+            }
           })
         ]
       })
