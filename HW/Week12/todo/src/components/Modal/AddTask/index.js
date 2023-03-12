@@ -108,7 +108,7 @@ const AddTask = () => {
                               }),
                               elementGenerator({
                                 element: 'div',
-                                className: 'hidden absolute min-w-max shadow-2xl bg-white rounded mt-1 w-56 mt-[10.5rem]',
+                                className: 'hidden absolute min-w-max shadow-2xl bg-white rounded w-56 mt-[10.3rem]',
                                 id: 'priorityDiv',
                                 child: priorityList.map(s => elementGenerator({
                                   element: 'a',
@@ -187,7 +187,7 @@ const AddTask = () => {
                               }),
                               elementGenerator({
                                 element: 'div',
-                                className: 'hidden absolute min-w-max shadow-2xl bg-white rounded mt-1 w-56 mt-[10.5rem]',
+                                className: 'hidden absolute min-w-max shadow-2xl bg-white rounded w-56 mt-[10.3rem]',
                                 id: 'statusDiv',
                                 child: statusList.map(s => elementGenerator({
                                   element: 'a',
