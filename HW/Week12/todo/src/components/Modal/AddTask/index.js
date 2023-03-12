@@ -146,7 +146,7 @@ const AddTask = () => {
                           let statusDivClass = statusDiv.className
                           statusDivClass = statusDivClass.replace('block', 'hidden')
                           span.innerHTML = svg.CaretDownFill
-                          generalDivStatus.className = generalDivStatus.className.replace('border-[#6200e3] border-2', '')
+                          generalDivStatus.className = generalDivStatus.className.replace('border-purple-600 border-2', '')
                           statusDiv.className = statusDivClass
                           statusDiv.className = statusDivClass
                         },
@@ -164,10 +164,10 @@ const AddTask = () => {
                                 statusDivClass = statusDivClass.replace('hidden', 'block')
                                 span.innerHTML = svg.CaretUpFill
                                 // generalDivStatus.className = generalDivStatus.className + ' border-[#7926ed]'
-                                generalDivStatus.className = generalDivStatus.className + ' border-[#6200e3] border-2'
+                                generalDivStatus.className = generalDivStatus.className + ' border-purple-600 border-2'
                               } else {
                                 statusDivClass = statusDivClass.replace('block', 'hidden')
-                                generalDivStatus.className = generalDivStatus.className.replace('border-[#7926ed]', '')
+                                generalDivStatus.className = generalDivStatus.className.replace('border-purple-600 border-2', '')
                                 span.innerHTML = svg.CaretDownFill
                               }
                               statusDiv.className = statusDivClass
