@@ -41,7 +41,7 @@ const Navbar = () => {
               const container = document.getElementById('container')
               addTaskModal.className = addTaskModal.className + ' transition-all delay-200'
               addTaskModal.className = addTaskModal.className.replace('top-[-90%]', 'top-[20%]')
-              container.className = container.className + ' bg-opacity-30 bg-black'
+              container.className = container.className + ' bg-opacity-30 bg-[black]'
             }
           })
         ]
