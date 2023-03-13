@@ -37,22 +37,26 @@ const AddTask = () => {
             className: '',
             child: [
               elementGenerator({
-                element: 'fieldset',
-                className: 'border m-4 h-16 rounded border-gray-300 focus-within:border-[#7926ed]',
-                child: elementGenerator({
-                  element: 'legend',
-                  className: 'ml-4 text-gray-100 p-1 flex text-gray-400 flex-col focus-within:text-[#7926ed]',
-                  child: ['Task Name',
-                    elementGenerator({
-                      element: 'label',
-                      for: 'taskName'
-                    }),
-                    elementGenerator({
-                      element: 'input',
-                      className: 'absolute top-[6.0rem] left-[1rem] w-[47.5rem] h-12 bg-opacity-0 p-5 bg-green-500 outline-none text-black',
-                      id: 'taskName'
-                    })]
-                })
+                element: 'p',
+                id: 'hiddenP',
+                className: 'absolute invisible top-28 text-lg left-8 bg-white w-22 p-1',
+                child: 'Task Name'
+              }),
+              elementGenerator({
+                element: 'label',
+                for: 'taskName'
+              }),
+              elementGenerator({
+                element: 'input',
+                className: 'w-[45.8rem] ml-4 mr-8 rounded border mt-8 p-3 outline-none text-black focus-within:border-[#7926ed] focus-within:border-2 placeholder:text-lg',
+                onclick: (e) => {
+                  e.target.placeholder = ''
+                  const p = document.getElementById('hiddenP')
+                  p.className = p.className + ' transition-all delay-75'
+                  p.className = p.className.replace('invisible top-28 text-lg', 'visible top-20 text-sm text-purple-800')
+                },
+                placeholder: 'Task Name',
+                id: 'taskName'
               }), elementGenerator({
                 element: 'div',
                 className: 'flex gap-1 mt-10',
@@ -242,7 +246,7 @@ const AddTask = () => {
         child: [
           elementGenerator({
             element: 'hr',
-            className: 'mt-4'
+            className: 'mt-8'
           }),
           elementGenerator({
             element: 'div',
