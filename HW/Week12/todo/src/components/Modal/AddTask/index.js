@@ -269,7 +269,7 @@ const AddTask = () => {
                   const addTaskModal = document.getElementById('addTaskModal')
                   const container = document.getElementById('container')
                   addTaskModal.className = addTaskModal.className.replace('top-[20%]', 'top-[-90%]')
-                  container.className = container.className.replace('bg-opacity-30 bg-[black]', 'bg-white')
+                  container.className = container.className.replace('bg-opacity-30 bg-gray-900', 'bg-white')
                 },
                 variant: 'outlined'
               }),
