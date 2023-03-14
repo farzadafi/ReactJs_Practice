@@ -14,7 +14,7 @@ const AddTask = () => {
       const p = document.getElementById('hiddenP')
       if (p.className.match('\\bvisible\\b')) {
         p.className = p.className + ' transition-all delay-75'
-        p.className = p.className.replace('visible top-20 text-sm text-purple-800', 'invisible top-[6.4rem] text-lg text-gray-500')
+        p.className = p.className.replace('visible top-[4.8rem] text-sm text-purple-800', 'invisible top-[5.9rem] text-lg text-gray-500')
         const setPlaceholder = () => {
           const input = document.getElementById('taskName')
           input.placeholder = 'Task Name'
@@ -49,7 +49,7 @@ const AddTask = () => {
               elementGenerator({
                 element: 'p',
                 id: 'hiddenP',
-                className: 'absolute invisible top-[6.4rem] text-lg text-gray-500 left-[1.4rem] bg-white w-22 p-1',
+                className: 'absolute invisible top-[5.9rem] text-lg text-gray-500 left-[1.4rem] bg-white w-22 p-1',
                 child: 'Task Name'
               }),
               elementGenerator({
@@ -58,13 +58,13 @@ const AddTask = () => {
               }),
               elementGenerator({
                 element: 'input',
-                className: 'w-[45.8rem] ml-4 mr-8 rounded border mt-8 p-3 outline-none text-black focus-within:border-[#7926ed] focus-within:border-2 placeholder:text-lg',
+                className: 'w-[45.8rem] ml-4 mr-8 rounded border mt-6 p-3 outline-none text-black focus-within:border-[#7926ed] focus-within:border-2 placeholder:text-lg',
                 onclick: (e) => {
                   e.stopPropagation()
                   e.target.placeholder = ''
                   const p = document.getElementById('hiddenP')
                   p.className = p.className + ' transition-all delay-75'
-                  p.className = p.className.replace('invisible top-[6.4rem] text-lg', 'visible top-20 text-sm text-purple-800')
+                  p.className = p.className.replace('invisible top-[5.9rem] text-lg', 'visible top-[4.8rem] text-sm text-purple-800')
                 },
                 placeholder: 'Task Name',
                 id: 'taskName'
