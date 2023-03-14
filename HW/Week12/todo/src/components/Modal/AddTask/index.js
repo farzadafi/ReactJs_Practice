@@ -11,6 +11,16 @@ const AddTask = () => {
     id: 'addTaskModal',
     onclick: (e) => {
       e.stopPropagation()
+      const p = document.getElementById('hiddenP')
+      p.className = p.className + ' transition-all delay-75'
+      p.className = p.className.replace('visible top-20 text-sm text-purple-800', 'invisible top-28 text-lg')
+
+      const naser = () => {
+        const input = document.getElementById('taskName')
+        input.placeholder = 'Task Name'
+      }
+
+      setInterval(naser, 400)
     },
     className: 'absolute w-6/12 h-3/5 bg-white top-[-90%] left-[25%] rounded-md shadow-2xl',
     child: [
@@ -39,7 +49,7 @@ const AddTask = () => {
               elementGenerator({
                 element: 'p',
                 id: 'hiddenP',
-                className: 'absolute invisible top-28 text-lg left-8 bg-white w-22 p-1',
+                className: 'absolute invisible top-[6.4rem] text-lg text-gray-500 left-[1.4rem] bg-white w-22 p-1',
                 child: 'Task Name'
               }),
               elementGenerator({
@@ -50,10 +60,11 @@ const AddTask = () => {
                 element: 'input',
                 className: 'w-[45.8rem] ml-4 mr-8 rounded border mt-8 p-3 outline-none text-black focus-within:border-[#7926ed] focus-within:border-2 placeholder:text-lg',
                 onclick: (e) => {
+                  e.stopPropagation()
                   e.target.placeholder = ''
                   const p = document.getElementById('hiddenP')
                   p.className = p.className + ' transition-all delay-75'
-                  p.className = p.className.replace('invisible top-28 text-lg', 'visible top-20 text-sm text-purple-800')
+                  p.className = p.className.replace('invisible top-[6.4rem] text-lg', 'visible top-20 text-sm text-purple-800')
                 },
                 placeholder: 'Task Name',
                 id: 'taskName'
