@@ -242,7 +242,7 @@ const AddTask = () => {
               }),
               elementGenerator({
                 element: 'textarea',
-                className: 'ml-4 rounded-md p-3 mt-10 border border-gray-300 focus-within:border-[#7926ed] focus-within:border-2 outline-none',
+                className: 'resize-none ml-4 rounded-md p-3 mt-10 border border-gray-300 focus-within:border-[#7926ed] focus-within:border-2 outline-none',
                 placeholder: 'Details (optional)',
                 rows: '6',
                 cols: '77'
@@ -257,7 +257,7 @@ const AddTask = () => {
         child: [
           elementGenerator({
             element: 'hr',
-            className: 'mt-8'
+            className: 'mt-6'
           }),
           elementGenerator({
             element: 'div',
