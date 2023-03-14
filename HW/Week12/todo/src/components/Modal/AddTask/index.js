@@ -12,15 +12,15 @@ const AddTask = () => {
     onclick: (e) => {
       e.stopPropagation()
       const p = document.getElementById('hiddenP')
-      p.className = p.className + ' transition-all delay-75'
-      p.className = p.className.replace('visible top-20 text-sm text-purple-800', 'invisible top-28 text-lg')
-
-      const naser = () => {
-        const input = document.getElementById('taskName')
-        input.placeholder = 'Task Name'
+      if (p.className.match('\\bvisible\\b')) {
+        p.className = p.className + ' transition-all delay-75'
+        p.className = p.className.replace('visible top-20 text-sm text-purple-800', 'invisible top-[6.4rem] text-lg text-gray-500')
+        const setPlaceholder = () => {
+          const input = document.getElementById('taskName')
+          input.placeholder = 'Task Name'
+        }
+        setTimeout(setPlaceholder, 230)
       }
-
-      setInterval(naser, 400)
     },
     className: 'absolute w-6/12 h-3/5 bg-white top-[-90%] left-[25%] rounded-md shadow-2xl',
     child: [
