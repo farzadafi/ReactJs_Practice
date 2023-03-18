@@ -1,13 +1,12 @@
-import { Container } from '@/layout'
-import { ElementGenerator } from '@/library'
-import { Header } from '@/components'
+import {Container} from '@/layout'
+import {ElementGenerator} from '@/library'
+import {Header, Main} from '@/components'
 
 const App = () => {
-  const app = ElementGenerator({
+  return ElementGenerator({
     element: 'div',
-    child: [Header()]
+    child: [Container(Header()), Main()]
   })
-  return Container(app)
 }
 
 export default App
