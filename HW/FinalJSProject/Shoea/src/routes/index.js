@@ -7,6 +7,8 @@ export const Routes = () => {
   switch (location.pathname) {
     case '/' :
       return routes.appendChild(LoadingPage())
+    case '/welcomePage' :
+      return routes.appendChild(WelcomePage())
     default :
       return routes.innerHTML = 'gom shodi!'
   }
