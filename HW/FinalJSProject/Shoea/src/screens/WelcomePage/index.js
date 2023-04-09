@@ -24,6 +24,11 @@ export const WelcomePage = () => {
             element: 'p',
             className: 'font-bold text-7xl',
             child: 'Shoea'
+          }),
+          ElementGenerator({
+            element: 'p',
+            className: 'font-semibold text-base',
+            child: 'The best sneakers & shoes e-commerse app of the century for your fashion needs!'
           })
         ]
       })
