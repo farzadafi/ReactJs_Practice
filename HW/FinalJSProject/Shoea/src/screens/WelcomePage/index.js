@@ -7,11 +7,11 @@ export const WelcomePage = () => {
     child: [
       ElementGenerator({
         element: 'div',
-        className: 'bg-red-400',
+        className: '',
         child: [
           ElementGenerator({
             element: 'p',
-            className: 'text-[40px] font-semibold',
+            className: 'text-[40px] text-white font-semibold',
             child: ['Welcome to',
               ElementGenerator({
                 element: 'img',
@@ -22,12 +22,12 @@ export const WelcomePage = () => {
           }),
           ElementGenerator({
             element: 'p',
-            className: 'font-bold text-7xl',
+            className: 'font-bold text-7xl text-white',
             child: 'Shoea'
           }),
           ElementGenerator({
             element: 'p',
-            className: 'font-semibold text-base',
+            className: 'font-semibold text-base text-white',
             child: 'The best sneakers & shoes e-commerse app of the century for your fashion needs!'
           })
         ]
