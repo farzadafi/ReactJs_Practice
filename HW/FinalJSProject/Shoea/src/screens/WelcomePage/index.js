@@ -7,7 +7,7 @@ export const WelcomePage = () => {
     child: [
       ElementGenerator({
         element: 'div',
-        className: '',
+        className: 'flex flex-col gap-4 pl-10 pb-16',
         child: [
           ElementGenerator({
             element: 'p',
