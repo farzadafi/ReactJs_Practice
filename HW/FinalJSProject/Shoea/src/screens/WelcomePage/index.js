@@ -8,7 +8,19 @@ export const WelcomePage = () => {
       ElementGenerator({
         element: 'div',
         className: 'bg-red-400',
-        child: 'div'
+        child: [
+          ElementGenerator({
+            element: 'p',
+            className: 'text-[40px]',
+            child: ['Welcome to',
+              ElementGenerator({
+                element: 'img',
+                className: 'inline ml-4',
+                src: './src/assets/image/WavingHandIcon.png'
+              })
+            ]
+          })
+        ]
       })
     ]
   })
