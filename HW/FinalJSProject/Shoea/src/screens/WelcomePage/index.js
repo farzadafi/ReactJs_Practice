@@ -11,7 +11,7 @@ export const WelcomePage = () => {
         child: [
           ElementGenerator({
             element: 'p',
-            className: 'text-[40px]',
+            className: 'text-[40px] font-semibold',
             child: ['Welcome to',
               ElementGenerator({
                 element: 'img',
@@ -19,6 +19,11 @@ export const WelcomePage = () => {
                 src: './src/assets/image/WavingHandIcon.png'
               })
             ]
+          }),
+          ElementGenerator({
+            element: 'p',
+            className: 'font-bold text-7xl',
+            child: 'Shoea'
           })
         ]
       })
