@@ -79,6 +79,16 @@ export const SliderProductPage = () => {
                   'aria-label': 'Slide 1',
                   'data-carousel-slide-to': '0'
                 }
+              }),
+              ElementGenerator({
+                element: 'button',
+                type: 'button',
+                className: 'w-8 h-1 rounded-full ',
+                restAttrs: {
+                  'aria-current': 'true',
+                  'aria-label': 'Slide 1',
+                  'data-carousel-slide-to': '1'
+                }
               })
             ]
           })
