@@ -4,7 +4,7 @@ import { svg } from '@/assets'
 export const LoadingPage = () => {
   return ElementGenerator({
     element: 'div',
-    className: 'w-screen h-[926px] flex flex-col justify-center items-center',
+    className: 'h-[926px] flex flex-col justify-center items-center',
     child: [
       ElementGenerator({
         element: 'img',
