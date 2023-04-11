@@ -3,7 +3,8 @@ import { ElementGenerator } from '@/library'
 export const WelcomePage = () => {
   return ElementGenerator({
     element: 'div',
-    className: 'w-screen h-[926px] bg-[url(./src/assets/image/welcomePageBackground.png)] flex justify-end flex-col',
+    id: 'welcomePage-id',
+    className: 'h-[926px] bg-[url(./src/assets/image/welcomePageBackground.png)] flex justify-end flex-col',
     child: [
       ElementGenerator({
         element: 'div',
