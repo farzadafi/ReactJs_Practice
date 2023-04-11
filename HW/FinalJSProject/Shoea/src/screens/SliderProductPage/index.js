@@ -85,8 +85,8 @@ export const SliderProductPage = () => {
                 type: 'button',
                 className: 'w-8 h-1 rounded-full ',
                 restAttrs: {
-                  'aria-current': 'true',
-                  'aria-label': 'Slide 1',
+                  'aria-current': 'false',
+                  'aria-label': 'Slide 2',
                   'data-carousel-slide-to': '1'
                 }
               }),
@@ -95,8 +95,8 @@ export const SliderProductPage = () => {
                 type: 'button',
                 className: 'w-8 h-1 rounded-full ',
                 restAttrs: {
-                  'aria-current': 'true',
-                  'aria-label': 'Slide 1',
+                  'aria-current': 'false',
+                  'aria-label': 'Slide 3',
                   'data-carousel-slide-to': '2'
                 }
               })
