@@ -3,7 +3,7 @@ import { ElementGenerator } from '@/library'
 export const SliderProductPage = () => {
   return ElementGenerator({
     element: 'div',
-    className: 'h-[926px] bg-gray-400',
+    className: 'h-[926px] bg-gray-300',
     child: [
       ElementGenerator({
         element: 'div',
@@ -15,7 +15,7 @@ export const SliderProductPage = () => {
         child: [
           ElementGenerator({
             element: 'div',
-            className: 'relative h-[657px] overflow-hidden',
+            className: 'relative h-screen overflow-hidden',
             child: [
               ElementGenerator({
                 element: 'div',
@@ -27,11 +27,12 @@ export const SliderProductPage = () => {
                   ElementGenerator({
                     element: 'img',
                     src: './src/assets/image/SliderFirstImage.png',
+                    className: 'h-[657px]',
                     alt: '...'
                   }),
                   ElementGenerator({
                     element: 'p',
-                    className: 'text-[32px] font-semibold text-center mt-4',
+                    className: 'text-[32px] font-semibold text-center mt-4 text-white',
                     child: 'We provide high quality products just for you'
                   })
                 ]
@@ -46,6 +47,7 @@ export const SliderProductPage = () => {
                   ElementGenerator({
                     element: 'img',
                     src: './src/assets/image/SliderSecondImage.png',
+                    className: 'h-[657px]',
                     alt: '...'
                   })
                 ]
@@ -60,6 +62,7 @@ export const SliderProductPage = () => {
                   ElementGenerator({
                     element: 'img',
                     src: './src/assets/image/SliderThirdImage.png',
+                    className: 'h-[657px]',
                     alt: '...'
                   })
                 ]
