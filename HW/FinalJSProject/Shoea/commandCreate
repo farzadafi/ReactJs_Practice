@@ -65,3 +65,22 @@ and create jsconfig.json file and copy this line:
     }
 
 =================================================
+
+install flowbite:
+    npm install flowbite
+
+    add these line to tailwind.config.js :
+
+    module.exports = {
+
+        plugins: [
+            require('flowbite/plugin')
+        ]
+        content: [
+                "./node_modules/flowbite/**/*.js"
+            ]
+    }
+
+    and add this line to index.html:
+
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
