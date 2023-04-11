@@ -3,7 +3,7 @@ import { ElementGenerator } from '@/library'
 export const SliderProductPage = () => {
   return ElementGenerator({
     element: 'div',
-    className: 'h-[926px]',
+    className: 'h-[926px] bg-gray-400',
     child: [
       ElementGenerator({
         element: 'div',
@@ -63,6 +63,22 @@ export const SliderProductPage = () => {
                     alt: '...'
                   })
                 ]
+              })
+            ]
+          }),
+          ElementGenerator({
+            element: 'div',
+            className: 'absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2',
+            child: [
+              ElementGenerator({
+                element: 'button',
+                type: 'button',
+                className: 'w-8 h-1 rounded-full',
+                restAttrs: {
+                  'aria-current': 'true',
+                  'aria-label': 'Slide 1',
+                  'data-carousel-slide-to': '0'
+                }
               })
             ]
           })
