@@ -15,7 +15,7 @@ export const SliderProductPage = () => {
         child: [
           ElementGenerator({
             element: 'div',
-            className: 'relative h-56 overflow-hidden rounded-lg md:h-96',
+            className: 'relative h-[657px] overflow-hidden',
             child: [
               ElementGenerator({
                 element: 'div',
@@ -27,7 +27,6 @@ export const SliderProductPage = () => {
                   ElementGenerator({
                     element: 'img',
                     src: './src/assets/image/SliderFirstImage.png',
-                    className: 'absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2',
                     alt: '...'
                   })
                 ]
@@ -42,7 +41,6 @@ export const SliderProductPage = () => {
                   ElementGenerator({
                     element: 'img',
                     src: './src/assets/image/SliderSecondImage.png',
-                    className: 'absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2',
                     alt: '...'
                   })
                 ]
@@ -57,7 +55,6 @@ export const SliderProductPage = () => {
                   ElementGenerator({
                     element: 'img',
                     src: './src/assets/image/SliderThirdImage.png',
-                    className: 'absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2',
                     alt: '...'
                   })
                 ]
