@@ -28,6 +28,11 @@ export const SliderProductPage = () => {
                     element: 'img',
                     src: './src/assets/image/SliderFirstImage.png',
                     alt: '...'
+                  }),
+                  ElementGenerator({
+                    element: 'p',
+                    className: 'text-[32px] font-semibold text-center mt-4',
+                    child: 'We provide high quality products just for you'
                   })
                 ]
               }),
