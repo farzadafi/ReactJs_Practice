@@ -32,7 +32,7 @@ export const SliderProductPage = () => {
                   }),
                   ElementGenerator({
                     element: 'p',
-                    className: 'text-[32px] font-semibold text-center mt-4 text-white',
+                    className: 'text-[32px] font-semibold text-center mt-4 text-black',
                     child: 'We provide high quality products just for you'
                   })
                 ]
@@ -49,6 +49,11 @@ export const SliderProductPage = () => {
                     src: './src/assets/image/SliderSecondImage.png',
                     className: 'h-[657px]',
                     alt: '...'
+                  }),
+                  ElementGenerator({
+                    element: 'p',
+                    className: 'text-[32px] font-semibold text-center mt-4 text-black',
+                    child: 'Your satisfaction is our number one priority'
                   })
                 ]
               }),
