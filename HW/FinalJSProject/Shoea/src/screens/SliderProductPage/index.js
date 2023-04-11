@@ -32,7 +32,7 @@ export const SliderProductPage = () => {
                   }),
                   ElementGenerator({
                     element: 'p',
-                    className: 'text-[32px] font-semibold text-center mt-4 text-black',
+                    className: 'text-[32px] font-semibold text-center mt-4 text-black px-5',
                     child: 'We provide high quality products just for you'
                   })
                 ]
@@ -52,7 +52,7 @@ export const SliderProductPage = () => {
                   }),
                   ElementGenerator({
                     element: 'p',
-                    className: 'text-[32px] font-semibold text-center mt-4 text-black',
+                    className: 'text-[32px] font-semibold text-center mt-4 text-black px-5',
                     child: 'Your satisfaction is our number one priority'
                   })
                 ]
@@ -69,6 +69,11 @@ export const SliderProductPage = () => {
                     src: './src/assets/image/SliderThirdImage.png',
                     className: 'h-[657px]',
                     alt: '...'
+                  }),
+                  ElementGenerator({
+                    element: 'p',
+                    className: 'text-[32px] font-semibold text-center mt-4 text-black px-5',
+                    child: 'Let’s fulfill your fashion needs with shoea right now!'
                   })
                 ]
               })
