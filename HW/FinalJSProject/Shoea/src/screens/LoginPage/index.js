@@ -16,6 +16,11 @@ export const LoginPage = () => {
             onclick: () => { alert('last page') }
           })
         ]
+      }),
+      ElementGenerator({
+        element: 'main',
+        className: 'flex justify-center mt-32',
+        child: ''
       })
     ]
   })
