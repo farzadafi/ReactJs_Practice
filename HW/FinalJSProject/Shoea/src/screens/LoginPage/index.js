@@ -97,7 +97,7 @@ export const LoginPage = () => {
                             element: 'input',
                             type: 'text',
                             id: 'password-id',
-                            className: 'bg-gray-50 border-none text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5',
+                            className: 'bg-gray-50 border-none text-gray-900 text-lg rounded-lg focus:ring-black focus:ring-2 focus:border-black focus:border-xl block w-96 pl-10 p-2.5',
                             placeholder: 'Password'
                           })
                         ]
