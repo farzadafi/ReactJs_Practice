@@ -4,7 +4,7 @@ import { svg } from '@/assets/index.js'
 export const LoginPage = () => {
   return ElementGenerator({
     element: 'div',
-    className: 'h-[926px] p-4',
+    className: 'h-[926px] p-3',
     child: [
       ElementGenerator({
         element: 'header',
@@ -29,11 +29,11 @@ export const LoginPage = () => {
           }),
           ElementGenerator({
             element: 'div',
-            className: '',
+            className: 'flex flex-col gap-10 justify-center',
             child: [
               ElementGenerator({
                 element: 'h1',
-                className: 'font-semibold text-4xl',
+                className: 'font-semibold text-4xl text-center',
                 child: 'Login to Your Account'
               }),
               ElementGenerator({
@@ -64,7 +64,7 @@ export const LoginPage = () => {
                         element: 'input',
                         type: 'text',
                         id: 'email-address-id',
-                        className: 'bg-gray-50 border-none text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5',
+                        className: 'bg-gray-50 border-none text-gray-900 text-lg rounded-lg focus:ring-black focus:ring-2 focus:border-black focus:border-xl block w-96 pl-10 p-2.5',
                         placeholder: 'Email'
                       })
                     ]
