@@ -20,7 +20,13 @@ export const LoginPage = () => {
       ElementGenerator({
         element: 'main',
         className: 'flex justify-center mt-32',
-        child: ''
+        child: [
+          ElementGenerator({
+            element: 'img',
+            className: '',
+            src: './src/assets/image/Vector1.png'
+          })
+        ]
       })
     ]
   })
