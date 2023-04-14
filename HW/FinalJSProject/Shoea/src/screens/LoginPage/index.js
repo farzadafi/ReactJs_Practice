@@ -1,5 +1,6 @@
 import { ElementGenerator } from '@/library'
 import { svg } from '@/assets/index.js'
+import { Button } from '@/components/index.js'
 
 export const LoginPage = () => {
   return ElementGenerator({
@@ -130,6 +131,12 @@ export const LoginPage = () => {
                     innerHTML: 'Remember me'
                   })
                 ]
+              }),
+              Button({
+                child: 'Sign in',
+                id: 'SignInButton',
+                variant: 'contained',
+                classes: 'bg-gray-500 rounded-full mt-40'
               })
             ]
           })
