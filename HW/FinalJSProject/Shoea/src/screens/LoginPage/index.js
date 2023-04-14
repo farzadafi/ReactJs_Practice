@@ -19,12 +19,23 @@ export const LoginPage = () => {
       }),
       ElementGenerator({
         element: 'main',
-        className: 'flex justify-center mt-32',
+        className: 'flex justify-center mt-32 flex-col items-center gap-24',
         child: [
           ElementGenerator({
             element: 'img',
-            className: '',
+            className: 'w-[3.3rem]',
             src: './src/assets/image/Vector1.png'
+          }),
+          ElementGenerator({
+            element: 'div',
+            className: '',
+            child: [
+              ElementGenerator({
+                element: 'h1',
+                className: 'font-semibold text-4xl',
+                child: 'Login to Your Account'
+              })
+            ]
           })
         ]
       })
