@@ -70,6 +70,41 @@ export const LoginPage = () => {
                     ]
                   })
                 ]
+              }),
+              ElementGenerator({
+                element: 'div',
+                className: '',
+                child: [
+                  ElementGenerator({
+                    element: 'div',
+                    className: '',
+                    child: [
+                      ElementGenerator({
+                        element: 'label',
+                        htmlFor: 'password-id',
+                        className: 'block mb-2 text-sm font-medium text-gray-900 dark:text-white'
+                      }),
+                      ElementGenerator({
+                        element: 'div',
+                        className: 'relative',
+                        child: [
+                          ElementGenerator({
+                            element: 'div',
+                            className: 'absolute inset-y-6 left-0 flex items-center pl-3 pointer-events-none',
+                            innerHTML: svg.lockSvg
+                          })
+                        ]
+                      }),
+                      ElementGenerator({
+                        element: 'input',
+                        type: 'text',
+                        id: 'password-id',
+                        className: 'bg-gray-50 border-none text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5',
+                        placeholder: 'Password'
+                      })
+                    ]
+                  })
+                ]
               })
             ]
           })
