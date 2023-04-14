@@ -5,6 +5,11 @@ export const LoginPage = () => {
     element: 'div',
     className: 'h-[926px] bg-gray-300',
     child: [
+      ElementGenerator({
+        element: 'header',
+        className: '',
+        child: ''
+      })
     ]
   })
 }
