@@ -56,12 +56,17 @@ export const FirstProductPage = () => {
           }),
           ElementGenerator({
             element: 'div',
-            className: '',
+            className: 'flex gap-3',
             child: [
               ElementGenerator({
                 element: 'div',
                 className: '',
                 innerHTML: svg.offBell
+              }),
+              ElementGenerator({
+                element: 'div',
+                className: '',
+                innerHTML: svg.outlineHeart
               })
             ]
           })
