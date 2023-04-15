@@ -1,7 +1,7 @@
 import { ElementGenerator } from '@/library/'
 
 const variants = {
-  contained: 'bg-blue-600 text-slate-100 font-bold hover:bg-[#094692]',
+  contained: 'bg-black text-slate-100 font-bold hover:bg-black',
   outlined: ' border border-1 text-blue-700 font-bold border-blue-700 hover:bg-[#E0E3FB]',
   link: 'bg-transparent'
 }
