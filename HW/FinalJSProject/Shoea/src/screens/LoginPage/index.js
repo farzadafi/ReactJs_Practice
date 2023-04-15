@@ -154,7 +154,7 @@ export const LoginPage = () => {
   const passwordInput = login.querySelector('#password-input-id')
   const emailInput = login.querySelector('#email-address-input-id')
   const hidePasswordBtn = login.querySelector('#hide-password-btn-id')
-  const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   const singInButton = login.querySelector('#sign-in-button')
   const signInButtonBlack = singInButton.className.replace('bg-gray-500 hover:bg-gray-500', 'bg-black hover:bg-black')
   const signInButtonGray = singInButton.className.replace('bg-black hover:bg-black', 'bg-gray-500 hover:bg-gray-500')
