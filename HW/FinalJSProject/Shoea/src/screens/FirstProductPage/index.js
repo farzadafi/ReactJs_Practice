@@ -1,4 +1,5 @@
 import { ElementGenerator } from '@/library'
+import { svg } from '@/assets/index.js'
 
 export const FirstProductPage = () => {
   return ElementGenerator({
@@ -7,7 +8,7 @@ export const FirstProductPage = () => {
     child: [
       ElementGenerator({
         element: 'div',
-        className: '',
+        className: 'flex justify-between items-center',
         child: [
           ElementGenerator({
             element: 'div',
@@ -50,6 +51,17 @@ export const FirstProductPage = () => {
                     child: 'Farzad Afshar Zarandi'
                   })
                 ]
+              })
+            ]
+          }),
+          ElementGenerator({
+            element: 'div',
+            className: '',
+            child: [
+              ElementGenerator({
+                element: 'div',
+                className: '',
+                innerHTML: svg.offBell
               })
             ]
           })
