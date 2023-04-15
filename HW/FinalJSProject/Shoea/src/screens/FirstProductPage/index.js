@@ -1,6 +1,34 @@
 import { ElementGenerator } from '@/library'
 import { svg } from '@/assets/index.js'
 
+const brand = [
+  {
+    name: 'nike',
+    image: './src/assets/image/brand/nike.png'
+  }, {
+    name: 'adidas',
+    image: './src/assets/image/brand/adidas.png'
+  }, {
+    name: 'asics',
+    image: './src/assets/image/brand/asics.png'
+  }, {
+    name: 'converse',
+    image: './src/assets/image/brand/converse.png'
+  }, {
+    name: 'more',
+    image: './src/assets/image/brand/more.png'
+  }, {
+    name: 'newBa..',
+    image: './src/assets/image/brand/newBa...png'
+  }, {
+    name: 'puma',
+    image: './src/assets/image/brand/puma.png'
+  }, {
+    name: 'reebok',
+    image: './src/assets/image/brand/rebook.png'
+  }
+]
+
 export const FirstProductPage = () => {
   return ElementGenerator({
     element: 'div',
