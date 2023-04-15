@@ -64,7 +64,7 @@ export const LoginPage = () => {
                       ElementGenerator({
                         element: 'input',
                         type: 'text',
-                        id: 'email-address-id',
+                        id: 'email-address-input-id',
                         className: 'bg-gray-50 border-none text-gray-900 text-lg rounded-lg focus:ring-black focus:ring-2 focus:border-black focus:border-xl block w-96 pl-10 p-2.5',
                         placeholder: 'Email'
                       })
@@ -103,7 +103,7 @@ export const LoginPage = () => {
                           ElementGenerator({
                             element: 'input',
                             type: 'password',
-                            id: 'password-id',
+                            id: 'password-input-id',
                             className: 'bg-gray-50 border-none text-gray-900 text-lg rounded-lg focus:ring-black focus:ring-2 focus:border-black focus:border-xl block w-96 pl-10 p-2.5',
                             placeholder: 'Password'
                           })
@@ -150,7 +150,7 @@ export const LoginPage = () => {
       })
     ]
   })
-  const passwordInput = login.querySelector('#password-id')
+  const passwordInput = login.querySelector('#password-input-id')
   const hidePasswordBtn = login.querySelector('#hide-password-btn-id')
 
   hidePasswordBtn.addEventListener('click', () => {
