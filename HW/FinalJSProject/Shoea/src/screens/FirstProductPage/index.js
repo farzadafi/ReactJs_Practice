@@ -26,12 +26,28 @@ export const FirstProductPage = () => {
               }),
               ElementGenerator({
                 element: 'div',
-                className: '',
+                className: 'flex flex-col gap-2',
                 child: [
                   ElementGenerator({
+                    element: 'div',
+                    className: 'flex gap-2 items-center',
+                    child: [
+                      ElementGenerator({
+                        element: 'p',
+                        className: 'text-gray-500',
+                        child: 'Good Morning'
+                      }),
+                      ElementGenerator({
+                        element: 'img',
+                        className: 'w-4 h-4',
+                        src: './src/assets/image/WavingHandIcon.png'
+                      })
+                    ]
+                  }),
+                  ElementGenerator({
                     element: 'p',
-                    className: 'text-gray-500',
-                    child: 'Good Morning'
+                    className: 'text-base font-bold',
+                    child: 'Farzad Afshar Zarandi'
                   })
                 ]
               })
