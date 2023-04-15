@@ -15,9 +15,6 @@ const brand = [
     name: 'converse',
     image: './src/assets/image/brand/converse.png'
   }, {
-    name: 'more',
-    image: './src/assets/image/brand/more.png'
-  }, {
     name: 'newBa..',
     image: './src/assets/image/brand/newBa...png'
   }, {
@@ -26,6 +23,10 @@ const brand = [
   }, {
     name: 'reebok',
     image: './src/assets/image/brand/rebook.png'
+  },
+  {
+    name: 'more',
+    image: './src/assets/image/brand/more.png'
   }
 ]
 
@@ -128,6 +129,36 @@ export const FirstProductPage = () => {
             placeholder: 'Search'
           })
         ]
+      }),
+      ElementGenerator({
+        element: 'div',
+        className: 'flex gap-8 flex-wrap',
+        child:
+          brand.map(items => {
+            return ElementGenerator({
+              element: 'div',
+              className: 'flex flex-col gap-4',
+              child: [
+                ElementGenerator({
+                  element: 'div',
+                  className: 'w-16 h-16 bg-gray-200 rounded-full flex justify-center items-center',
+                  child: [
+                    ElementGenerator({
+                      element: 'img',
+                      className: '',
+                      src: items.image
+                    })
+                  ]
+                }),
+                ElementGenerator({
+                  element: 'p',
+                  className: 'text-center text-sm font-semibold',
+                  innerHTML: items.name
+                })
+              ]
+            })
+          })
+
       })
     ]
   })
