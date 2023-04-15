@@ -11,7 +11,7 @@ export const FirstProductPage = () => {
         child: [
           ElementGenerator({
             element: 'div',
-            className: '',
+            className: 'flex gap-4',
             child: [
               ElementGenerator({
                 element: 'div',
@@ -21,6 +21,17 @@ export const FirstProductPage = () => {
                     element: 'img',
                     className: 'w-12 rounded-full',
                     src: './src/assets/image/farzadProf.jpg'
+                  })
+                ]
+              }),
+              ElementGenerator({
+                element: 'div',
+                className: '',
+                child: [
+                  ElementGenerator({
+                    element: 'p',
+                    className: 'text-gray-500',
+                    child: 'Good Morning'
                   })
                 ]
               })
