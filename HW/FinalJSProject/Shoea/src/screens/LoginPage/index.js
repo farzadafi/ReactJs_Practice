@@ -140,9 +140,9 @@ export const LoginPage = () => {
               }),
               Button({
                 child: 'Sign in',
-                id: 'SignInButton',
-                variant: 'contained',
-                classes: 'bg-gray-500 rounded-full mt-40 hover:bg-gray-500',
+                id: 'sign-in-button',
+                variant: '',
+                classes: 'bg-gray-500 hover:bg-gray-500 rounded-full mt-40 text-slate-100 font-bold',
                 disabled: true
               })
             ]
@@ -152,7 +152,12 @@ export const LoginPage = () => {
     ]
   })
   const passwordInput = login.querySelector('#password-input-id')
+  const emailInput = login.querySelector('#email-address-input-id')
   const hidePasswordBtn = login.querySelector('#hide-password-btn-id')
+  const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  const singInButton = login.querySelector('#sign-in-button')
+  const signInButtonBlack = singInButton.className.replace('bg-gray-500 hover:bg-gray-500', 'bg-black hover:bg-black')
+  const signInButtonGray = singInButton.className.replace('bg-black hover:bg-black', 'bg-gray-500 hover:bg-gray-500')
 
   hidePasswordBtn.addEventListener('click', () => {
     if (passwordInput.type === 'password') {
@@ -161,6 +166,30 @@ export const LoginPage = () => {
     } else {
       passwordInput.type = 'password'
       hidePasswordBtn.innerHTML = svg.eyeBlockSvg
+    }
+  })
+
+  passwordInput.addEventListener('keyup', () => {
+    const validEmail = String(emailInput.value)
+      .toLowerCase().match(emailRegex)
+    if ((validEmail) && (passwordInput.value.length > 7)) {
+      singInButton.disabled = false
+      singInButton.className = signInButtonBlack
+    } else {
+      singInButton.disabled = true
+      singInButton.className = signInButtonGray
+    }
+  })
+
+  emailInput.addEventListener('keyup', () => {
+    const validEmail = String(emailInput.value)
+      .toLowerCase().match(emailRegex)
+    if ((validEmail) && (passwordInput.value.length > 7)) {
+      singInButton.disabled = false
+      singInButton.className = signInButtonBlack
+    } else {
+      singInButton.disabled = true
+      singInButton.className = signInButtonGray
     }
   })
 
