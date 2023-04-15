@@ -3,29 +3,29 @@ import { svg } from '@/assets/index.js'
 
 const brand = [
   {
-    name: 'nike',
+    name: 'Nike',
     image: './src/assets/image/brand/nike.png'
   }, {
-    name: 'adidas',
+    name: 'Adidas',
     image: './src/assets/image/brand/adidas.png'
   }, {
-    name: 'asics',
+    name: 'Asics',
     image: './src/assets/image/brand/asics.png'
   }, {
-    name: 'converse',
+    name: 'Converse',
     image: './src/assets/image/brand/converse.png'
   }, {
-    name: 'newBa..',
+    name: 'NewBa..',
     image: './src/assets/image/brand/newBa...png'
   }, {
-    name: 'puma',
+    name: 'Puma',
     image: './src/assets/image/brand/puma.png'
   }, {
-    name: 'reebok',
+    name: 'Reebok',
     image: './src/assets/image/brand/rebook.png'
   },
   {
-    name: 'more',
+    name: 'More...',
     image: './src/assets/image/brand/more.png'
   }
 ]
