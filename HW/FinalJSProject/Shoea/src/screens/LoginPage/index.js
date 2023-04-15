@@ -3,7 +3,7 @@ import { svg } from '@/assets/index.js'
 import { Button } from '@/components/index.js'
 
 export const LoginPage = () => {
-  return ElementGenerator({
+  const login = ElementGenerator({
     element: 'div',
     className: 'h-[926px] p-3',
     child: [
@@ -91,12 +91,18 @@ export const LoginPage = () => {
                                 element: 'div',
                                 className: 'absolute inset-y-6 left-0 flex items-center pl-3 pointer-events-none',
                                 innerHTML: svg.lockSvg
+                              }),
+                              ElementGenerator({
+                                element: 'div',
+                                className: 'absolute bg-orange-500 inset-y-6 left-[21.5rem] flex items-center pl-3 ',
+                                id: 'hide-password-btn-id',
+                                innerHTML: svg.eyeBlockSvg
                               })
                             ]
                           }),
                           ElementGenerator({
                             element: 'input',
-                            type: 'text',
+                            type: 'password',
                             id: 'password-id',
                             className: 'bg-gray-50 border-none text-gray-900 text-lg rounded-lg focus:ring-black focus:ring-2 focus:border-black focus:border-xl block w-96 pl-10 p-2.5',
                             placeholder: 'Password'
@@ -136,7 +142,7 @@ export const LoginPage = () => {
                 child: 'Sign in',
                 id: 'SignInButton',
                 variant: 'contained',
-                classes: 'bg-gray-500 rounded-full mt-40'
+                classes: 'bg-gray-500 rounded-full mt-40 hover:bg-gray-500'
               })
             ]
           })
@@ -144,4 +150,18 @@ export const LoginPage = () => {
       })
     ]
   })
+  const passwordInput = login.querySelector('#password-id')
+  const hidePasswordBtn = login.querySelector('#hide-password-btn-id')
+
+  hidePasswordBtn.addEventListener('click', () => {
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text'
+      hidePasswordBtn.innerHTML = svg.eyePermitSvg
+    } else {
+      passwordInput.type = 'password'
+      hidePasswordBtn.innerHTML = svg.eyeBlockSvg
+    }
+  })
+
+  return login
 }
