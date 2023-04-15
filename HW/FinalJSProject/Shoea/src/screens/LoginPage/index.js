@@ -142,7 +142,8 @@ export const LoginPage = () => {
                 child: 'Sign in',
                 id: 'SignInButton',
                 variant: 'contained',
-                classes: 'bg-gray-500 rounded-full mt-40 hover:bg-gray-500'
+                classes: 'bg-gray-500 rounded-full mt-40 hover:bg-gray-500',
+                disabled: true
               })
             ]
           })
