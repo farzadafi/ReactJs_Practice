@@ -152,7 +152,7 @@ export const FirstProductPage = () => {
                 }),
                 ElementGenerator({
                   element: 'p',
-                  className: 'text-center text-sm font-semibold',
+                  className: 'text-center text-md font-semibold',
                   innerHTML: items.name
                 })
               ]
