@@ -158,7 +158,28 @@ export const FirstProductPage = () => {
               ]
             })
           })
-
+      }),
+      ElementGenerator({
+        element: 'div',
+        className: '',
+        child: [
+          ElementGenerator({
+            element: 'div',
+            className: 'flex justify-center justify-between items-center',
+            child: [
+              ElementGenerator({
+                element: 'p',
+                className: 'text-xl font-semibold',
+                child: 'Most Popular'
+              }),
+              ElementGenerator({
+                element: 'p',
+                className: 'text-base font-semibold',
+                child: 'See All'
+              })
+            ]
+          })
+        ]
       })
     ]
   })
