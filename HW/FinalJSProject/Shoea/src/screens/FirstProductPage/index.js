@@ -30,6 +30,14 @@ const brand = [
   }
 ]
 
+const newBrand = brand.map(item => {
+  if (item.name === 'More...') {
+    return { ...item, name: 'All' }
+  }
+  return item
+})
+newBrand.reverse()
+
 export const FirstProductPage = () => {
   return ElementGenerator({
     element: 'div',
@@ -161,7 +169,7 @@ export const FirstProductPage = () => {
       }),
       ElementGenerator({
         element: 'div',
-        className: '',
+        className: 'flex flex-col gap-4',
         child: [
           ElementGenerator({
             element: 'div',
@@ -178,6 +186,18 @@ export const FirstProductPage = () => {
                 child: 'See All'
               })
             ]
+          }),
+          ElementGenerator({
+            element: 'div',
+            className: 'flex gap-2 overflow-x-scroll',
+            child:
+              newBrand.map(items => {
+                return ElementGenerator({
+                  element: 'div',
+                  className: 'border p-2 px-4 border-black border-2 rounded-full max-w-content min-w-20 text-base font-semibold',
+                  child: items.name
+                })
+              })
           })
         ]
       })
