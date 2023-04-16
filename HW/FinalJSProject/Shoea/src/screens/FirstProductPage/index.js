@@ -262,6 +262,38 @@ export const FirstProductPage = () => {
                   ]
                 })
               })
+          }),
+          ElementGenerator({
+            element: 'div',
+            className: 'fixed bottom-0 w-full z-50 bg-gray-50 px-4 py-4 flex gap-10',
+            child: [
+              ElementGenerator({
+                element: 'div',
+                className: 'flex flex-col justify-center items-center',
+                innerHTML: svg.outlineHouseDoor,
+                child: 'Home'
+              }), ElementGenerator({
+                element: 'div',
+                className: 'flex flex-col justify-center items-center',
+                innerHTML: svg.outlineBag,
+                child: 'Home'
+              }), ElementGenerator({
+                element: 'div',
+                className: 'flex flex-col justify-center items-center',
+                innerHTML: svg.outlineCart,
+                child: 'Home'
+              }), ElementGenerator({
+                element: 'div',
+                className: 'flex flex-col justify-center items-center',
+                innerHTML: svg.outlineWallet,
+                child: 'Home'
+              }), ElementGenerator({
+                element: 'div',
+                className: 'flex flex-col justify-center items-center',
+                innerHTML: svg.outlinePerson,
+                child: 'Home'
+              })
+            ]
           })
         ]
       })
