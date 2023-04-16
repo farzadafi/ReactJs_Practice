@@ -228,6 +228,40 @@ export const FirstProductPage = () => {
                   child: items.name
                 })
               })
+          }),
+          ElementGenerator({
+            element: 'div',
+            className: 'flex gap-4 flex-wrap',
+            child:
+              shoes.map(items => {
+                return ElementGenerator({
+                  element: 'div',
+                  className: 'flex flex-col gap-1',
+                  child: [
+                    ElementGenerator({
+                      element: 'div',
+                      className: 'w-44 h-44 bg-gray-100 flex justify-center items-center rounded-2xl',
+                      child: [
+                        ElementGenerator({
+                          element: 'img',
+                          className: 'w-36 h-36',
+                          src: items.image
+                        })
+                      ]
+                    }),
+                    ElementGenerator({
+                      element: 'p',
+                      className: 'text-xl font-bold',
+                      child: items.name
+                    }),
+                    ElementGenerator({
+                      element: 'p',
+                      className: 'font-semibold text-base',
+                      child: items.price
+                    })
+                  ]
+                })
+              })
           })
         ]
       })
