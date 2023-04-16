@@ -38,6 +38,36 @@ const newBrand = brand.map(item => {
 })
 newBrand.reverse()
 
+// HW/FinalJSProject/Shoea/src/assets/image/shoe1.png
+
+const shoes = [
+  {
+    name: 'Puma',
+    price: '85R',
+    image: './src/assets/image/shoe1.png'
+  }, {
+    name: 'Puma',
+    price: '85R',
+    image: './src/assets/image/shoe1.png'
+  }, {
+    name: 'Puma',
+    price: '85R',
+    image: './src/assets/image/shoe1.png'
+  }, {
+    name: 'Puma',
+    price: '85R',
+    image: './src/assets/image/shoe1.png'
+  }, {
+    name: 'Puma',
+    price: '85R',
+    image: './src/assets/image/shoe1.png'
+  }, {
+    name: 'Puma',
+    price: '85R',
+    image: './src/assets/image/shoe1.png'
+  }
+]
+
 export const FirstProductPage = () => {
   return ElementGenerator({
     element: 'div',
