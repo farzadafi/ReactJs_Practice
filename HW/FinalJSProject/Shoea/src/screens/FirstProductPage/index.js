@@ -276,22 +276,22 @@ export const FirstProductPage = () => {
                 element: 'div',
                 className: 'flex flex-col justify-center items-center',
                 innerHTML: svg.outlineBag,
-                child: 'Home'
+                child: 'Cart'
               }), ElementGenerator({
                 element: 'div',
                 className: 'flex flex-col justify-center items-center',
                 innerHTML: svg.outlineCart,
-                child: 'Home'
+                child: 'Orders'
               }), ElementGenerator({
                 element: 'div',
                 className: 'flex flex-col justify-center items-center',
                 innerHTML: svg.outlineWallet,
-                child: 'Home'
+                child: 'Wallet'
               }), ElementGenerator({
                 element: 'div',
                 className: 'flex flex-col justify-center items-center',
                 innerHTML: svg.outlinePerson,
-                child: 'Home'
+                child: 'Profile'
               })
             ]
           })
