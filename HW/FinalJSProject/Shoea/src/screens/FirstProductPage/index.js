@@ -231,7 +231,7 @@ export const FirstProductPage = () => {
           }),
           ElementGenerator({
             element: 'div',
-            className: 'flex gap-4 flex-wrap',
+            className: 'flex gap-4 flex-wrap pb-24',
             child:
               shoes.map(items => {
                 return ElementGenerator({
