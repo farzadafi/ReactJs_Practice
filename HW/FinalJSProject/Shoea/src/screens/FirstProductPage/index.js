@@ -71,7 +71,7 @@ const shoes = [
 export const FirstProductPage = () => {
   return ElementGenerator({
     element: 'div',
-    className: 'h-[926px] flex flex-col p-5 gap-4',
+    className: 'h-[926px] flex flex-col gap-4',
     child: [
       ElementGenerator({
         element: 'div',
@@ -265,7 +265,7 @@ export const FirstProductPage = () => {
           }),
           ElementGenerator({
             element: 'div',
-            className: 'fixed bottom-0 w-full z-50 bg-gray-50 px-4 py-4 flex gap-10',
+            className: 'fixed bottom-0 w-full z-50 bg-gray-50 px-4 py-4 flex gap-x-8',
             child: [
               ElementGenerator({
                 element: 'div',
