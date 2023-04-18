@@ -17,3 +17,16 @@ body {
   font-family: "Noto Sans Mono", sans-serif;
   height: 100%;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 800px;
+  height: 500px;
+  background-color: #f0f0f0;
+}
