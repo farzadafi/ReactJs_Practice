@@ -1,5 +1,6 @@
 import { ElementGenerator } from '@/library'
 import Swiper from 'swiper/bundle'
+import { Router } from '@/functions'
 
 const slides = [
   {
@@ -100,7 +101,7 @@ export const SliderProductPage = () => {
                   const swiper = document.querySelector('.swiper').swiper
                   swiper.slideNext()
                   if (e.target.innerText === 'Get Started') {
-                    // Router().navigate('/login')
+                    Router().navigate('/login')
                   }
                   swiper.activeIndex === 2
                     ? (e.target.innerText = 'Get Started')
