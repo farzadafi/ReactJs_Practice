@@ -1,6 +1,7 @@
 import { ElementGenerator } from '@/library'
 import { svg } from '@/assets/index.js'
 import { Button } from '@/components/index.js'
+import { Router } from '@/functions'
 
 export const LoginPage = () => {
   const login = ElementGenerator({
@@ -143,7 +144,15 @@ export const LoginPage = () => {
                 id: 'sign-in-button',
                 variant: '',
                 classes: 'bg-gray-500 hover:bg-gray-500 rounded-full mt-40 text-slate-100 font-bold',
-                disabled: true
+                disabled: true,
+                eventListener: [
+                  {
+                    event: 'click',
+                    callback: () => {
+                      Router().navigate('/home')
+                    }
+                  }
+                ]
               })
             ]
           })
