@@ -51,12 +51,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  width: 80%;
 }
 
 .inner-info-div {
   display: flex;
   justify-content: space-between;
-  gap: 10rem;
 }
 
 .prof-image {
