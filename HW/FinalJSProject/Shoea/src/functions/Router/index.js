@@ -1,5 +1,5 @@
 import Navigo from 'navigo'
-import { LoginPage } from '@/screens'
+import { LoginPage, FirstProductPage } from '@/screens'
 
 export const Router = () => {
   const root = document.getElementById('app')
@@ -8,6 +8,10 @@ export const Router = () => {
     .on('/login', () => {
       root.innerHTML = ''
       root.append(LoginPage())
+    })
+    .on('/home', () => {
+      root.innerHTML = ''
+      root.append(FirstProductPage())
     })
     .notFound(() => {
       console.log('page not found!!!')
