@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "vazir";
+  src: url(../assets/font/Vazir.ttf) format("truetype");
+}
+
 html {
   font-size: 62.5%;
   height: 100%;
@@ -14,7 +19,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Noto Sans Mono", sans-serif;
+  font-family: "Vazir", "Noto Sans Mono", sans-serif;
   height: 100%;
 }
 
