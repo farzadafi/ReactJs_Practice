@@ -38,8 +38,6 @@ const newBrand = brand.map(item => {
 })
 newBrand.reverse()
 
-// HW/FinalJSProject/Shoea/src/assets/image/shoe1.png
-
 const shoes = [
   {
     name: 'Puma',
@@ -71,7 +69,7 @@ const shoes = [
 export const FirstProductPage = () => {
   return ElementGenerator({
     element: 'div',
-    className: 'h-[926px] flex flex-col gap-4',
+    className: 'h-[926px] flex flex-col gap-4 p-4',
     child: [
       ElementGenerator({
         element: 'div',
