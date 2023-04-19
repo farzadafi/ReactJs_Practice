@@ -1,3 +1,8 @@
+$primary-color: #6927e8;
+$gray-color : gray;
+$button-color : #1980f5;
+$hover-button-color : #003cff;
+
 *,
 *::after,
 *::before {
@@ -14,7 +19,7 @@
 html {
   font-size: 62.5%;
   height: 100%;
-  background-color: gray;
+  background-color: $gray-color;
 }
 
 body {
@@ -38,7 +43,7 @@ main {
 }
 
 .left-div {
-  background-color: #6927e8;
+  background-color: $primary-color;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -101,7 +106,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: #1980f5;
+  background-color: $button-color;
   border: none;
   color: white;
   padding: 1rem;
@@ -110,7 +115,7 @@ main {
 
 .download-resume-button:hover {
   cursor: pointer;
-  background-color: #003cff;
+  background-color: $hover-button-color;
 }
 
 .bold-font {
@@ -130,5 +135,5 @@ main {
 }
 
 .gray-font {
-  color: gray;
+  color: $gray-color;
 }
