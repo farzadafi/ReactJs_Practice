@@ -85,3 +85,23 @@ main {
   height: 85%;
   background-color: pink;
 }
+
+.about-button {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  background-color: rebeccapurple;
+  margin-top: 7rem;
+}
+
+.download-resume-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1980f5;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 5rem;
+}
