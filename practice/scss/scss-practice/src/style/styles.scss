@@ -83,7 +83,7 @@ main {
 .more-information {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  justify-content: space-between;
   width: 85%;
   height: 85%;
   text-align: right;
@@ -116,4 +116,20 @@ main {
 
 .bold-font {
   font-weight: bold;
+}
+
+.skill-percentage {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
+}
+
+.skill {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.gray-font {
+  color: gray;
 }
