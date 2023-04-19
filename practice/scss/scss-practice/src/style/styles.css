@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "vazir";
+  src: url(../assets/font/Vazir.ttf) format("truetype");
+}
 html {
   font-size: 62.5%;
   height: 100%;
@@ -14,8 +18,118 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Noto Sans Mono", sans-serif;
+  font-family: "Vazir", "Noto Sans Mono", sans-serif;
   height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 800px;
+  height: 500px;
+  background-color: #f0f0f0;
+  display: flex;
+}
+
+.left-div {
+  background-color: #6927e8;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  gap: 1.3rem;
+  height: 100%;
+  justify-content: center;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 80%;
+}
+
+.inner-info-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prof-image {
+  width: 80%;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.icon-div {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.right-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.more-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 85%;
+  height: 85%;
+  text-align: right;
+  direction: rtl;
+}
+
+.about-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7rem;
+}
+
+.download-resume-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1980f5;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 5rem;
+}
+
+.download-resume-button:hover {
+  cursor: pointer;
+  background-color: #003cff;
+}
+
+.bold-font {
+  font-weight: bold;
+}
+
+.skill-percentage {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
+}
+
+.skill {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.gray-font {
+  color: gray;
 }
 
 /*# sourceMappingURL=styles.css.map */
