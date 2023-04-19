@@ -87,6 +87,7 @@ main {
   width: 85%;
   height: 85%;
   text-align: right;
+  direction: rtl;
 }
 
 .about-button {
@@ -111,4 +112,8 @@ main {
 .download-resume-button:hover {
   cursor: pointer;
   background-color: #003cff;
+}
+
+.bold-font {
+  font-weight: bold;
 }
