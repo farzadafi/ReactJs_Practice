@@ -1,5 +1,5 @@
 import React from "react";
-import InputMaker from "../../Button/InputMaker";
+import InputMaker from "../../InputMaker/InputMaker";
 
 function Section1() {
     return (
