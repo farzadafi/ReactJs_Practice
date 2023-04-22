@@ -1,0 +1,85 @@
+npm create vite@latest
+npm install
+npm run dev
+
+====================
+
+for install tailwind:
+npm install -D tailwindcss postcss autoprefixer vite
+npx tailwindcss init -p
+
+in file tailwind.config.js copy these line:
+    /** @type {import('tailwindcss').Config} */
+    module.exports = {
+      content: [
+        "./index.html",
+        "./main.js",
+        "./src/**/*.{js,ts,jsx,tsx}"
+      ],
+      theme: {
+        extend: {},
+      },
+      plugins: [
+      ],
+    }
+
+and these line for index.css:
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+and this line to file main.tsx:
+    import './style.css'
+
+install tailwindcss successfully
+
+=====================================
+
+now config eslint :
+//??
+
+===============================
+
+for config js-paths:
+    npm install vite-jsconfig-paths --save-dev
+
+this line to vite.config.js(after create this file yourself:
+    import { defineConfig } from 'vite'
+    import jsconfigPaths from 'vite-jsconfig-paths'
+
+    export default defineConfig({
+      plugins: [jsconfigPaths()]
+    })
+
+and create jsconfig.json file and copy this line:
+    {
+      "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+          "@/*": ["./src/*"]
+        }
+      },
+      "include": ["src/**/*"],
+      "exclude": ["node_modules"]
+    }
+
+=================================================
+
+install flowbite:
+    npm install flowbite
+
+    add these line to tailwind.config.js :
+
+    module.exports = {
+
+        plugins: [
+            require('flowbite/plugin')
+        ]
+        content: [
+                "./node_modules/flowbite/**/*.js"
+            ]
+    }
+
+    and add this line to index.html:
+
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>

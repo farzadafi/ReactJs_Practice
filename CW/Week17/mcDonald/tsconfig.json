@@ -17,7 +17,14 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "scripts": {
+      "lint": "eslint 'src/**/*.{js,jsx}'"
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
