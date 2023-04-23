@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../Card";
+import Basket from "../Basket";
 
 const berger = [
   {
@@ -72,6 +73,7 @@ const Main = () => {
           return <Card name={bergerName} price={price} image={image}/>;
         })
       }
+    <Basket/>
     </main>
   );
 };
