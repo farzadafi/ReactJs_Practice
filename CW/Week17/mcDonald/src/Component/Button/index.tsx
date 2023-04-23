@@ -1,7 +1,9 @@
 import React from "react";
 
 const variants = {
-  counter: "p-1 bg-red-800"
+  counter: "p-1",
+  tick: "absolute left-4 w-8 rounded-bl-md rounded-tl-md",
+  pay: "p-4 text-white rounded-md mt-1"
 };
 
 type buttonProps = {
@@ -12,7 +14,7 @@ type buttonProps = {
 
 const Button = ({variant, classes, child}: buttonProps) => {
   return (
-    <button className={`${variants[variant]} ${classes}`}>
+    <button className={`${variants[variant]} ${classes} bg-red-800`}>
       {
         child
       }
