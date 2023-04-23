@@ -6,7 +6,7 @@ const register: JSX.Element = <p>ثبت سفارش</p>
 
 const Basket = () => {
   return (
-    <div className={"flex flex-col w-full p-4 rtl-dir rounded-xl gap-2 bg-orange-500"}>
+    <div className={"flex flex-col w-full p-4 rtl-dir rounded-xl gap-2 bg-gray-200 m-4"}>
       <div className={"flex justify-between text-gray-500"}>
         <p>جمع کل سفارشات:</p>
         <p className={"direction-ltr text-right"}>۰ تومان</p>
