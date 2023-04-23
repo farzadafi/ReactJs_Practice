@@ -6,3 +6,7 @@
     src: url("./src/assets/font/Vazir.ttf");
     font-family: "Vazir";
 }
+
+.rtl-dir {
+    direction: rtl;
+}
