@@ -20,7 +20,7 @@ const Card = ({name, price, image}: cardProps) => {
         </div>
         <div>
           <div className={"flex justify-between"}>
-            <p className={"text-right rtl text-gray-500"}>۰ تومان</p>
+            <p className={"text-right rtl text-gray-500 rtl-dir"}>۰ تومان</p>
             <div className={"flex"}>
               <Button classes={"rounded-tl-md rounded-bl-md"} child={minusImg} variant={"counter"}/>
               <div className={"w-6 bg-gray-200 flex justify-center items-center"}>
