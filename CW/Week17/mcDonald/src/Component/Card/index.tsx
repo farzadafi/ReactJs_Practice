@@ -32,7 +32,7 @@ const Card = ({name, price, image}: cardProps) => {
         </div>
       </div>
       <div>
-        <img src={image} alt={name} className={"w-72"}/>
+        <img src={image} alt={name} className={"w-72 h-32"}/>
       </div>
     </div>
   );
