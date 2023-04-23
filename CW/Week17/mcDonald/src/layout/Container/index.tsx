@@ -5,8 +5,7 @@ type containerProps = {
 }
 
 const Container = ({children}: containerProps) => {
-  return (<div className={"container mx-auto max-w-[120rem] mt-2"}>
-    <p>farzad</p>
+  return (<div className={"container mx-auto max-w-xs bg-orange-400 rounded-xl"}>
     {children}
   </div>);
 };
