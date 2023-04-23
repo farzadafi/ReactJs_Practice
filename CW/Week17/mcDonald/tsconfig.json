@@ -24,7 +24,8 @@
     ],
     "scripts": {
       "lint": "eslint 'src/**/*.{js,jsx}'"
-    }
+    },
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
