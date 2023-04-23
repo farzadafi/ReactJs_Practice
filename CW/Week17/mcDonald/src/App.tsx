@@ -1,10 +1,11 @@
 import Container from "./layout/Container";
+import Header from "./Component/Header";
 
 const App = () => {
   return (
-    <div>
+    <div className={"font-Vazir"}>
       <Container>
-        <p>farzad</p>
+        <Header/>
       </Container>
     </div>
   );
