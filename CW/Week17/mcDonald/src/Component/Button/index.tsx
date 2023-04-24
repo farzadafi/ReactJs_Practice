@@ -1,4 +1,3 @@
-import React from "react";
 
 const variants = {
   counter: "p-1",
@@ -10,11 +9,12 @@ type buttonProps = {
   variant: string,
   classes: string,
   child?: JSX.Element,
+  onClick?: () => void;
 }
 
-const Button = ({variant, classes, child}: buttonProps) => {
+const Button = ({variant, classes, child, onclickFunction}: buttonProps) => {
   return (
-    <button className={`${variants[variant]} ${classes} bg-red-800`}>
+    <button className={`${variants[variant]} ${classes} bg-red-800`} onClick={onclickFunction}>
       {
         child
       }
