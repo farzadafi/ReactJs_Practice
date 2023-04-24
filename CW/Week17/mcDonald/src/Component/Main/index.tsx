@@ -6,70 +6,70 @@ const berger = [
   {
     id: 1,
     bergerName: "همبرگر معمولی",
-    price: "۸۰۰۰ تومان",
+    price: "8000 تومان",
     image: "./public/image/hamburger.png",
     quantityNumber : 0
   },
   {
     id: 1,
     bergerName: "همبرگر مخصوص",
-    price: "۱۰۰۰۰ تومان",
+    price: "10000 تومان",
     image: "./public/image/hamburger.png",
     quantityNumber : 0
   },
   {
     id: 1,
     bergerName: "همبرگر معمولی با قارچ و پنیر",
-    price: "۱۰۰۰۰ تومان",
+    price: "10000 تومان",
     image: "./public/image/hamburger.png",
     quantityNumber : 0
   },
   {
     id: 1,
     bergerName: "همبرگر مخصوص با قارچ و پنیر",
-    price: "۲۰۰۰۰ تومان",
+    price: "20000 تومان",
     image: "./public/image/hamburger.png",
     quantityNumber : 0
   },
   {
     id: 1,
     bergerName: "سیب زمینی سرخ کرده ویژه",
-    price: "۲۵۰۰۰ تومان",
+    price: "25000 تومان",
     image: "./public/image/french_fries.png",
     quantityNumber : 0
   },
   {
     id: 1,
     bergerName: "سیب زمینی سرخ کرده",
-    price: "۱۰۰۰۰ تومان",
+    price: "10000 تومان",
     image: "./public/image/french_fries.png",
     quantityNumber : 0
   },
   {
     id: 1,
     bergerName: "نوشابه رژیمی",
-    price: "۶۰۰۰ تومان",
+    price: "6000 تومان",
     image: "./public/image/soda.png",
     quantityNumber : 0
   },
   {
     id: 1,
     bergerName: "نوشابه ",
-    price: "۵۰۰۰ تومان",
+    price: "5000 تومان",
     image: "./public/image/soda.png",
     quantityNumber : 0
   },
   {
     id: 1,
     bergerName: "سالاد فصل ",
-    price: "۸۰۰۰ تومان",
+    price: "8000 تومان",
     image: "./public/image/salad.png",
     quantityNumber : 0
   },
   {
     id: 1,
     bergerName: "سالاد سزار ",
-    price: "۲۵۰۰۰ تومان",
+    price: "25000 تومان",
     image: "./public/image/ceasar.png",
     quantityNumber : 0
   },
