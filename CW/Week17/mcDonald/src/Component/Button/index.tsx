@@ -2,7 +2,7 @@ import React from "react";
 
 const variants = {
   counter: "p-1",
-  tick: "absolute left-8 w-8 rounded-bl-md rounded-tl-md",
+  tick: "absolute left-0 w-8 rounded-bl-md rounded-tl-md",
   pay: "p-4 text-white rounded-md mt-1"
 };
 
