@@ -12,9 +12,9 @@ type cardProps = {
 
 
 const randomIdWithTimestamp = (): string => {
-  const uuid = uuidv4(); // generate a random UUID
-  const timestamp = LocalDateTime.now().toString(); // get the current timestamp
-  return `${uuid}-${timestamp}`; // concatenate the UUID and timestamp with a dash
+  const uuid = uuidv4();
+  const timestamp = LocalDateTime.now().toString();
+  return `${uuid}-${timestamp}`;
 };
 
 const minusImg: JSX.Element = <img src={"../../../public/image/minus.png"} className={"w-4"} alt={"minus"}/>;
@@ -23,14 +23,22 @@ const plusImg: JSX.Element = <img src={"../../../public/image/add.png"} classNam
 const Card = ({name, price, image, quantity}: cardProps) => {
   const id = randomIdWithTimestamp();
   const [count, setCount] = useState(quantity);
+  const [priceQuan, setPriceQuan] = useState(0);
 
   const plusQuantity = () => {
     setCount(count + 1);
+    const priceString: string = price.replace(/\D/g, "");
+    const priceNumber: number = parseInt(priceString);
+    setPriceQuan(priceQuan + priceNumber);
   };
 
   const minusQuantity = () => {
-    if (count >= 1)
+    if (count >= 1) {
       setCount(count - 1);
+      const priceString: string = price.replace(/\D/g, "");
+      const priceNumber: number = parseInt(priceString);
+      setPriceQuan(priceQuan - priceNumber);
+    }
   };
 
   return (
@@ -41,8 +49,11 @@ const Card = ({name, price, image, quantity}: cardProps) => {
           <p className={"text-gray-500"}>{price}</p>
         </div>
         <div>
-          <div className={"flex justify-between"}>
-            <p className={"text-right rtl text-gray-500 rtl-dir"}>۰ تومان</p>
+          <div className={"flex justify-between text-gray-500"}>
+            <div className={"flex justify-center items-center gap-2"}>
+              <p className={"rtl-dir"}>تومان</p>
+              <p>{priceQuan}</p>
+            </div>
             <div className={"flex"}>
               <Button onclickFunction={minusQuantity} classes={"rounded-tl-md rounded-bl-md"} child={minusImg}
                       variant={"counter"}/>
