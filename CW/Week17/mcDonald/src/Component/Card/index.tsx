@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Button from "../Button";
 import {v4 as uuidv4} from "uuid";
 import {LocalDateTime} from "@js-joda/core";
+import {useDispatch} from "react-redux";
 
 type cardProps = {
   name: string,
@@ -24,24 +25,30 @@ const Card = ({name, price, image, quantity}: cardProps) => {
   const id = randomIdWithTimestamp();
   const [count, setCount] = useState(quantity);
   const [priceQuan, setPriceQuan] = useState(0);
+  const dispatch = useDispatch();
 
   const plusQuantity = () => {
-    setCount(count + 1);
     const priceString: string = price.replace(/\D/g, "");
     const priceNumber: number = parseInt(priceString);
+    dispatch({type: "INCREMENT" , incrementPayload: priceNumber});
+    setCount(count + 1);
     setPriceQuan(priceQuan + priceNumber);
   };
 
   const minusQuantity = () => {
     if (count >= 1) {
-      setCount(count - 1);
       const priceString: string = price.replace(/\D/g, "");
       const priceNumber: number = parseInt(priceString);
+      dispatch({type: "DECREMENT", decrementPayload: priceNumber});
+      setCount(count - 1);
       setPriceQuan(priceQuan - priceNumber);
     }
   };
 
+
   return (
+
+
     <div key={id} className={"flex justify-end text-right p-1 bg-white max-w-xs m-4 rounded-md"}>
       <div className={"flex flex-col justify-between py-2 w-full gap-2"}>
         <div>
