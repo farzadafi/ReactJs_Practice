@@ -1,11 +1,11 @@
 import {createStore} from "redux";
 
 type AppState = {
-  count: number;
+  price: number;
 };
 
 const initialState: AppState = {
-  count: 0,
+  price: 0,
 };
 
 type IncrementAction = {
@@ -22,10 +22,10 @@ function reducer(state = initialState, action: any) {
   switch (action.type) {
   case "INCREMENT":
     const {incrementPayload} = action as IncrementAction;
-    return {...state, count: state.count + incrementPayload};
+    return {...state, price: state.price + incrementPayload};
     case "DECREMENT":
       const {decrementPayload} = action as DecrementAction;
-      return {...state, count: state.count - decrementPayload};
+      return {...state, price: state.price - decrementPayload};
   default:
     return state;
   }
