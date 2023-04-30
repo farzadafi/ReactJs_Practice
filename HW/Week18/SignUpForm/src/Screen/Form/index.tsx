@@ -1,7 +1,8 @@
 import {Button, Input} from "../../Component";
-import {EmailSvg} from "../../svg";
+import {EmailSvg, PeopleSvg} from "../../svg";
 
 const Email = <EmailSvg/>
+const People = <PeopleSvg/>
 
 const Form = () => {
   return (
@@ -12,6 +13,7 @@ const Form = () => {
           <Button title={"Sign Up"} classes={"bg-purple-600 font-white"}/>
         </div>
         <Input placeHolder={"Email"} svg={Email} name={"email"} type={"email"}/>
+        <Input placeHolder={"Username"} svg={People} name={"username"} type={"text"}/>
       </div>
     </div>
   );
