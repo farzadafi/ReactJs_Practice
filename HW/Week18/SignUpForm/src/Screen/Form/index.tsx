@@ -1,6 +1,5 @@
 import {Button, Input} from "../../Component";
 import {CheckSvg, EmailSvg, LockSvg, PeopleSvg} from "../../svg";
-import {Simulate} from "react-dom/test-utils";
 
 const Email = <EmailSvg/>
 const People = <PeopleSvg/>
