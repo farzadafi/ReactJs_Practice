@@ -3,9 +3,11 @@ interface Props {
   svg: JSX.Element
   name: string
   type: string
+  onChange?: (value:string) => void
+  value?: string
 }
 
-const Input = ({placeHolder, svg, name, type}:Props) => {
+const Input = ({placeHolder, svg, name, type, onChange, value}:Props) => {
   return (
     <div>
       <label htmlFor="email" className="block text-sm font-medium text-gray-700"></label>
@@ -15,7 +17,7 @@ const Input = ({placeHolder, svg, name, type}:Props) => {
         </div>
         <input type={type} name={name}
                className="text-xs block w-full pl-5 border-gray-300 rounded-sm h-5 flex items-center justify-center"
-               placeholder={placeHolder} />
+               placeholder={placeHolder} onChange={e => onChange ? onChange(e.target.value) : "null" } value={value}/>
       </div>
     </div>
   );
