@@ -1,8 +1,11 @@
 import {Button, Input} from "../../Component";
-import {EmailSvg, PeopleSvg} from "../../svg";
+import {CheckSvg, EmailSvg, LockSvg, PeopleSvg} from "../../svg";
+import {Simulate} from "react-dom/test-utils";
 
 const Email = <EmailSvg/>
 const People = <PeopleSvg/>
+const password = <LockSvg/>
+const confirmPassword = <CheckSvg/>
 
 const Form = () => {
   return (
@@ -14,6 +17,8 @@ const Form = () => {
         </div>
         <Input placeHolder={"Email"} svg={Email} name={"email"} type={"email"}/>
         <Input placeHolder={"Username"} svg={People} name={"username"} type={"text"}/>
+        <Input placeHolder={"password"} svg={password} name={"password"} type={"password"}/>
+        <Input placeHolder={"confirm password"} svg={confirmPassword} name={"confirmPassword"} type={"password"}/>
       </div>
     </div>
   );
