@@ -1,8 +1,10 @@
 import './index.css'
+import {Form} from "@/Component";
 
 function App() {
   return (
     <>
+      <Form/>
     </>
   )
 }
