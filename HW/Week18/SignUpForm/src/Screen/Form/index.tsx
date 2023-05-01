@@ -11,11 +11,13 @@ const Form = () => {
   const [emailValue, setEmailValue] = useState("");
   const [usernameValue, setUsernameValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
+  const [confirmPasswordValue, setConfirmPasswordValue] = useState("");
 
   const handleOnClick = () => {
     alert("email value is" + emailValue);
     alert("username value is" + usernameValue);
     alert("password value is" + passwordValue);
+    alert("confirm password value is" + confirmPasswordValue);
   };
 
   const onChangeHandler = (value: string) => {
@@ -28,6 +30,10 @@ const Form = () => {
 
   const onChangePasswordHandler = (value: string) => {
     setPasswordValue(value);
+  };
+
+  const onChangeConfirmPasswordHandler = (value: string) => {
+    setConfirmPasswordValue(value);
   };
 
   return (
@@ -44,7 +50,8 @@ const Form = () => {
                onChange={(value) => onChangeUsernameHandler(value)}/>
         <Input placeHolder={"password"} svg={password} name={"password"} type={"password"}
                onChange={(value) => onChangePasswordHandler(value)}/>
-        <Input placeHolder={"confirm password"} svg={confirmPassword} name={"confirmPassword"} type={"password"}/>
+        <Input placeHolder={"confirm password"} svg={confirmPassword} name={"confirmPassword"} type={"password"}
+               onChange={(value => onChangeConfirmPasswordHandler(value))}/>
         <Button title={"Sign Up"} classes={"bg-purple-600 text-white"} onClick={handleOnClick}/>
       </div>
     </div>
