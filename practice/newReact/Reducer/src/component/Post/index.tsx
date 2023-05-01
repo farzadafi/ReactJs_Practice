@@ -1,12 +1,13 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {toast} from "react-toastify";
+import CustomToast from "../customToast";
 
 function Post() {
-
   const [title, setTitle] = useState("");
   const [postId, setPostId] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [customToast, setCustomToast] = useState({type : 'success', message : ''})
 
   useEffect(() => {
     axios(`http://localhost:3000/posts/${postId}`)
@@ -38,6 +39,7 @@ function Post() {
         <div className={"text-blue-500 mt-10"}>
           { loading ? <span>Loading</span> : <span>{title}</span>}
         </div>
+        <CustomToast type={customToast.type} message={customToast.message}/>
       </div>
     </>
   );
