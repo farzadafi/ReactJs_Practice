@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {toast} from "react-toastify";
 
 function Post() {
 
@@ -12,6 +13,7 @@ function Post() {
       .then(({data}) => {
         setTitle(data.title)
         setLoading(false)
+        toast.success(`${postId} is fetched :)`)
       });
   }, [postId]);
 
