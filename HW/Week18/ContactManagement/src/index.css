@@ -1,6 +1,7 @@
 html, body {
     background-color: lightpink;
     font-family: Vazir, serif;
+    direction: rtl;
 }
 
 @font-face {
