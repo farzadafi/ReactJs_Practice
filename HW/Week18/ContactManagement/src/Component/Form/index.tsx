@@ -5,12 +5,17 @@ import {useState} from "react";
 const Form = () => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const firstnameOnchangeHandler = (e: string) => {
     setFirstname(e);
   };
 
   const lastnameOnchangeHandler = (e: string) => {
+    setLastname(e);
+  };
+
+  const phoneNumberOnchangeHandler = (e: string) => {
     setLastname(e);
   };
 
@@ -24,7 +29,8 @@ const Form = () => {
              value={firstname}/>
       <Input placeHolder={"نام خانوادگی ..."} name={"firstname"} onChange={(e) => lastnameOnchangeHandler(e)}
              value={lastname}/>
-      <Input placeHolder={"شماره تماس ..."} name={"firstname"} onChange={}/>
+      <Input placeHolder={"شماره تماس ..."} name={"firstname"} onChange={(e) => phoneNumberOnchangeHandler(e)}
+             value={phoneNumber}/>
       <CustomSelect/>
       <Input placeHolder={"ایمیل ..."} name={"firstname"}/>
       <Button onClick={onClickHandler} text={"اضافه کردن"}/>
