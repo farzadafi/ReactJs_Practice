@@ -6,6 +6,7 @@ const Form = () => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
 
   const firstnameOnchangeHandler = (e: string) => {
     setFirstname(e);
@@ -16,7 +17,11 @@ const Form = () => {
   };
 
   const phoneNumberOnchangeHandler = (e: string) => {
-    setLastname(e);
+    setPhoneNumber(e);
+  };
+  
+  const emailOnchangeHandler = (e: string) => {
+    setEmail(e);
   };
 
   const onClickHandler = () => {
@@ -32,7 +37,7 @@ const Form = () => {
       <Input placeHolder={"شماره تماس ..."} name={"firstname"} onChange={(e) => phoneNumberOnchangeHandler(e)}
              value={phoneNumber}/>
       <CustomSelect/>
-      <Input placeHolder={"ایمیل ..."} name={"firstname"}/>
+      <Input placeHolder={"ایمیل ..."} name={"firstname"} onChange={ (e) => emailOnchangeHandler(e)} value={email}/>
       <Button onClick={onClickHandler} text={"اضافه کردن"}/>
     </div>
   );
