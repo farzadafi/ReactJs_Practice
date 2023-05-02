@@ -2,6 +2,9 @@ import {Fragment, useState} from "react";
 import {Listbox, Transition} from "@headlessui/react";
 import {CheckCircleIcon, SelectorIcon} from "@heroicons/react/solid";
 
+interface Props {
+  onClick: (value:string) => void;
+}
 
 const people = [
   {id: 1, name: "نسبت"},
@@ -15,7 +18,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const CustomSelect = () => {
+const CustomSelect = ({onClick}:Props) => {
   const [selected, setSelected] = useState(people[0]);
 
 
@@ -37,7 +40,7 @@ const CustomSelect = () => {
               <Listbox.Options
                 className="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
                 {people.map((person) => (
-                  <Listbox.Option key={person.id} className={({active}) =>
+                  <Listbox.Option key={person.id} onClick={() => onClick ? onClick(person.name) : "null" } className={({active}) =>
                     classNames(
                       active ? "text-white bg-indigo-600" : "text-gray-900",
                       "cursor-default select-none relative py-2 pl-3 pr-9"
