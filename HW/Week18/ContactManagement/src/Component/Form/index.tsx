@@ -15,25 +15,37 @@ const Form = () => {
   const [isRelationHidden, setIsRelationHidden] = useState(true);
   const [isEmailHidden, setIsEmailHidden] = useState(true);
 
+  const [isDisabled, setIsDisabled] = useState(true);
+
   const firstnameOnchangeHandler = (e: string) => {
     setFirstname(e);
+    enableButton();
   };
 
   const lastnameOnchangeHandler = (e: string) => {
     setLastname(e);
+    enableButton();
   };
 
   const phoneNumberOnchangeHandler = (e: string) => {
     setPhoneNumber(e);
+    enableButton();
   };
 
   const emailOnchangeHandler = (e: string) => {
     setEmail(e);
+    enableButton();
   };
 
   const onClickHandlerCustomSelect = (e: string) => {
     setRelation(e);
+    enableButton();
   };
+
+  function enableButton() {
+    if ((firstname.length > 0) && (lastname.length > 0) && (phoneNumber.length > 6) && (relation.length > 0) && (email.length > 0))
+      setIsDisabled(false);
+  }
 
   const onClickHandler = () => {
     firstname.length <= 2 ? setIsFirstnameHidden(false) : setIsFirstnameHidden(true);
@@ -84,7 +96,7 @@ const Form = () => {
             یک ایمیل معتبر وارد کنید </p>
         )}
       </div>
-      <Button onClick={onClickHandler} text={"اضافه کردن"}/>
+      <Button isDisabled={isDisabled} onClick={onClickHandler} text={"اضافه کردن"}/>
     </div>
   );
 };
