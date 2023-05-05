@@ -1,6 +1,6 @@
 import Input from "@/Component/Input";
 import {Button, CustomSelect} from "@/Component";
-import {ChangeEvent, useState} from "react";
+import {ChangeEvent, useEffect, useState} from "react";
 import {User} from "@/interfaces/userInterface";
 
 interface Props {
@@ -9,6 +9,7 @@ interface Props {
 
 const Form = ({setUser}: Props) => {
   const [isDisabled, setIsDisabled] = useState(true);
+  const [isValidForm, setValidForm] = useState(true);
 
   const [userValue, setUserValue] = useState<User>({
     firstname: "",
@@ -30,7 +31,7 @@ const Form = ({setUser}: Props) => {
   }
 
   function handleClick() {
-    if (onClickHandler()) {
+    if (isValidForm) {
       const newUser = {
         firstname : userValue.firstname,
         lastname : userValue.lastname,
@@ -53,14 +54,10 @@ const Form = ({setUser}: Props) => {
     enableButton();
   };
 
-  const onClickHandler = () => {
-    userValue.firstname.length <= 2 ? setIsFirstnameHidden(false) : setIsFirstnameHidden(true);
-    userValue.lastname.length <= 2 ? setIsLastnameHidden(false) : setIsLastnameHidden(true);
-    userValue.phoneNumber.length <= 6 ? setIsPhoneNumberHidden(false) : setIsPhoneNumberHidden(true);
-    userValue.relation === "" ? setIsRelationHidden(false) : setIsRelationHidden(true);
-    userValue.email.length <= 6 ? setIsEmailHidden(false) : setIsEmailHidden(true);
-    return ((userValue.firstname.length > 2) && (userValue.lastname.length > 2) && (userValue.phoneNumber.length > 6) && (userValue.relation !== "") && (userValue.email.length > 2));
-  };
+  useEffect(() => {
+    const allInputsEmpty = Object.values(userValue).every((value) => value !== '');
+    setValidForm(allInputsEmpty);
+  }, [userValue]);
 
   return (
     <div className={"flex justify-center flex-col items-center gap-4 bg-pink-300 rounded-md mt-2 w-72 p-4 mx-auto"}>
