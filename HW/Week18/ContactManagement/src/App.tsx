@@ -7,13 +7,14 @@ function App() {
 
   const [user, setUser] = useState<User>();
 
-  const setUserHandler = (user: User) => {
-    setUser(user);
+  const setUserHandler = (userPass: User) => {
+    console.log(user);
+    setUser(userPass);
   };
 
   return (
     <>
-      <Form user={user} setUser={setUserHandler}/>
+      <Form setUser={setUserHandler}/>
     </>
   );
 }
