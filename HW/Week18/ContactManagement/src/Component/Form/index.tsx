@@ -33,13 +33,19 @@ const Form = ({setUser}: Props) => {
   function handleClick() {
     if (isValidForm) {
       const newUser = {
-        firstname : userValue.firstname,
-        lastname : userValue.lastname,
-        email : userValue.email,
+        firstname: userValue.firstname,
+        lastname: userValue.lastname,
+        email: userValue.email,
         phoneNumber: userValue.phoneNumber,
-        relation : userValue.relation
+        relation: userValue.relation
       };
       setUser(newUser);
+    } else {
+      userValue.firstname.length < 2 ? setIsFirstnameHidden(false) : setIsFirstnameHidden(true);
+      userValue.lastname.length < 2 ? setIsLastnameHidden(false) : setIsLastnameHidden(true);
+      userValue.phoneNumber.length < 2 ? setIsPhoneNumberHidden(false) : setIsPhoneNumberHidden(true);
+      userValue.email.length < 2 ? setIsEmailHidden(false) : setIsEmailHidden(true);
+      userValue.relation == "" ? setIsRelationHidden(false) : setIsRelationHidden(true);
     }
   }
 
@@ -55,8 +61,13 @@ const Form = ({setUser}: Props) => {
   };
 
   useEffect(() => {
-    const allInputsEmpty = Object.values(userValue).every((value) => value !== '');
+    const allInputsEmpty = Object.values(userValue).every((value) => value.length > 2);
     setValidForm(allInputsEmpty);
+    userValue.firstname.length > 2 ? setIsFirstnameHidden(true) : null;
+    userValue.lastname.length > 2 ? setIsLastnameHidden(true) : null;
+    userValue.phoneNumber.length > 2 ? setIsPhoneNumberHidden(true) : null;
+    userValue.email.length > 2 ? setIsEmailHidden(true) : null;
+    userValue.relation != "" ? setIsRelationHidden(true) : null;
   }, [userValue]);
 
   return (
