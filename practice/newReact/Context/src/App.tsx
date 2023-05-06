@@ -1,6 +1,7 @@
 import React, {createContext, useContext, useState} from "react";
 
 function Counter() {
+  // @ts-ignore
   const {counter, handleClick} = useCounter()
   return (
     <div>
