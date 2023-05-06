@@ -10,7 +10,7 @@ const startArray = [...Array(5)];
 
 const Card = ({product}: Props) => {
   return (
-    <div className={"flex flex-col w-[33%] rounded-md border border-slate-500"}>
+    <div className={"flex flex-col w-[31%] rounded-md border border-slate-500"}>
       <img src="./../../../public/transport.jpeg" alt="naser"/>
       <div className={"p-6 space-y-1"}>
         <h3>{product.name}</h3>
