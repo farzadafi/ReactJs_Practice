@@ -1,10 +1,15 @@
 import {AiFillStar, AiOutlineStar} from "react-icons/all";
 import Button from "../button";
 import {useShop} from "../context/CounterContext";
+import {ProductInterface} from "../../interfaces/ProductInterface";
 
 const startArray = [...Array(5)];
 
-const Card = ({product}) => {
+interface Props {
+  product : ProductInterface
+}
+
+const Card = ({product}:Props) => {
   const { products, addToCard } = useShop()
 
   const handleClick = () => {
