@@ -1,11 +1,14 @@
 import {Input} from "../../component";
-import {useState} from "react";
+import { useState } from "react";
 import Button from "../../component/button";
 import {IoCartSharp, MdOutlineArrowDropDown} from "react-icons/all";
+import {useShop} from "../../component/context/CounterContext";
+
 
 const Header = () => {
   const [searchInput, setSearchInput] = useState("");
-
+  const { products, addToCard} = useShop();
+  //
   const onchangeHandler = (value: string) => {
     setSearchInput(value);
   };
@@ -16,10 +19,9 @@ const Header = () => {
       <Input value={searchInput} placeHolder={"Search a Product..."} setInput={(e) => onchangeHandler(e)}/>
       <Button variant={"shoppingCartButton"}>
         <IoCartSharp className={"text-4xl"}/>
-        <p>0</p>
+        <p>{products.length}</p>
         <MdOutlineArrowDropDown className={"text-2xl"}/>
       </Button>
-      {/*<IoCartSharp />*/}
     </header>
   );
 };
