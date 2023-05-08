@@ -1,6 +1,6 @@
 import Header from "../header";
 import {ReactNode} from "react";
-import {ShopProvider} from "../../component/context/CounterContext";
+import {ShopProvider} from "../../component";
 
 interface Props {
   children: ReactNode;
