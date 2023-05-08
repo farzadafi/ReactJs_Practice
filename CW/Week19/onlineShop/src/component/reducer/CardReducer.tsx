@@ -1,13 +1,9 @@
 import {ProductInterface} from "../../interfaces/ProductInterface";
 
-interface Props {
-  product: ProductInterface;
-}
-
 interface State {
   count: number,
   products: ProductInterface[]
-  addToCard:(product:Props) => void
+  addToCard: (product: ProductInterface) => void
 }
 
 export const initialState:State = {
