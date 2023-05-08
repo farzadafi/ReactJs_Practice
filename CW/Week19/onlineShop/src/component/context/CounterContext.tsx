@@ -8,14 +8,10 @@ interface PropsReact {
   children: ReactNode;
 }
 
-interface Props {
-  product: ProductInterface;
-}
-
 export const ShopProvider = ({children}:PropsReact) => {
   const [state, dispatch] = useReducer(CardReducer, initialState);
 
-  const addToCard = (product:Props) => {
+  const addToCard = (product:ProductInterface) => {
     const updateCart = [...state.products, product]
 
     dispatch({
