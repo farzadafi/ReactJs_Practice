@@ -1,9 +1,21 @@
+interface State {
+  count: number;
+  products: [];
+}
+
+interface Action {
+  type: string;
+  payload: {
+    products: []
+  };
+}
+
 export const initialState = {
   count: 0,
   products: [],
-}
+};
 
-const CardReducer = (state, action) => {
+const CardReducer = (state: State, action:Action) => {
   const {type, payload} = action;
 
   switch (type) {
