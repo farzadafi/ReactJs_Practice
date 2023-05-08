@@ -1,21 +1,21 @@
 import {createContext, ReactNode, useContext, useReducer} from "react";
 import CardReducer, {initialState} from "../reducer/CardReducer";
+import {ProductInterface} from "../../interfaces/ProductInterface";
 
 const ShopContext = createContext(initialState);
 
-// interface PropsReact {
-//   children: ReactNode;
-// }
-//
-// interface Props {
-//   product: ProductInterface;
-// }
+interface PropsReact {
+  children: ReactNode;
+}
 
-export const ShopProvider = ({children}) => {
+interface Props {
+  product: ProductInterface;
+}
+
+export const ShopProvider = ({children}:PropsReact) => {
   const [state, dispatch] = useReducer(CardReducer, initialState);
 
-  const addToCard = (product) => {
-    // const updateCart = state.products.concat(product)
+  const addToCard = (product:Props) => {
     const updateCart = [...state.products, product]
 
     dispatch({
