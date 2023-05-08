@@ -3,11 +3,13 @@ import {ProductInterface} from "../../interfaces/ProductInterface";
 interface State {
   count: number,
   products: ProductInterface[]
+  addToCard:() => void
 }
 
 export const initialState:State = {
   count: 0,
-  products: []
+  products: [],
+  addToCard:() => {}
 };
 
 interface Action {
