@@ -1,8 +1,7 @@
-import {Input, useShop} from "../../component";
+import {Input, ListCard, useShop} from "../../component";
 import { useState } from "react";
 import Button from "../../component/button";
 import {IoCartSharp, MdOutlineArrowDropDown} from "react-icons/all";
-
 
 const Header = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -14,7 +13,6 @@ const Header = () => {
   };
 
   const onClickHandler = () => {
-    alert("farzad")
     isEnable ? setEnable(false) : setEnable(true)
   }
 
@@ -26,7 +24,14 @@ const Header = () => {
         <IoCartSharp className={"text-4xl"}/>
         <p>{products.length}</p>
         <MdOutlineArrowDropDown className={"text-2xl"}/>
-        <div className={'text-black top-[3.3rem] right-[15.6rem] w-72 rounded-md bg-white border border-slate-500 ' + (isEnable ? 'hidden' : 'absolute')}>farzad</div>
+        <div className={'text-black p-3 flex flex-col gap-3 top-[3.3rem] right-[15.6rem] w-96 rounded-md bg-white border border-slate-500 ' + (isEnable ? 'hidden' : 'absolute')}>
+          {
+            products.length > 0 ? products.map(item => {
+              return <ListCard product={item}/>;
+            }) : null
+          }
+          <Button variant={"addToCard"} classes={"w-full text-white"} children={"Go To Cart"}/>
+        </div>
       </Button>
     </header>
   );
