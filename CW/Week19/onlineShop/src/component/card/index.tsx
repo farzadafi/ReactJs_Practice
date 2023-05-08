@@ -27,7 +27,7 @@ const Card = ({product}:Props) => {
         <p>{"fast delivery"}</p>
         <div className={"flex"}>
           {
-            startArray.map((value, index) => {
+            startArray.map((_value, index) => {
               if (index < product.ratings)
                 return <AiFillStar key={index}/>;
               else
