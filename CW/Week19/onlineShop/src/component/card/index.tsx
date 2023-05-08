@@ -24,9 +24,9 @@ const Card = ({product}) => {
           {
             startArray.map((value, index) => {
               if (index < product.ratings)
-                return <AiFillStar/>;
+                return <AiFillStar key={index}/>;
               else
-                return <AiOutlineStar/>;
+                return <AiOutlineStar key={index}/>;
             })
           }
         </div>
