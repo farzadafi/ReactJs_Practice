@@ -13,7 +13,7 @@ const Main = ({products}: Props) => {
       <div className={"p-5 flex flex-wrap gap-8 w-[100%]"}>
         {
           products.length > 0 ? products.map(item => {
-            return <Card product={item}/>;
+            return <Card key={item.id} product={item}/>;
           }) : null
         }
       </div>
