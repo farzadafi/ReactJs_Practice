@@ -1,8 +1,7 @@
-import {Input} from "../../component";
+import {Input, useShop} from "../../component";
 import { useState } from "react";
 import Button from "../../component/button";
 import {IoCartSharp, MdOutlineArrowDropDown} from "react-icons/all";
-import {useShop} from "../../component/context/CounterContext";
 
 
 const Header = () => {
