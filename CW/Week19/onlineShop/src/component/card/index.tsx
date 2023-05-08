@@ -1,19 +1,23 @@
-import {ProductInterface} from "../../interfaces/ProductInterface";
 import {AiFillStar, AiOutlineStar} from "react-icons/all";
 import Button from "../button";
-
-interface Props {
-  product: ProductInterface;
-}
+import {useShop} from "../context/CounterContext";
 
 const startArray = [...Array(5)];
 
-const Card = ({product}: Props) => {
+const Card = ({product}) => {
+  const { products, addToCard } = useShop()
+
+  const handleClick = () => {
+    addToCard(product)
+  }
+
   return (
     <div className={"flex flex-col w-[31%] rounded-md border border-slate-500"}>
       <img src="./../../../public/transport.jpeg" alt="naser"/>
       <div className={"p-6 space-y-1"}>
         <h3>{product.name}</h3>
+        <h1>farzad</h1>
+        <h1>{products.length}</h1>
         <p>{product.price}</p>
         <p>{"fast delivery"}</p>
         <div className={"flex"}>
@@ -26,7 +30,7 @@ const Card = ({product}: Props) => {
             })
           }
         </div>
-        <Button variant={"addToCard"}>
+        <Button onClick={handleClick} variant={"addToCard"}>
           add To Card
         </Button>
       </div>
