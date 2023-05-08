@@ -1,16 +1,21 @@
 import Header from "../header";
 import {ReactNode} from "react";
+import {ShopProvider} from "../../component/context/CounterContext";
 
 interface Props {
-  children : ReactNode
+  children: ReactNode;
 }
 
-const Container = ({children}:Props) => {
+const Container = ({children}: Props) => {
   return (
-    <div>
-      <Header/>
-      {children}
-    </div>
+    <>
+      <ShopProvider>
+        <div>
+          <Header/>
+          {children}
+        </div>
+      </ShopProvider>
+    </>
   );
 };
 
