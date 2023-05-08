@@ -1,21 +1,23 @@
+import {ProductInterface} from "../../interfaces/ProductInterface";
+
 interface State {
-  count: number;
-  products: [];
+  count: number,
+  products: ProductInterface[]
 }
+
+export const initialState:State = {
+  count: 0,
+  products: []
+};
 
 interface Action {
   type: string;
   payload: {
-    products: []
+    products: ProductInterface[]
   };
 }
 
-export const initialState = {
-  count: 0,
-  products: [],
-};
-
-const CardReducer = (state: State, action:Action) => {
+const CardReducer = (state, action:Action) => { // :State here :)
   const {type, payload} = action;
 
   switch (type) {
