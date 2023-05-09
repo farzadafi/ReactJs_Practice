@@ -4,12 +4,16 @@ interface State {
   count: number,
   products: ProductInterface[]
   addToCard: (product: ProductInterface) => void
+  removeFromCard: (product: ProductInterface) => void
 }
 
-export const initialState:State = {
+export const initialState: State = {
   count: 0,
   products: [],
-  addToCard:() => {}
+  addToCard: () => {
+  },
+  removeFromCard: () => {
+  }
 };
 
 interface Action {
@@ -19,11 +23,16 @@ interface Action {
   };
 }
 
-const CardReducer = (state, action:Action) => { // :State here :)
+const CardReducer = (state, action: Action) => { // :State here :)
   const {type, payload} = action;
 
   switch (type) {
   case "ADD_TO_CARD":
+    return {
+      ...state,
+      products: payload.products
+    };
+  case "REMOVE_FROM_CARD":
     return {
       ...state,
       products: payload.products
