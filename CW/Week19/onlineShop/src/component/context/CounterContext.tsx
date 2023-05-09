@@ -22,10 +22,22 @@ export const ShopProvider = ({children}:PropsReact) => {
     });
   };
 
+  const removeFromCard = (product:ProductInterface) => {
+    const updateCart = state.products.filter((item: { id: string; }) => item.id !== product.id)
+
+    dispatch({
+      type: "REMOVE_FROM_CARD",
+      payload: {
+        products: updateCart
+      }
+    });
+  };
+
   const value = {
     count: state.count,
     products: state.products,
-    addToCard
+    addToCard,
+    removeFromCard
   };
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };
