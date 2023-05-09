@@ -39,7 +39,8 @@ const Card = ({product, id}: Props) => {
           }
         </div>
         {
-          products.includes(product) ? <Button onClick={handleRemoveClick} variant={"removeFromCard"}>Remove From Card</Button> :
+          products.includes(product) ?
+            <Button onClick={handleRemoveClick} variant={"removeFromCard"}>Remove From Card</Button> :
             <Button onClick={handleClick} variant={"addToCard"}>add To Card</Button>
         }
       </div>
