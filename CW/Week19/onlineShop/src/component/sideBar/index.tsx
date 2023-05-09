@@ -1,19 +1,26 @@
+import * as React from 'react';
+
 const notificationMethods = [
   { id: 'asc', title: 'Ascending' },
   { id: 'desc', title: 'Descending' }
 ]
 
-const Sidebar = () => {
+interface Props {
+  onClick: (e: React.MouseEvent<HTMLInputElement>) => void
+}
+
+const Sidebar = ({onClick}:Props) => {
   return (
     <div className={"w-[20%] bg-gray-700 m-2 h-[50rem] p-5 text-white"}>
       <h1 className={"text-2xl "}>Filter Products</h1>
       <div className={"text-white"}>
         <fieldset className="mt-4">
-          <div className="space-y-4">
+          <div className="space-y-4 bg-green-500">
             {notificationMethods.map((notificationMethod) => (
               <div key={notificationMethod.id} className="flex items-center">
                 <input
                   id={notificationMethod.id}
+                  onClick={(e) => onClick(e)}
                   name="notification-method"
                   type="radio"
                   defaultChecked={notificationMethod.id === 'email'}
