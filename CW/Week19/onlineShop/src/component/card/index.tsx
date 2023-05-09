@@ -2,19 +2,27 @@ import {AiFillStar, AiOutlineStar} from "react-icons/all";
 import Button from "../button";
 import {useShop} from "../context/CounterContext";
 import {ProductInterface} from "../../interfaces/ProductInterface";
+import {useState} from "react";
 
 const startArray = [...Array(5)];
 
 interface Props {
-  product : ProductInterface
+  product: ProductInterface;
 }
 
-const Card = ({product}:Props) => {
-  const { products, addToCard } = useShop()
+const Card = ({product}: Props) => {
+  const {products, addToCard, removeFromCard} = useShop();
+  const [isExist, setExist] = useState(false);
 
   const handleClick = () => {
-    addToCard(product)
-  }
+    addToCard(product);
+    setExist(true);
+  };
+
+  const handleRemoveClick = () => {
+    removeFromCard(product);
+    setExist(false);
+  };
 
   return (
     <div className={"flex flex-col w-[31%] rounded-md border border-slate-500"}>
@@ -35,9 +43,12 @@ const Card = ({product}:Props) => {
             })
           }
         </div>
-        <Button onClick={handleClick} variant={"addToCard"}>
-          add To Card
-        </Button>
+        {
+          isExist ? <Button onClick={handleRemoveClick} variant={"removeFromCard"}>Remove From Cart</Button> :
+            <Button onClick={handleClick} variant={"addToCard"}>
+              Add To Card
+            </Button>
+        }
       </div>
     </div>
   );
