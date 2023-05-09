@@ -1,11 +1,20 @@
 import {ProductInterface} from "../../interfaces/ProductInterface";
 import {RiDeleteBin7Fill} from "react-icons/all";
+import Button from "../button";
+import {useShop} from "../context/CounterContext";
 
 interface Props {
   product: ProductInterface;
 }
 
+
 const ListCard = ({product}: Props) => {
+  const {removeFromCard} = useShop();
+
+  const onClickRemoveHandler = () => {
+    removeFromCard(product)
+  }
+
   return (
     <div className={"flex justify-between items-center hover:cursor-auto"}>
       <div className={"flex gap-3"}>
@@ -15,9 +24,9 @@ const ListCard = ({product}: Props) => {
           <p>{product.price}</p>
         </div>
       </div>
-      <button>
+      <Button onClick={onClickRemoveHandler} variant={"addToCard"} classes={"bg-white"}>
         <RiDeleteBin7Fill/>
-      </button>
+      </Button>
     </div>
   );
 };
