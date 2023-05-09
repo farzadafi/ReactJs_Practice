@@ -11,7 +11,7 @@ interface Props {
 }
 
 const Card = ({product}: Props) => {
-  const {products, addToCard, removeFromCard} = useShop();
+  const {addToCard, removeFromCard} = useShop();
   const [isExist, setExist] = useState(false);
 
   const handleClick = () => {
@@ -29,8 +29,6 @@ const Card = ({product}: Props) => {
       <img src="./../../../public/transport.jpeg" alt="naser"/>
       <div className={"p-6 space-y-1"}>
         <h3>{product.name}</h3>
-        <h1>farzad</h1>
-        <h1>{products.length}</h1>
         <p>{product.price}</p>
         <p>{"fast delivery"}</p>
         <div className={"flex"}>
