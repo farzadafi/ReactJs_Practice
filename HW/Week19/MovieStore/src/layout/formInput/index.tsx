@@ -15,6 +15,7 @@ const FormInput = () => {
         <TextArea labelName={"توضیحات"} placeHolder={"توضیحات درباره فیلم"}/>
         <div>
           <Button children={"ذخیره"} variant={"saveFilm"}/>
+          <Button children={"انصراف"} variant={"canselSave"}/>
         </div>
       </div>
     </div>
