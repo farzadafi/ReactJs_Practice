@@ -31,7 +31,7 @@ const CustomSelect = ({labelName}:Props) => {
           </div>
           <div className="relative">
             <Listbox.Button
-              className="w-full border-2 border-gray-500 p-4 rounded-md cursor-default focus:outline-none focus:ring-1 focus:ring-yellow-300 focus:border-yellow-300 sm:text-sm">
+              className="w-full border-2 hover:cursor-pointer border-gray-500 p-4 rounded-md cursor-default focus:outline-none focus:ring-1 focus:ring-yellow-300 focus:border-yellow-300 sm:text-sm">
               <span className="block">{selected.name}</span>
               <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                 <CgArrowsExchangeAltV/>
@@ -46,7 +46,7 @@ const CustomSelect = ({labelName}:Props) => {
                   <Listbox.Option key={person.id} className={({active}) =>
                     classNames(
                       active ? "text-black bg-yellow-300" : "text-white",
-                      "cursor-default select-none relative py-2 pl-3 pr-9"
+                      "cursor-default hover:cursor-pointer select-none relative py-2 pl-3 pr-9"
                     )
                   } value={person}>
                     {({selected, active}) => (
