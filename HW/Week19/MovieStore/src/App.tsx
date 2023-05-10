@@ -1,11 +1,14 @@
 import './index.css'
+import {Container, Header} from "@/layout";
 
 function App() {
 
   return (
     <>
       <div>
-        farzad
+        <Container>
+          <Header/>
+        </Container>
       </div>
     </>
   )
