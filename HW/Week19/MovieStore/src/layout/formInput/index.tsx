@@ -1,4 +1,4 @@
-import {Input, TextArea} from "@/component";
+import {Button, Input, TextArea} from "@/component";
 
 const FormInput = () => {
   return (
@@ -13,6 +13,9 @@ const FormInput = () => {
       </div>
       <div className={"space-y-10 w-[40%]"}>
         <TextArea labelName={"توضیحات"} placeHolder={"توضیحات درباره فیلم"}/>
+        <div>
+          <Button children={"ذخیره"} variant={"saveFilm"}/>
+        </div>
       </div>
     </div>
   );
