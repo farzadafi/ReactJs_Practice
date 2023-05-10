@@ -1,4 +1,5 @@
 import {Button, Input, TextArea} from "@/component";
+import CustomSelect from "@/component/CustomSelect";
 
 const FormInput = () => {
   return (
@@ -8,7 +9,7 @@ const FormInput = () => {
         <Input labelName={"کارگردان"} placeHolder={"نام کارگردان را وارد کنید"}/>
       </div>
       <div className={"space-y-10 w-[25%]"}>
-        <Input labelName={"ژانر فیلم"} placeHolder={"نام فیلم را وارد کنید"}/>
+        <CustomSelect labelName={"ژانر فیلم"}/>
         <Input labelName={"سال تولید"} placeHolder={"سال ساخت فیلم را وارد کنید"}/>
       </div>
       <div className={"space-y-10 w-[40%]"}>
