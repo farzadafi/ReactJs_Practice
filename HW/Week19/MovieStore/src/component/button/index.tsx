@@ -1,8 +1,10 @@
 import {ReactNode} from "react";
 
+const sameClassName = 'rounded-md p-3 w-28 ';
+
 const variants: Record<string, string> = {
-  saveFilm: "bg-yellow-500 rounded-md p-3 w-28",
-  cancelSave: "rounded-md p-3 w-28 border border-2 border-gray-500"
+  saveFilm: `${sameClassName} bg-yellow-500`,
+  cancelSave: `${sameClassName} border border-2 border-gray-500`
 };
 
 type buttonProps = {
