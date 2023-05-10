@@ -12,7 +12,7 @@ const TextArea = ({labelName, placeHolder}: Props) => {
           {labelName}
         </label>
       </div>
-      <div className="mt-1">
+      <div className="mt-4">
         <textarea rows={4} name="comment" id="comment"
                   className="resize-none focus:border-yellow-300 outline-none bg-gray-700 w-full sm:text-sm border-2 border-gray-500 rounded-md p-4"
                   placeholder={placeHolder}/>
