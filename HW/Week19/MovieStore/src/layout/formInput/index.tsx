@@ -13,9 +13,9 @@ const FormInput = () => {
       </div>
       <div className={"space-y-10 w-[40%]"}>
         <TextArea labelName={"توضیحات"} placeHolder={"توضیحات درباره فیلم"}/>
-        <div>
+        <div className={"flex justify-end gap-5"}>
           <Button children={"ذخیره"} variant={"saveFilm"}/>
-          <Button children={"انصراف"} variant={"canselSave"}/>
+          <Button children={"انصراف"} variant={"cancelSave"}/>
         </div>
       </div>
     </div>
