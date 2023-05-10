@@ -1,72 +1,65 @@
-import  { Fragment, useState } from 'react'
-import { Listbox, Transition } from '@headlessui/react'
+import {Fragment, useState} from "react";
+import {Listbox, Transition} from "@headlessui/react";
+import {CgArrowsExchangeAltV} from "react-icons/all";
 
 const people = [
-  { id: 1, name: 'Wade Cooper' },
-  { id: 2, name: 'Arlene Mccoy' },
-  { id: 3, name: 'Devon Webb' },
-  { id: 4, name: 'Tom Cook' },
-  { id: 5, name: 'Tanya Fox' },
-  { id: 6, name: 'Hellen Schmidt' },
-  { id: 7, name: 'Caroline Schultz' },
-  { id: 8, name: 'Mason Heaney' },
-  { id: 9, name: 'Claudie Smitham' },
-  { id: 10, name: 'Emil Schaefer' },
-]
+  {id: 1, name: "اکشن"},
+  {id: 2, name: "کمدی"},
+  {id: 3, name: "درام"}
+];
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
+interface Props {
+  labelName : string
 }
 
-const CustomSelect = () => {
-  const [selected, setSelected] = useState(people[3])
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
+
+const CustomSelect = ({labelName}:Props) => {
+  const [selected, setSelected] = useState(people[1]);
 
   return (
     <Listbox value={selected} onChange={setSelected}>
-      {({ open }) => (
+      {({open}) => (
         <>
-          <Listbox.Label className="block text-sm font-medium text-gray-700">Assigned to</Listbox.Label>
-          <div className="mt-1 relative">
-            <Listbox.Button className="bg-white relative w-full border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-              <span className="block text-black truncate">{selected.name}</span>
+          <div className={"flex gap-2 items-center -mb-6"}>
+            <span className="w-2 h-5 bg-yellow-300 rounded-sm inline-block"></span>
+            <label className="block text-sm font-medium text-gray-700 text-white text-xl">
+              {labelName}
+            </label>
+          </div>
+          <div className="relative">
+            <Listbox.Button
+              className="w-full border-2 border-gray-500 p-4 rounded-md cursor-default focus:outline-none focus:ring-1 focus:ring-yellow-300 focus:border-yellow-300 sm:text-sm">
+              <span className="block">{selected.name}</span>
               <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                {/*<SelectorIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />*/}
+                <CgArrowsExchangeAltV/>
               </span>
             </Listbox.Button>
 
-            <Transition
-              show={open}
-              as={Fragment}
-              leave="transition ease-in duration-100"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <Listbox.Options className="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
+            <Transition show={open} as={Fragment} leave="transition ease-in duration-100" leaveFrom="opacity-100"
+                        leaveTo="opacity-0">
+              <Listbox.Options
+                className="absolute z-10 mt-1 w-full bg-gray-600 text-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
                 {people.map((person) => (
-                  <Listbox.Option
-                    key={person.id}
-                    className={({ active }) =>
-                      classNames(
-                        active ? 'text-white bg-indigo-600' : 'text-gray-900',
-                        'cursor-default select-none relative py-2 pl-3 pr-9'
-                      )
-                    }
-                    value={person}
-                  >
-                    {({ selected, active }) => (
+                  <Listbox.Option key={person.id} className={({active}) =>
+                    classNames(
+                      active ? "text-black bg-yellow-300" : "text-white",
+                      "cursor-default select-none relative py-2 pl-3 pr-9"
+                    )
+                  } value={person}>
+                    {({selected, active}) => (
                       <>
-                        <span className={classNames(selected ? 'font-semibold' : 'font-normal', 'block truncate')}>
+                        <span className={classNames(selected ? "font-semibold" : "font-normal", "block truncate")}>
                           {person.name}
                         </span>
 
                         {selected ? (
-                          <span
-                            className={classNames(
-                              active ? 'text-white' : 'text-indigo-600',
-                              'absolute inset-y-0 right-0 flex items-center pr-4'
-                            )}
-                          >
-                            {/*<CheckIcon className="h-5 w-5" aria-hidden="true" />*/}
+                          <span className={classNames(
+                            active ? "text-white" : "text-indigo-600",
+                            "absolute inset-y-0 right-0 flex items-center pr-4"
+                          )}>
                           </span>
                         ) : null}
                       </>
