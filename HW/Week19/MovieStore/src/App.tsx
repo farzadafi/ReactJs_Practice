@@ -1,5 +1,5 @@
 import './index.css'
-import {Container, Header} from "@/layout";
+import {Container, FormInput, Header} from "@/layout";
 
 function App() {
 
@@ -8,6 +8,7 @@ function App() {
       <div>
         <Container>
           <Header/>
+          <FormInput/>
         </Container>
       </div>
     </>
