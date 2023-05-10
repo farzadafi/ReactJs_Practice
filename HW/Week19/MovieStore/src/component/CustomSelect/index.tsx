@@ -34,7 +34,7 @@ const CustomSelect = ({labelName}:Props) => {
               className="w-full border-2 hover:cursor-pointer border-gray-500 p-4 rounded-md cursor-default focus:outline-none focus:ring-1 focus:ring-yellow-300 focus:border-yellow-300 sm:text-sm">
               <span className="block">{selected.name}</span>
               <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                <CgArrowsExchangeAltV/>
+                <CgArrowsExchangeAltV className={"w-8 h-8"}/>
               </span>
             </Listbox.Button>
 
