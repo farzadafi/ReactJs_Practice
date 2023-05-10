@@ -1,6 +1,7 @@
 import {Fragment, useState} from "react";
 import {Listbox, Transition} from "@headlessui/react";
 import {CgArrowsExchangeAltV} from "react-icons/all";
+import {YellowLabel} from "@/component";
 
 const people = [
   {id: 1, name: "اکشن"},
@@ -9,26 +10,21 @@ const people = [
 ];
 
 interface Props {
-  labelName : string
+  labelName: string;
 }
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const CustomSelect = ({labelName}:Props) => {
+const CustomSelect = ({labelName}: Props) => {
   const [selected, setSelected] = useState(people[1]);
 
   return (
     <Listbox value={selected} onChange={setSelected}>
       {({open}) => (
         <>
-          <div className={"flex gap-2 items-center -mb-6"}>
-            <span className="w-2 h-5 bg-yellow-300 rounded-sm inline-block"></span>
-            <label className="block text-sm font-medium text-gray-700 text-white text-xl">
-              {labelName}
-            </label>
-          </div>
+          <YellowLabel labelName={labelName} classes={"-mb-7"}/>
           <div className="relative">
             <Listbox.Button
               className="w-full border-2 hover:cursor-pointer border-gray-500 p-4 rounded-md cursor-default focus:outline-none focus:ring-1 focus:ring-yellow-300 focus:border-yellow-300 sm:text-sm">
