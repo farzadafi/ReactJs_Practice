@@ -15,7 +15,7 @@ const Input = ({labelName, placeHolder}: Props) => {
       </div>
       <div className="mt-3">
         <input
-          className="focus:border-yellow-300 outline-none bg-gray-700 w-full sm:text-sm border-2 border-gray-200 rounded-md p-4"
+          className="focus:border-yellow-300 outline-none bg-gray-700 w-full sm:text-sm border-2 border-gray-500 rounded-md p-4"
           placeholder={placeHolder}/>
       </div>
     </div>
