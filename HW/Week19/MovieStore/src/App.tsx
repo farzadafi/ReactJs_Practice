@@ -1,6 +1,7 @@
 import "./index.css";
 import {Container, FormInput, Header} from "@/layout";
-import {MovieProvider} from "@/context";
+import {MovieProvider} from "@/context/CardContext";
+import {FormProvider} from "@/context/FormContext";
 
 function App() {
 
@@ -10,7 +11,9 @@ function App() {
         <MovieProvider>
           <Container>
             <Header/>
-            <FormInput/>
+            <FormProvider>
+              <FormInput/>
+            </FormProvider>
           </Container>
         </MovieProvider>
       </div>
