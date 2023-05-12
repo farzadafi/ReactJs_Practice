@@ -1,13 +1,13 @@
 import {createContext, ReactNode, useReducer} from "react";
 import FormReducer, {initialState} from "@/reducer/FormReducer";
 
-const FormContext = createContext({});
+export const FormContext = createContext(initialState);
 
 interface Props {
   children: ReactNode;
 }
 
-const FormProvider = ({children}: Props) => {
+export const FormProvider = ({children}: Props) => {
   const [state, dispatch] = useReducer(FormReducer, initialState);
 
   const setFormData = (name: string, value: string) => {
