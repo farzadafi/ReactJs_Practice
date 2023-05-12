@@ -1,9 +1,12 @@
 import {Button, Input, TextArea} from "@/component";
 import CustomSelect from "@/component/CustomSelect";
-import {ChangeEvent, useState} from "react";
+import {ChangeEvent, useContext, useState} from "react";
+import {FormContext} from "@/context/FormContext";
 
 const FormInput = () => {
   const [formValue, setFormValue] = useState({});
+  const { state, setFormData, setErrors } = useContext(FormContext);
+
 
   const inputOnchangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const {name, value} = e.target;
@@ -18,6 +21,10 @@ const FormInput = () => {
   const selectHandler = (gonerName: string) => {
     setFormValue({...formValue, "goner": gonerName});
   };
+
+  const onClickHandler = () => {
+    console.log(formValue);
+  }
 
 
   return (
@@ -37,7 +44,7 @@ const FormInput = () => {
         <TextArea name={"description"} onChange={(e) => textareaOnchangeHandler(e)} labelName={"توضیحات"}
                   placeHolder={"توضیحات درباره فیلم"}/>
         <div className={"flex justify-end gap-5"}>
-          <Button children={"ذخیره"} variant={"saveFilm"}/>
+          <Button children={"ذخیره"} variant={"saveFilm"} onClick={() => onClickHandler()} />
           <Button children={"انصراف"} variant={"cancelSave"}/>
         </div>
       </div>
