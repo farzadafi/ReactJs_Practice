@@ -10,7 +10,7 @@ const FormInput = () => {
       </div>
       <div className={"space-y-10 w-[25%]"}>
         <CustomSelect labelName={"ژانر فیلم"}/>
-        <Input labelName={"سال تولید"} placeHolder={"سال ساخت فیلم را وارد کنید"}/>
+        <Input myType={"date"} labelName={"سال تولید"} placeHolder={"سال ساخت فیلم را وارد کنید"}/>
       </div>
       <div className={"space-y-10 w-[40%]"}>
         <TextArea labelName={"توضیحات"} placeHolder={"توضیحات درباره فیلم"}/>
