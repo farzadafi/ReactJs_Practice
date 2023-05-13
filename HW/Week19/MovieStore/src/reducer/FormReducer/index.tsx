@@ -1,14 +1,27 @@
+type FormData = {
+  name : string,
+}
+
+type Error = {
+  name : string,
+  error : string
+}
+
 interface State {
-  formData: {};
-  errors: {};
+  formData: FormData;
+  errors: Error;
+  setErrors : (name:string, error:string) => void
 }
 
 export const initialState: State = {
   formData: {
-    firstname: ""
+    name: ""
   },
   errors: {
-    isValidFirstname: false
+    name : '',
+    error: ''
+  },
+  setErrors: () => {
   }
 };
 
@@ -21,7 +34,7 @@ interface Action {
   };
 }
 
-const FormReducer = (state, action:Action) => {
+const FormReducer = (state:State, action:Action) => {
   switch (action.type) {
   case "SET_FORM_DATA":
     return {
