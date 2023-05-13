@@ -24,8 +24,15 @@ export const FormProvider = ({children}: Props) => {
     });
   };
 
+  const value = {
+    formData : state.formData,
+    errors : state.errors,
+    setFormData,
+    setErrors
+  };
+
   return (
-    <FormContext.Provider value={{state, setFormData, setErrors}}>
+    <FormContext.Provider value={value}>
       {children}
     </FormContext.Provider>
   );
