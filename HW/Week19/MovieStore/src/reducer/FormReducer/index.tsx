@@ -1,26 +1,18 @@
 type FormData = {
-  name : string,
-}
-
-type Error = {
-  name : string,
-  error : string
+  name: string,
 }
 
 interface State {
   formData: FormData;
-  errors: Error;
-  setErrors : (name:string, error:string) => void
+  errors: string[];
+  setErrors: (name: string) => void;
 }
 
 export const initialState: State = {
   formData: {
     name: ""
   },
-  errors: {
-    name : '',
-    error: ''
-  },
+  errors: [],
   setErrors: () => {
   }
 };
@@ -28,13 +20,12 @@ export const initialState: State = {
 interface Action {
   type: string;
   payload: {
-    name:string
-    value?:string
-    error?:string
+    name: string
+    value?: string
   };
 }
 
-const FormReducer = (state:State, action:Action) => {
+const FormReducer = (state, action: Action) => {
   switch (action.type) {
   case "SET_FORM_DATA":
     return {
@@ -47,11 +38,8 @@ const FormReducer = (state:State, action:Action) => {
   case "SET_ERRORS":
     return {
       ...state,
-      errors: {
-        ...state.errors,
-        [action.payload.name]: action.payload.error
-      }
-    };
+      errors: [...state.errors, action.payload.name]
+    }
   default:
     return state;
   }
