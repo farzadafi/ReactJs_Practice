@@ -5,7 +5,7 @@ type FormData = {
 interface State {
   formData: FormData;
   errors: string[];
-  setErrors: (name: string) => void;
+  setErrors: (name: string[]) => void;
 }
 
 export const initialState: State = {
@@ -20,25 +20,25 @@ export const initialState: State = {
 interface Action {
   type: string;
   payload: {
-    name: string
+    name: string[]
     value?: string
   };
 }
 
 const FormReducer = (state, action: Action) => {
   switch (action.type) {
-  case "SET_FORM_DATA":
-    return {
-      ...state,
-      formData: {
-        ...state.formData,
-        [action.payload.name]: action.payload.value
-      }
-    };
+  // case "SET_FORM_DATA":
+  //   return {
+  //     ...state,
+  //     formData: {
+  //       ...state.formData,
+  //       [action.payload.name]: action.payload.value
+  //     }
+  //   };
   case "SET_ERRORS":
     return {
       ...state,
-      errors: [...state.errors, action.payload.name]
+      errors: action.payload.name
     }
   default:
     return state;
