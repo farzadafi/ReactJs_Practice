@@ -17,10 +17,10 @@ export const FormProvider = ({children}: Props) => {
     });
   };
 
-  const setErrors = (name: string, error: string) => {
+  const setErrors = (name: string) => {
     dispatch({
       type: "SET_ERRORS",
-      payload: {name, error}
+      payload: {name}
     });
   };
 
