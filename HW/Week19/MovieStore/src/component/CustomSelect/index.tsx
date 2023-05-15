@@ -4,9 +4,9 @@ import {CgArrowsExchangeAltV} from "react-icons/all";
 import {YellowLabel} from "@/component";
 
 const goner = [
-  {id: 1, name: "اکشن"},
-  {id: 2, name: "کمدی"},
-  {id: 3, name: "درام"}
+  {id: 0, name: "اکشن"},
+  {id: 1, name: "کمدی"},
+  {id: 2, name: "درام"}
 ];
 
 interface Props {
