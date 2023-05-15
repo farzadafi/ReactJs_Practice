@@ -10,14 +10,14 @@ interface Props {
 export const FormProvider = ({children}: Props) => {
   const [state, dispatch] = useReducer(FormReducer, initialState);
 
-  const setFormData = (name: string, value: string) => {
-    dispatch({
-      type: "SET_FORM_DATA",
-      payload: {name, value}
-    });
-  };
+  // const setFormData = (name: string, value: string) => {
+  //   dispatch({
+  //     type: "SET_FORM_DATA",
+  //     payload: {name, value}
+  //   });
+  // };
 
-  const setErrors = (name: string) => {
+  const setErrors = (name: string[]) => {
     dispatch({
       type: "SET_ERRORS",
       payload: {name}
@@ -27,7 +27,7 @@ export const FormProvider = ({children}: Props) => {
   const value = {
     formData : state.formData,
     errors : state.errors,
-    setFormData,
+    // setFormData,
     setErrors
   };
 
